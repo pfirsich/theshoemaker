@@ -372,22 +372,6 @@
     all and this was probably one of my favorite Global Game Jams because of it. If
     any of you reads this, feel free to shoot me a message!
 
-- name: "C++ ECS"
-  disabled: true
-  id: cpp-ecs
-  link: https://github.com/pfirsich/cpp-ecs
-  tags: [c++, library]
-  tech: C++
-  time: "Sep 2018 – Oct 2018"
-  sort_time: 20181001
-  sort_effort: 12
-  image: ecs_stripe.png
-  links:
-  - {title: GitHub, url: "https://github.com/pfirsich/cpp-ecs"}
-  description: This is an entity-component-system library inspired by ideas presented
-    in Allan Deutsch's C++Now 2018 talk [Game Engine API Design](https://www.youtube.com/watch?v=W3ViIBnTTKA).
-    (Reword this if I don't decide to remove it)
-
 - name: SudoHack
   id: sudohack
   link: https://theshoemaker.de/tag/sudohack/
@@ -557,21 +541,6 @@
   description: Frontdown is an open source backup program, written in Python, that
     uses hardlinks for space efficient, versioned backups. I used this for regular
     backups for quite a while, but I have now replaced it with [restic](https://restic.net/).
-
-- name: "Möhre"
-  disabled: true
-  id: moehre
-  link: https://github.com/jojonas/moehre
-  tags: [python, tool]
-  tech: Python, PyQt, PyAudio, OpenGL
-  time: Jan 2015
-  sort_time: 20150101
-  sort_effort: 5
-  image: moehre_stripe.png
-  links:
-  - {title: GitHub, url: "https://github.com/jojonas/moehre"}
-  description: A node based software synthesizer for generating instrument samples
-    or sound effects I worked on with my roommate [Jonas Lieb](http://www.jonaslieb.com/).
 
 - name: Spacewalk
   id: spacewalk
@@ -889,3 +858,34 @@
   - {title: Blog Post, url: "https://theshoemaker.de/2015/02/exam-preparation-avoidance-game-jam/"}
   description: A very bad simulation, but a fairly fun game about being a flight coordinator.
     Made just for fun in a 48h marathon with my roommate [Jonas Lieb](http://jonaslieb.com/).
+
+- name: "C++ ECS"
+  disabled: true
+  id: cpp-ecs
+  link: https://github.com/pfirsich/cpp-ecs
+  tags: [c++, library]
+  tech: C++
+  time: "Sep 2018 – Oct 2018"
+  sort_time: 20181001
+  sort_effort: 12
+  image: ecs_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/cpp-ecs"}
+  description: This is an entity-component-system library inspired by ideas presented
+    in Allan Deutsch's C++Now 2018 talk [Game Engine API Design](https://www.youtube.com/watch?v=W3ViIBnTTKA).
+    (Reword this if I don't decide to remove it)
+
+- name: "Möhre"
+  disabled: true
+  id: moehre
+  link: https://github.com/jojonas/moehre
+  tags: [python, tool]
+  tech: Python, PyQt, PyAudio, OpenGL
+  time: Jan 2015
+  sort_time: 20150101
+  sort_effort: 5
+  image: moehre_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/jojonas/moehre"}
+  description: A node based software synthesizer for generating instrument samples
+    or sound effects I worked on with my roommate [Jonas Lieb](http://www.jonaslieb.com/).
