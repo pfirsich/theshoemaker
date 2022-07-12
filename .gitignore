@@ -1,0 +1,4 @@
+output/
+untracked/
+wp_data/theshoemaker.WordPress.*
+posts/*.draft

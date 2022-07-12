@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %} &raquo; theshoemaker</title>
+    <style type="text/css">
+        body {
+            /*
+            font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+            font-family: "Times New Roman", Times, serif;
+            font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+            */
+            font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+
+            color: #454545;
+            background-color: #fafafa;
+            font-size: 19px;
+            line-height: 1.5em;
+            max-width: 800px;
+            margin: 10px auto;
+            padding: 10px;
+
+            background-color: #232323;
+            color: #d3d3d3;
+        }
+
+        #headerbox {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        #title {
+            font-size: 3em;
+            /*
+            It seems line-height in em is resolved to pixels inside the rule that specifies it.
+            So at this point, where we change font-size, the line-height is still the same as the one
+            in body! In pixels! So we have to set the line-height again (even to the same value), to make sure
+            it's not too small and the text does not break out of the title div
+            */
+            line-height: normal;
+            letter-spacing: .05em;
+            font-weight: 200;
+            margin-right: 20px;
+        }
+
+        a {
+            color: #5292e7;
+            /*color: #41a4a6; normal text: #fafafa, bg: #444*/
+            color: #11c8b0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #656565;
+        }
+
+        #menu ul {
+            list-style-type: none;
+            padding-left: 0;
+            /* to remove whitespace between <li>*/
+            display: flex;
+        }
+
+        #menu li:not(:last-child) {
+            border-right: 1px solid;
+            padding-right: 10px;
+        }
+
+        #menu li:not(:first-child) {
+            padding-left: 10px;
+        }
+
+        .post:not(:first-child) {
+            margin-top: 50px;
+            border-top: 1px solid;
+        }
+
+        #blognav {
+            min-width: 300px;
+            margin-left: 15px;
+        }
+
+        .postdate {
+            font-style: italic;
+        }
+
+        #footerbox {
+            border-top: 1px solid;
+        }
+
+        .postlistdate {
+            color: #777;
+            font-style: italic;
+        }
+
+        .codehighlight pre {
+            padding: 6px 12px;
+            border: 1px solid #555;
+        }
+
+        code {
+            font-size: 15px;
+        }
+
+        /*
+         * This is for single-backtick code,
+         * but we need to make sure we don't match code blocks.
+         * I don't like this solution, but I can't find a better one.
+         */
+        :not(pre)>code {
+            background-color: #3a3a3a;
+            padding: 3px;
+        }
+    </style>
+
+    {% block header %}{% endblock %}
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <div id="headerbox">
+                <div id="title">
+                    <a href="/">theshoemaker</a>
+                </div>
+                <div id="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="/">home</a></li>
+                            <li><a href="/blog">blog</a></li>
+                            <li><a href="/projects">projects</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+
+        <!--
+        <footer>
+            <div id="footerbox">
+                <p>© 2022 theshoemaker</p>
+            </div>
+        </footer>
+        -->
+    </div>
+</body>
+
+</html>

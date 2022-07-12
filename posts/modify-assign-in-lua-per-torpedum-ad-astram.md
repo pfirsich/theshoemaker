@@ -1,0 +1,19 @@
+---
+publish_date: '2014-12-30 12:42:00'
+summary_length: 4
+title: The Delightful Reunification With Modify-Assign in Lua and Per Torpedum ad Astram
+---
+Jonas, who already worked on Spacewalk with me, and another fellow student of mine recently became roommates after Jonas and third said roommate spent a year abroad. Jonas and I decided to visit the Global Game Jam in Cologne in January and felt it was necessary to do some kind of warm up to get comfortable with the technology we plan on using and produce some useful code for loading <a href="http://www.mapeditor.org/">Tiled</a> (which just keeps getting better and better, geez!) maps and general boilerplate. After a while I again noticed the painful lack of `+=`, `-=`, `*=` and `/=` operators in Lua. I remembered writing a Python script (which is bad) that compiled ".mond" to Lua only adding said assignment operators in functionality and significant whitespaces instead of those ugly `then`/`do`/`end` blocks. I now know though, that it is possible to add loaders to Lua that will be invoked once a module will be "require"d in a source file. So I wrote a loader that gives me those missing operators (replaces them before passing the source to loadstring)! The loader and an example of this using löve2D can be found here:
+
+[https://github.com/pfirsich/ModifyAssignInLua](https://github.com/pfirsich/ModifyAssignInLua)
+
+If I or you (if anyone would ever read this) would like to use it, you just have to rename your actual `main.lua` to `realmain.lua` (or however you want to name it. But don't forget to change the name in `main.lua`!) and include `mond.lua` and `main.lua` in your project folder (without löve the usage is very similar to this).
+
+As you can see in `mond.lua`, line 33 ff. I also kept the option to parse completely different source files and do something like I did in the Python version of Mond (replacing the Lua blocks with significant whitespaces (actually the other way round of course)), but I think that this is, though nice and fun, a little of a waste of time, since I should actually be working important things.
+
+The last 5 posts were part of the TAG Jam, which I got to host, since I won TAG Jam 5: <a href="http://blog.ratalaika.com/tag/tagjam/">http://blog.ratalaika.com/tag/tagjam/</a> (here you can find my game too of course! **Read the readme**!) (<strong><span style="text-decoration: underline;">Update 7th of April 2015</span></strong>: This link seems to be broken. You can <a href="https://www.dropbox.com/s/gvb3vomavw5lrxu/PerTorpedumAdAstram.zip?dl=0">download it from my Dropbox</a> instead. Or <a href="https://www.youtube.com/watch?v=723aAV4LAd8">watch a video of it on Youtube</a>). I think the version that can be downloaded on Ratalaika's blog is not the most recent one and not the one with all known bugs fixed and all typos corrected, but this game is already almost one year old, so I don't really know what is what.
+
+Screenshot for completeness' sake:
+[![Per Torpedum Ad Astram](/images/per_torpedum_ad_astram.png)](/images/per_torpedum_ad_astram.png)
+
+This time, as stated in the readme, I worked on the game with a lot less pressure. I didn't want it to be good. I did it myself and I just wanted to spend a little time programming a game that I think would be cool. I purposely kept the scope of the game as small as I could imagine and this time it was just right for 48 hours. Apparently I still have problems keeping the scope small enough and not trying to do too much. This was easily the most fun game jam yet. Also the game being a game emulating the Starfox gameplay helped a lot, since it is one of my favourite franchises and one I have the fondest memories of. I'm also a little proud of the unique graphics style. By that I don't just mean the exceptionally sub-par artwork, but the pseudo 3D visuals and the clouds and the graphics feel in general.

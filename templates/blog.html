@@ -1,0 +1,22 @@
+{% extends "templates/base.html" %}
+{% block title %}Blog{% endblock %}
+{% block content %}
+<div id="blog">
+    <div id="posts">
+        {% for post in posts %}
+        <div class="post">
+            {% set post_url = "posts/" + post.filename | replace('.md', '') %}
+            <h2><a href="{{ post_url }}">{{ post.title }}</a></h2>
+            <p class="postdate">
+                <time datetime="{{ post.publish_date }}">{{ post.publish_date | datetime("%Y-%m-%d") }}</time>
+                {% if post.update_date is defined %}
+                (Updated: <time datetime="{{ post.update_date }}">{{ post.update_date | datetime("%Y-%m-%d") }}</time>)
+                {% endif %}
+            </p>
+            {{ post.content | safe | limit(".", post.summary_length) }}
+            <a href="{{ post_url }}">Continue reading</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

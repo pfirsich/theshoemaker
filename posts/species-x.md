@@ -1,0 +1,21 @@
+---
+publish_date: '2012-09-01 19:52:00'
+summary_length: 3
+title: Species X
+---
+I tried to make a game for ludum dare #24. The theme was evolution and I decided to make a game about some sort of species that evolves and you would have to fight. Because I was in a hurry and I'm not very good at such things I ended up with this game. It features a cellular automaton resembling a fungus that spreads through the level and sort of "zombifies" people and hopefully other living beings (not yet implemented. Neither in my entry nor in the current version), making them slaves to spread the infection further. The goal would be destroying the fungus and surviving the attacks of the evil fungus-slaves surrounding it. Unfortunately the game around this idea emerged to a be a top-down shooter and all in all just way to complex to choose for a 48 hour competition. In short: The game I entered was extraordinarily bad. Really, really bad. I recommend trying it though for comparison:
+
+<a href="http://www.ludumdare.com/compo/ludum-dare-24/?action=preview&amp;uid=14778">http://www.ludumdare.com/compo/ludum-dare-24/?action=preview&amp;uid=14778</a><br />(Screenshot and download link inside)
+
+I was so unsatisfied and unhappy with my entry that I decided to see it as my honour to make this game an enjoyable experience. It proved to not be that trivial on numerous occasions but I think I made quite a bit of progress up until now.
+
+You can find it here:<br /><a href="https://dl.dropbox.com/u/9961608/SpeciesX_new_and_improved_alpha.zip">https://dl.dropbox.com/u/9961608/SpeciesX_new_and_improved_alpha.zip</a>
+
+Screenshot:
+![Species X Screenshot](/images/species_x_screenshot.png)
+
+(Note: Space triggers a flame-thrower-effect that has no impact on the game world but looks nice and I'm thinking about adding a flame-thrower as a new weapon (or 30-seconds-ish super power up)) <br />At first you might notice, that the first version was WAY harder. I am pretty sure that it's safe to say that it's impossible to complete a level. Mainly because the enemies would spawn everywhere constantly. So right after sleeping and waking up the next morning I only allowed enemies to spawn if they would spawn on a tile that's currently visible and adjusted the rate of enemies spawning, which changed the experience <b>a lot</b>.<br />You feel way less overwhelmed and have the feeling of having more overview what's actually happening in the level.<br />I then changed the controls so you would throw grenades with G instead of changing the weapon, throwing and changing back which appeared to be very inconvenient mid-fight. After adding film grain and various particle effects (blood, goo (when shooting the fungus roots) and little sparkles (spores, I'd say) over the fungus and a cheap fire during a grenade explosion) the next big problem would have been the absolute lack of fun when destroying the fungus. There had to be some sort of satisfaction from destroying it. Until then killing the fungus only meant having to destroy some other fungus somewhere else now. There was no reward. So I decided to change the cellular automaton drastically. I decided that I want to have the regular fungus connected to it's roots. Turning the spot light on the roots, because they deserve it! In the end this connection was implemented in the way that the root fungi dispatched waves through the fungus matter, which get carried on by the regular fungus. Additionally the fungi would die if they weren't "freshened up" by a wave recently. Also the fungi would now only be able to spread if they are just freshened up. This made the fungus seem way more like something organic and added to the atmosphere drastically.
+
+Still there seems to be a problem with the game being horribly repetitive and just not very interesting. Maybe I have to blow up this game idea with actual progress (different levels, gradually introducing weapons, doors, keys you have to find, generators you have to turn on, stuff like this) to make it interesting, but maybe this is equivalent to saying that this might be a good foundation for top-down 2D horror-shooter. Let me know what you think and how I could improve on this!
+
+Edit: This is all programmer art! If anyone is interested in replacing some of the images with better ones, I would really appreciate your help!

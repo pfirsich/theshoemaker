@@ -1,0 +1,228 @@
+{% extends "templates/base.html" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block header %}
+<style>
+    .project {
+        text-align: justify;
+    }
+
+    .project h3 {
+        text-align: center;
+        font-size: 2em;
+        line-height: normal;
+        margin-bottom: 0;
+    }
+
+    .project .stripe {
+        width: 900px;
+        height: 250px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .project .tech {
+        text-align: center;
+        margin: 5px;
+    }
+
+    .filters {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .tag {
+        margin-right: 5px;
+    }
+
+    .tag[data-enabled="true"] {
+        text-decoration: underline;
+    }
+
+    .tag[data-enabled="false"] {
+        text-decoration: line-through;
+        color: #888;
+    }
+
+    .tag:hover {
+        color: #fff;
+    }
+
+    /* https://www.w3schools.com/css/css_tooltip.asp */
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted #fafafa;
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        position: absolute;
+        border-radius: 5px;
+        z-index: 1;
+        background-color: #111111;
+        width: 500px;
+        top: 100%;
+        left: 50%;
+        margin-left: -250px;
+        padding: 10px;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+</style>
+
+<script>
+    /*// compare strings like this:
+    function nameAscCompare(a, b) {
+        aName = a.getElementsByClassName("projectname")[0].innerHTML;
+        bName = b.getElementsByClassName("projectname")[0].innerHTML;
+        return aName.localeCompare(bName);
+    }
+    */
+
+    window.addEventListener("load", () => {
+        document.querySelectorAll(".tag").forEach(tag => {
+            tag.addEventListener("click", () => onClickTag(tag));
+        });
+
+        document.querySelector("#sorting").addEventListener("change", (event) => sortProjects(event.target));
+    });
+
+    function getCmp(attr, reverse) {
+        return function (a, b) {
+            let v = parseFloat(a.getAttribute("data-sort-" + attr))
+                - parseFloat(b.getAttribute("data-sort-" + attr));
+            return reverse * v;
+        }
+    }
+
+    function sortProjects(selectElement) {
+        let compareFuncs = {
+            "index": getCmp("index", 1),
+            "time": getCmp("time", -1),
+            "effort": getCmp("effort", -1),
+        }
+        let compareFunc = compareFuncs[selectElement.value];
+        if (compareFunc == undefined) {
+            console.log("Invalid sort key");
+            return;
+        }
+
+        let projects = Array.from(document.getElementsByClassName("project"));
+        projects.sort(compareFunc);
+
+        let projectsContainer = document.getElementById("projects");
+        projectsContainer.innerHTML = "";
+
+        for (const project of projects) {
+            projectsContainer.appendChild(project);
+        }
+    }
+
+    function updateProjects() {
+        let tagMap = {};
+        for (const tag of document.getElementsByClassName("tag")) {
+            tagMap[tag.getAttribute("data-tagname")] = tag.getAttribute("data-enabled") == "true";
+        }
+
+        for (let project of document.getElementsByClassName("project")) {
+            const projectTags = project.getAttribute("data-tags").split(",");
+            const visible = projectTags.some(tag => tagMap[tag]);
+            project.style["display"] = visible ? "block" : "none";
+        }
+    }
+
+    function onClickTag(clickedTag) {
+        const tagName = clickedTag.getAttribute("data-tagname");
+        for (let tag of document.getElementsByClassName("tag")) {
+            tag.setAttribute("data-enabled",
+                tagName == "all" || tagName == tag.getAttribute("data-tagname"));
+        }
+        // let enabled = clickedTag.getAttribute("data-enabled") == "true";
+        // clickedTag.setAttribute("data-enabled", (!enabled).toString());
+
+        updateProjects();
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+<h1>Projects</h1>
+<p>This excludes about 5 years worth of stuff I did before university and before I knew how to use git. There
+    are also many dozens of weekend-projects that I have omitted and some way-more-than-a-weekend projects that are
+    simply too incomplete/broken to show off in any capacity.</p>
+
+<div class="filters">
+    <div class="tags">
+        {% set tags = projects | sum(attribute="tags", start=[]) | unique | sort %}
+        Tags:
+        <span class="tag" data-tagname="all" data-enabled="true">
+            All
+        </span>
+        {% for tag in tags %}
+        <span class="tag" data-tagname="{{ tag }}" data-enabled="true">
+            {{ tag_names[tag] }}
+        </span>
+        {% endfor %}
+    </div>
+
+    <div class="sorting">
+        <div class="tooltip">Sort By
+            <span class="tooltiptext">
+                ⏺ <b>Joel's Selection</b>: What I think is worth showing the most is listed first. Of course this is
+                biased towards recency and it's not sorted really well towards the bottom.
+                <br />
+                ⏺ <b>Most Effort</b>: The projects listed below have an HTML attribute ("data-sort-effort") containing
+                roughly the equivalent of the number of 8h work days spent on it. I do not show these values, because
+                they are just estimated.
+            </span>
+        </div>:
+        <!-- autocomplete="off" because of this: https://bugzilla.mozilla.org/show_bug.cgi?id=46845 -->
+        <select id="sorting" autocomplete="off">
+            <option value="index" selected>Joel's Selection</option>
+            <option value="time">Most Recent First</option>
+            <option value="effort">Most Effort First</option>
+        </select>
+    </div>
+</div>
+
+<div id="projects">
+    {% for project in projects | rejectattr("disabled", "eq", True) %}
+    <article id="{{ project.id }}" class="project" data-tags="{{ project.tags | join(',') }}"
+        data-sort-index="{{ loop.index0 }}" data-sort-time="{{ project.sort_time }}"
+        data-sort-effort="{{ project.sort_effort }}">
+        <h3>
+            <a class="projectname" href="#{{ project.id }}">{{ project.name }}</a>
+        </h3>
+
+        <p class="tech">
+            {{ project.tech }}
+            &mdash;
+            {{ project.time }}
+            {% if project.links | length > 0 %}
+            &mdash;
+            {% endif %}
+            {% set comma = joiner(",") %}
+            {% for link in project.links %}
+            {{ comma() }}
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% endfor %}
+        </p>
+
+
+        <a href="{{ project.link }}">
+            <img class="stripe" src="images/{{ project.image }}">
+        </a>
+
+        {{ project.description | markdown | safe }}
+    </article>
+    {% endfor %}
+</div>
+{% endblock %}
