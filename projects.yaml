@@ -231,7 +231,7 @@
   description: Much like [Per Torpedum Ad Astram](#per-torpedum-ad-astram) this was
     a game, where I really didn't even try to make something anyone would like and
     I ended up having the most fun I ever had making a game jam game. I love the resulting
-    game, even though it is objectively extremely unfunny and probably bad game design.
+    game immensely, even though it is objectively unfunny and bad game design.
 
 - name: JOML
   id: joml
@@ -606,8 +606,8 @@
   - {title: Blog Post, url: "https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/"}
   description: "I started a little “engine” (with normal mapping and lighting\
     \ (dynamic and some cool global pre-baked lighting) for a potential Metroidvania\
-    \ I wanted to make. But my ideas were too vague and I'm still not sure what exactly\
-    \ I wanted to do there. REWORD REWORD"
+    \ I wanted to make. Most of the time was spent on technical aspects and I never\
+    \ got to include actual gameplay before the project fizzled away.
 
 - name: (PL)ANT LIFE
   id: plant-life
