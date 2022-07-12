@@ -79,14 +79,6 @@
 </style>
 
 <script>
-    /*// compare strings like this:
-    function nameAscCompare(a, b) {
-        aName = a.getElementsByClassName("projectname")[0].innerHTML;
-        bName = b.getElementsByClassName("projectname")[0].innerHTML;
-        return aName.localeCompare(bName);
-    }
-    */
-
     window.addEventListener("load", () => {
         document.querySelectorAll(".tag").forEach(tag => {
             tag.addEventListener("click", () => onClickTag(tag));
@@ -145,8 +137,6 @@
             tag.setAttribute("data-enabled",
                 tagName == "all" || tagName == tag.getAttribute("data-tagname"));
         }
-        // let enabled = clickedTag.getAttribute("data-enabled") == "true";
-        // clickedTag.setAttribute("data-enabled", (!enabled).toString());
 
         updateProjects();
     }
