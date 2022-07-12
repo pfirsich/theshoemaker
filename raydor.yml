@@ -17,7 +17,7 @@ files:
   projects.html:
     template: templates/projects.html
     vars:
-      projects: !load projects.json
+      projects: !load projects.yaml
       tag_names:
         c++: C++
         game: Game

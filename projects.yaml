@@ -1,0 +1,891 @@
+
+- name: htcpp
+  id: htcpp
+  link: https://github.com/pfirsich/htcpp
+  tech: C++
+  tags: [c++, library, tool, web]
+  time: "Jul 2021, Apr 2022 – today"
+  sort_time: 20220731
+  sort_effort: 40
+  image: htcpp_stripe.png
+  links:
+  - {title: GitHub,  url: "https://github.com/pfirsich/htcpp"}
+  description: 'htcpp is a HTTP server that hosts the website you are on right now.
+    Initially I created started it in 2021 as a way to try out [io_uring](https://en.wikipedia.org/wiki/Io_uring),
+    which is a fairly new asynchronous Linux Kernel IO interface (C++ wrapper: [liburingpp](https://github.com/pfirsich/liburingpp)).
+    In July 2021 I couldn''t even come up with more features to implement, except
+    TLS, which I decided to tackle in April 2022. After that I thought that not much
+    more was missing to actually host something with it and a couple of hundreds of
+    hours later I am still working on it to make that happen.'
+
+- name: melee-framedata
+  id: melee-framedata
+  link: http://melee-framedata.theshoemaker.de/
+  tags: [python, web]
+  tech: Python, HTML/CSS
+  time: "Apr 2018 – Jun 2018"
+  sort_time: 20180601
+  sort_effort: 50
+  image: melee-framedata_stripe.png
+  links:
+  - {title: Website, url: "http://melee-framedata.theshoemaker.de/"}
+  - {title: GitHub (Website), url: "https://github.com/pfirsich/melee-framedata"}
+  - {title: GitHub (.dat file reader), url: "https://github.com/pfirsich/meleeFrameDataExtractor"}
+  - {title: GitHub (Frame Data Extractor), url: "https://github.com/pfirsich/meleeFrameDataExtractor"}
+  description: melee-framedata is a website with in-depth frame data for Super Smash
+    Bros. Melee, inspired by the move pages on [SmashWiki](https://www.ssbwiki.com/Samus_(SSBM)/Neutral_aerial).
+    It is based on two other programs of mine, [meleeDat2Json](https://github.com/pfirsich/meleeDat2Json)
+    and [meleeFrameDataExtractor](https://github.com/pfirsich/meleeFrameDataExtractor)
+    which dump the character data files right from the Super Smash Bros. Melee disk
+    image ([gciso](#gciso)) to JSON and generate JSON framedata from these dumps respectively.
+    [meleeframedata.com](https://meleeframedata.com/) bases their data on my results
+    (see their Info section under "Data Sources"). I consider this one of the best
+    things I have made, though it is hard to understand for most people what it is
+    or why it is cool.
+
+- name: exquisite
+  id: exquisite
+  link: https://github.com/pfirsich/exquisite
+  tech: C++
+  tags: [c++, tool]
+  time: "Jul 2020 – Aug 2020"
+  sort_time: 20200801
+  sort_effort: 35
+  image: exq_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/exquisite"}
+  description: There was a time at work, where our graphical interface was not working
+    properly and I had to use vim for a few weeks. A few years earlier I spent a good
+    half year with a vim cheat sheet in front of me to learn vim and concluded that
+    I would never be as fast at editing text with it than I already am with [Sublime
+    Text](https://www.sublimetext.com/). Since there seems to be a dire lack of an
+    editor of the TextMate family (to which Sublime Text belongs as well) for the
+    terminal, I decided to try my hand at it. This editor is not intended to be used
+    by anyone else but me, so it can be fully tailored to my needs without compromises.
+    It has multiple buffers, a command palette, C++ highlighting using [tree-sitter](https://tree-sitter.github.io/tree-sitter/),
+    find and various cursor movements and I already use it for small editing jobs
+    here and there, but some major features are missing to switch to it, which I have
+    not gotten around to yet.
+
+- name: Spectacular Shatter Buddies
+  id: spectacular-shatter-buddies
+  link: http://shatterbuddies.net/
+  tech: "löve/Lua, Python"
+  tags: [game, lua]
+  time: "Jan 2017 – Aug 2018"
+  sort_time: 20180801
+  sort_effort: 400
+  image: ssb_stripe.png
+  links:
+  - {title: itch.io, url: "http://shatterbuddies.net/"}
+  - {title: Beginner Tutorial, url: "https://www.youtube.com/watch?v=TQ7Ru947PTI"}
+  - {title: Advanced Tutorial, url: "https://www.youtube.com/watch?v=2VmGMA1wzo4"}
+  description: I've been a huge fan of Super Smash Bros. Melee for a while now, but
+    it is relatively hard to get your friends into it due to the high technical skill
+    barrier, requiring many hours of training solo to start experiencing "the real
+    game". Therefore I decided to try my hand at making a game that captures the spirit
+    of Melee as much as possible while also making it a little more accessible and
+    adding the modern multiplayer features that are sorely missed nowadays. I spent
+    multiple thousands of hours working on it, but ultimately there are just not enough
+    people interested in something like this and some time in 2021 I turned off the
+    servers. You can still play it locally though.
+
+- name: IRPS Arena
+  id: irps-arena
+  link: ''
+  tech: C++
+  tags: [c++, game]
+  time: "Aug 2021 – Oct 2021"
+  sort_time: 20211015
+  sort_effort: 70
+  image: irps_arena_stripe.png
+  links:
+  - {title: Video, url: "https://youtu.be/K2D1kBn7oDE"}
+  description: "I wanted to make a game and decided to make a clone of [FÄRG](https://ditto.itch.io/farg)\
+    \ with online multiplayer, which I have wanted to do for a very long time. This\
+    \ of course comes with more constraints and more possibilities and you end up\
+    \ with a very different game (which was expected). I worked on this very intensely\
+    \ for a few months, but then found myself being somewhat on the fence about whether\
+    \ it is worth it to invest a couple thousand hours into finishing it. The repository\
+    \ is private, since I considered selling it and I don't want to pay for servers\
+    \ at the moment."
+
+- name: makelove
+  id: makelove
+  link: https://github.com/pfirsich/makelove
+  tech: Python
+  tags: [python, tool]
+  time: Feb 2020
+  sort_time: 20200201
+  sort_effort: 23
+  image: makelove_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/makelove"}
+  description: "This is a build/packaging tool for [löve](https://love2d.org),\
+    \ which I have used for many games on this page and liked quite a lot for many\
+    \ years. After [jprof](#jprof) this is the second most used piece of software\
+    \ of mine."
+
+- name: jprof
+  id: jprof
+  link: https://github.com/pfirsich/jprof/
+  tags: [lua, tool]
+  tech: "löve/Lua"
+  time: "Nov 2017 – Jun 2018"
+  sort_time: 20180601
+  sort_effort: 24
+  image: jprof_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/jprof/"}
+  description: "Usually Lua programs are profiled by setting hooks using the built-in\
+    \ function debug.sethook, but sadly these hooks are not reliably called in LuaJIT,\
+    \ which makes most profiling libraries for Lua not usable in the current version\
+    \ of löve. jprof is a semi-makeshift solution for profiling löve applications\
+    \ with some extra work, but while also providing no significant slowdown while\
+    \ profiling. It is probably the piece of software of mine that is most used by\
+    \ other people."
+
+- name: lua-discordRPC
+  id: lua-discordrpc
+  link: https://github.com/pfirsich/lua-discordRPC
+  tags: [library, lua]
+  tech: LuaJIT
+  time: "Jan 2018 – May 2018"
+  sort_time: 20180501
+  sort_effort: 1
+  image: discordrpc_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/lua-discordRPC"}
+  description: LuaJIT bindings for the [Discord Rich Presence](https://github.com/discordapp/discord-rpc)
+    library via FFI.
+
+- name: C++ glTF Library
+  id: gltf-cpp
+  link: https://github.com/pfirsich/gltf
+  tech: C++
+  tags: [c++, library]
+  time: Jul 2020
+  sort_time: 20200715
+  sort_effort: 10
+  image: gltf_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/gltf"}
+  description: '[glTF](https://www.khronos.org/gltf/) is a scene format, which I tremendously
+    like the idea and execution of, so I made a modern C++ library to read it. So
+    far I have only used it in [Arbitrary Complexity](#arbitrary-complexity). It supports
+    the whole specification and some extensions, except morph targets.'
+
+- name: glwrap
+  id: glwrap
+  link: https://github.com/pfirsich/glwrap
+  tech: C++, OpenGL
+  tags: [c++, library]
+  time: Jun 2020
+  sort_time: 20200701
+  sort_effort: 32
+  image: glwrap_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/glwrap"}
+  description: After writing wrapper classes for OpenGL primitives many, *many*, **many**
+    times and not liking them a year later, I (again) started writing wrapper classes,
+    but this time with a slightly new concept. Having a low-level wrapper that extremely
+    closely wraps the OpenGL primitives with as little opinions of mine mixed into
+    it as possible and a high-level wrapper on top that makes common tasks easier.
+    This finally proved to be the right balance, which I before never seemed able
+    to strike. I am very happy with this and have used it in [Arbitrary Complexity](#arbitrary-complexity),
+    [IRPS Arena](#irps-arena), [muwa](#muwa), [myl](#myl) and the examples for the
+    [glTF Library](#gltf-cpp).
+
+- name: Arbitrary Complexity
+  id: arbitrary-complexity
+  link: https://pfirsich.itch.io/arbitrary-complexity
+  tech: C++, OpenGL
+  tags: [c++, game, gamejam]
+  time: "7dfps 2020 (Dec 4th – Dec 14th)"
+  sort_time: 20201220
+  sort_effort: 15
+  image: arbitrary_complexity_stripe.png
+  links:
+  - {title: itch.io, url: "https://pfirsich.itch.io/arbitrary-complexity"}
+  - {title: GitHub, url: "https://github.com/pfirsich/7dfps_2020"}
+  description: 7dfps always was a game jam I really wanted to participate in, but
+    it took a long hiatus and I missed the first few ones after that, so I wanted
+    to make something special. I am very happy with this game, though it never really
+    turned into what we had envisioned. I think it would take a few months of work
+    to get it there and I kind of plan to maybe do that some day.
+
+- name: What a Mess
+  id: what-a-mess
+  link: https://pfirsich.itch.io/what-a-mess
+  tech: "löve/Lua"
+  tags: [game, gamejam, lua]
+  time: "LÖVE Jam 2020 (Feb 22nd - Feb 25th)"
+  sort_time: 20200225
+  sort_effort: 4
+  image: what_a_mess_stripe.png
+  links:
+  - {title: itch.io, url: "https://pfirsich.itch.io/what-a-mess"}
+  - {title: GitHub, url: "https://github.com/pfirsich/lovejam20"}
+  - {title: Tutorial Video, url: "https://www.youtube.com/watch?v=rBzPzOfCInA"}
+  - {title: Speedrun, url: "https://www.youtube.com/watch?v=rqkKjjP6l-8"}
+  description: Much like [Per Torpedum Ad Astram](#per-torpedum-ad-astram) this was
+    a game, where I really didn't even try to make something anyone would like and
+    I ended up having the most fun I ever had making a game jam game. I love the resulting
+    game, even though it is objectively extremely unfunny and probably bad game design.
+
+- name: JOML
+  id: joml
+  link: https://github.com/pfirsich/joml
+  tech: C++, Python
+  tags: [c++, library, python]
+  time: Apr 2021
+  sort_time: 20210422
+  sort_effort: 30
+  image: joml_stripe.png
+  links:
+  - {title: Specification, url: "https://github.com/pfirsich/joml"}
+  - {title: C++ Parser, url: "https://github.com/pfirsich/joml-cpp"}
+  - {title: Python Parser, url: "https://github.com/pfirsich/joml-python"}
+  description: I consider every common configuration file format objectively horrible.
+    JSON does not have comments, TOML is too complicated and inhomogenous, YAML is
+    just completely crazy and huge (see [here](https://github.com/pfirsich/joml#alternatives)
+    for more notes on this). So I though I should make some YAML/JSON-like small format
+    that puts an emphasis on being human-written and machine-readable (easy to parse!).
+    The specification is not finished, because there are some open questions, but
+    it is enough to write a parser, which I have done for C++ and Python (my most
+    used languages these days). I have used JOML files for [muwa](#muwa), [htcpp](#muwa),
+    [IRPS Arena](#irps-arena) and stuff that is not on this page or GitHub. I should
+    probably finish it up and share it with the world.
+
+- name: kaun
+  id: kaun
+  link: https://github.com/pfirsich/kaun
+  tags: [c++, library, lua]
+  tech: C++, Lua
+  sort_time: 20180815
+  sort_effort: 28
+  time: Aug 2018
+  image: kaun_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/kaun"}
+  description: "As an avid user of the [löve](https://love2d.org/) framework, I\
+    \ have been looking for an alternative for 3D games that has a “löve-ly”\
+    \ feel to it for a long time, but never really found a framework/engine I found\
+    \ appealing. So I started to work on a framework of my own, based on an older\
+    \ project of mine, [NGN](#ngn). kaun is a Lua module provided as a shared library\
+    \ and merely a replacement of löve's graphics module (therefore to be used\
+    \ alongside löve). The screenshot is of an example project, that started as\
+    \ a game for Ludum Dare 42 (which I did not finish, since too much kaun related\
+    \ work kept getting in the way – which I expected). The strength of the water\
+    \ foam is determined by the depth value differences between the ground and the\
+    \ water. It also features soft shadows (Percentage-Closer Filtering) and procedural\
+    \ terrain."
+
+- name: myl
+  id: myl
+  link: https://github.com/pfirsich/myl
+  tech: C++, Lua
+  tags: [c++, library, lua]
+  time: May 2020 - Jun 2020
+  sort_time: 20200615
+  sort_effort: 28
+  image: myl_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/myl"}
+  - {title: Video, url: "https://www.youtube.com/watch?v=zW5ACxGnX8E"}
+  description: I have never really liked any game engine for 3D games, which turned
+    out to be a problem in game jams many times. I have also tried to fix that problem
+    many times and never succeeded. This is another iteration, where I wanted to use
+    the [LuaJIT FFI](https://luajit.org/ext_ffi.html) to access structs I built at
+    runtime, specified in TOML files (e.g. [components.toml](https://github.com/pfirsich/myl/blob/master/examples/test/components.toml)).
+    If you are a programmer you might be thinking "what? oh no." and you would be
+    right. This relies on [undefined behaviour](https://en.wikipedia.org/wiki/Undefined_behavior)
+    heavily and it breaks in shocking ways across compilers and compiler versions.
+    So I consider it a research project more than anything. I like the direction,
+    but I need a couple more good ideas to turn it into a viable piece of software.
+
+- name: clipp
+  id: clipp
+  link: https://github.com/pfirsich/clipp
+  tech: C++
+  tags: [c++, library]
+  time: Jun 2022
+  sort_time: 20220610
+  sort_effort: 14
+  image: clipp_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/clipp"}
+  description: After having used a great many C++ command line argument parsing libraries
+    I always found it annoying and redundant to plumb their output into a struct which
+    contains the CLI arguments in a well-typed way. I have pondered whether there
+    was a better way to do it and I finally had the idea I decided to implement in
+    this library. I have used it for [htcpp](#htcpp) and I am pretty sure I like this
+    much more than any other library I have used, so I will keep using it.
+
+- name: cpprom
+  id: cpprom
+  link: https://github.com/pfirsich/cpprom
+  tech: C++
+  tags: [c++, library]
+  time: Jun 2022
+  sort_time: 20220620
+  sort_effort: 8
+  image: cpprom_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/cpprom"}
+  description: At work we started using [Prometheus](https://prometheus.io/), a metrics
+    and alerting system, and I decided to play with it in my home server setup, after
+    which I kind of fell in love with it. I decided I had to add support for it to
+    [htcpp](#htcpp), but make it a self-contained reusable library, so I get to use
+    it again in the future.
+
+- name: muwa
+  id: muwa
+  link: https://github.com/pfirsich/muwa
+  tech: C++
+  tags: [c++, tool]
+  time: "Aug 2021 – Oct 2021"
+  sort_time: 20211015
+  sort_effort: 22
+  image: muwa_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/muwa"}
+  description: This is a generic 2D map editor intended as the evolution of [Screwdriver](#screwdriver).
+    It was made for [IRPS Arena](#irps-arena), so it is private on GitHub for now,
+    but I should absolutely change that at some point and write some documentation.
+
+- name: Rodent Rampage
+  id: rodent-rampage
+  link: https://globalgamejam.org/2020/games/rodent-rampage-1
+  tech: Unity
+  tags: [game, gamejam]
+  time: "Global Game Jam 2020 (Jan 31st – Feb 2nd)"
+  sort_time: 20200202
+  sort_effort: 4
+  image: rodent_rampage_stripe.png
+  links:
+  - {title: globalgamejam.org, url: "https://globalgamejam.org/2020/games/rodent-rampage-1"}
+  - {title: GitHub, url: "https://github.com/pfirsich/ggj2020"}
+  description: For most game jam games on here I remember quite well what features
+    or game design aspects I had issues with or even how I ended up implementing some
+    things, but for this game I mostly remember my team! I had a lot of fun with you
+    all and this was probably one of my favorite Global Game Jams because of it. If
+    any of you reads this, feel free to shoot me a message!
+
+- name: "C++ ECS"
+  disabled: true
+  id: cpp-ecs
+  link: https://github.com/pfirsich/cpp-ecs
+  tags: [c++, library]
+  tech: C++
+  time: "Sep 2018 – Oct 2018"
+  sort_time: 20181001
+  sort_effort: 12
+  image: ecs_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/cpp-ecs"}
+  description: This is an entity-component-system library inspired by ideas presented
+    in Allan Deutsch's C++Now 2018 talk [Game Engine API Design](https://www.youtube.com/watch?v=W3ViIBnTTKA).
+    (Reword this if I don't decide to remove it)
+
+- name: SudoHack
+  id: sudohack
+  link: https://theshoemaker.de/tag/sudohack/
+  tags: [game, lua]
+  tech: "löve/Lua"
+  time: "Dec 2014 – Jun 2015"
+  sort_time: 20150601
+  sort_effort: 80
+  image: sudohack_stripe.png
+  links:
+  - {title: Video, url: "http://youtu.be/j9_trXhZrmM"}
+  description: SudoHack is a bullethell roguelike featured in [a number of blog posts
+    on this blog](https://theshoemaker.de/tag/sudohack/). After the main development
+    period listed in the title university demanded a lot more attention from me and
+    I had to hibernate development until December 2015. Then after working on it again
+    I realized that I somehow lost track of the vision for this game and I had to
+    stop and just think about it for a while. After finishing my Bachelor's degree
+    I wanted to continue, but somehow never recovered my initial intention for the
+    game. I still like what the game was, so I'm sure there will be more iterations
+    of SudoHack.
+
+- name: NGN
+  id: ngn
+  link: https://github.com/pfirsich/NGN
+  tags: [c++, library]
+  tech: C++, OpenGL
+  time: "Aug 2016 – Dec 2016"
+  sort_time: 20161201
+  sort_effort: 39
+  image: ngn_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/NGN"}
+  description: NGN is one of many game engine projects I have started. This was an
+    attempt after taking a long break of developing game engines, so it turned out
+    to be outdated quite quickly, but it was the foundation for [kaun](#kaun) and
+    [myl](#myl).
+
+- name: LameTD
+  id: lametd
+  link: https://github.com/pfirsich/LameTD
+  tags: [c++, game]
+  tech: C++
+  time: "Oct 2010 – Jan 2011"
+  sort_time: 20110101
+  sort_effort: 1
+  image: lametd_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/LameTD"}
+  - {title: Video, url: "https://www.youtube.com/watch?v=P7YLTwcZt20"}
+  description: This is the oldest project on the list. I've worked on it for about
+    4 months (while still going to school) and it started out of the growing, but
+    now faded trend of tower defense games. Starting university I got quickly distracted
+    by other things, but it looks relatively nice and it's 3D, so it is listed here.
+
+- name: Screwdriver
+  id: screwdriver
+  link: https://theshoemaker.de/2015/11/isr2015-preparation-screwdriver-sparkled-lighting/
+  tags: [lua, tool]
+  tech: "löve/Lua"
+  time: "Sep 2015 – Nov 2015"
+  sort_time: 20150801
+  sort_effort: 31
+  image: screwdriver_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/Screwdriver"}
+  - {title: Video, url: "https://www.youtube.com/watch?v=x0ldw3uBklg"}
+  description: To supplement the awesome [Tiled](http://www.mapeditor.org/) map editor,
+    I decided to build an editor for non-tile based games. It is meant to be extended
+    for each different game that one wants to build levels for. In the end it was
+    not used for the game jam it was initially built for, but I used it in some other
+    projects (such as [Spectacular Shatter Buddies](#spectacular-shatter-buddies)).
+    I superseeded it by a C++ version of it, [muwa](#muwa).
+
+- name: andross
+  id: andross
+  link: https://github.com/pfirsich/andross
+  tags: [library, lua]
+  tech: "löve/Lua"
+  time: "Feb 2017 – Mar 2017"
+  sort_time: 20170301
+  sort_effort: 14
+  image: andross_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/andross"}
+  description: "andross is a Lua library for 2D skeletal/bone animations. It provides\
+    \ different backends, where a backend for [löve](https://love2d.org/) is already\
+    \ provided. There is also the possibility to implement different importers, where\
+    \ an importer for the DragonBones format is already provided as well. Originally\
+    \ it is written as a runtime for the [Cutout Animation Tools](https://github.com/ndee85/coa_tools)\
+    \ plugin for Blender, so that there are still quite some compatibility issues\
+    \ with files exported by DragonBones itself. It is used in [Spectacular Shatter\
+    \ Buddies](#spectacular-shatter-buddies)."
+
+- name: kraidGUI
+  id: kraidgui
+  link: https://github.com/pfirsich/kraidGUI/
+  tags: [library, lua]
+  tech: Lua
+  time: Apr 2015
+  sort_time: 20150401
+  sort_effort: 20
+  image: kraidGUI_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/kraidGUI/"}
+  - {title: Demo, url: "https://gfycat.com/VagueSociableJackal"}
+  description: "kraidGUI is a framework for creating GUI libraries, with a built-in\
+    \ löve backend. I only used it for [Screwdriver](#screwdriver)."
+
+- name: gciso
+  id: gciso
+  link: https://github.com/pfirsich/gciso
+  tags: [library, python, tool]
+  tech: Python
+  time: May 2018
+  sort_time: 20180501
+  sort_effort: 10
+  image: gciso_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/gciso"}
+  description: A Python library to read and write Nintendo GameCube .iso files. Also
+    has a command line interface that enables basic file operations. It is used by
+    [Melee Framedata](#melee-framedata).
+
+- name: welo
+  id: welo
+  link: https://github.com/pfirsich/welo
+  tags: [python, tool]
+  tech: Python
+  time: "May 2018 – Jun 2018"
+  sort_time: 20180501
+  sort_effort: 5
+  image: welo_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/welo"}
+  description: welo is a command line weight and calorie tracker application that
+    I used extensively to track the results of my weight loss efforts. In 2018 this
+    tool helped me lose ~25kg.
+
+- name: fexp
+  id: fexp
+  link: https://github.com/pfirsich/fexp
+  tags: [lua, tool]
+  tech: "löve/Lua"
+  time: May 2018
+  sort_time: 20180501
+  sort_effort: 12
+  image: fexp_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/fexp"}
+  - {title: Video, url: "https://streamable.com/4rolj"}
+  description: "fexp is a prototype of the file explorer I wish I could replace Windows\
+    \ Explorer with. The general idea is to make “Sublime Text for file browsing”\
+    \ with a fuzzy matching command palette for all operations and also just for navigating\
+    \ directories. It also includes tabs and panes."
+
+- name: Frontdown
+  id: frontdown
+  link: https://github.com/pfirsich/Frontdown
+  tags: [python, tool]
+  tech: Python
+  time: "Jan 2016 – Feb 2016"
+  sort_time: 20160201
+  sort_effort: 8
+  image: frontdown_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/Frontdown"}
+  description: Frontdown is an open source backup program, written in Python, that
+    uses hardlinks for space efficient, versioned backups. I used this for regular
+    backups for quite a while, but I have now replaced it with [restic](https://restic.net/).
+
+- name: "Möhre"
+  disabled: true
+  id: moehre
+  link: https://github.com/jojonas/moehre
+  tags: [python, tool]
+  tech: Python, PyQt, PyAudio, OpenGL
+  time: Jan 2015
+  sort_time: 20150101
+  sort_effort: 5
+  image: moehre_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/jojonas/moehre"}
+  description: A node based software synthesizer for generating instrument samples
+    or sound effects I worked on with my roommate [Jonas Lieb](http://www.jonaslieb.com/).
+
+- name: Spacewalk
+  id: spacewalk
+  link: https://theshoemaker.de/2013/04/spacewalk-part-1/
+  tags: [game, python]
+  tech: Python, PyOpenGL
+  time: Feb 2014
+  sort_time: 20140201
+  sort_effort: 5
+  image: spacewalk_stripe.png
+  links:
+  - {title: Video, url: "https://www.youtube.com/watch?v=_4EkPm3LLYg"}
+  - {title: Blog Post, url: "https://theshoemaker.de/2013/04/spacewalk-part-1/"}
+  description: This was a 2D multiplayer shooter (with basic networking) taking place
+    on rock formations in space with very high gravity (watch the video!). My then
+    roommate [Jonas Lieb](http://www.jonaslieb.com/) and I did this during a weekend
+    and I still can't quite let go of the idea, but have not found good solutions
+    for some of the design problems that became apparent, back when we made it.
+
+- name: Metroidlike
+  id: metroidlike
+  link: https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/
+  tags: [game, lua]
+  tech: "löve/Lua"
+  time: Jun 2013
+  sort_time: 20130601
+  sort_effort: 10
+  image: metroidlike_stripe.png
+  links:
+  - {title: Video, url: "https://www.youtube.com/watch?v=dJSdzbMAj7Y"}
+  - {title: Video 2, url: "https://www.youtube.com/watch?v=6onBYjnob7w"}
+  - {title: Blog Post, url: "https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/"}
+  description: "I started a little “engine” (with normal mapping and lighting\
+    \ (dynamic and some cool global pre-baked lighting) for a potential Metroidvania\
+    \ I wanted to make. But my ideas were too vague and I'm still not sure what exactly\
+    \ I wanted to do there. REWORD REWORD"
+
+- name: (PL)ANT LIFE
+  id: plant-life
+  link: https://www.indiespeedrun.com/2015wp/game/?game=652770 # dead, no archive
+  tags: [game, gamejam, lua]
+  tech: "löve/Lua"
+  time: "Indie Speed Run 2015 Finalist (Oct 23rd – Oct 25th)"
+  sort_time: 20150826
+  sort_effort: 4
+  image: plantlife_stripe.png
+  links:
+  - {title: Video, url: "https://www.youtube.com/watch?v=WrhGQBfiMfg"}
+  - {title: GitHub, url: "https://github.com/pfirsich/ISR2015"}
+  description: "We made this as a 4 man team (programming by me and [Markus Over](http://shellfishgames.com/),\
+    \ art by Lukas Schnitzler (see also [Termination Shock](#termination-shock), [Falling\
+    \ Nukes and Running People](#falling-nukes-running-people) and [SudoHack](#sudohack)),\
+    \ music/sound done by [Philipp Koerver](http://flipsomusic.blogspot.de/)) for\
+    \ Indie Speed Run 2015 with the themes being “rebuilding” and “\
+    ants”. The game is about the player (playing the plant) trying to regain\
+    \ it's former majesty by managing resources and defending itself from foes cohabiting\
+    \ the forest. We reached the finals of Indie Speed Run with this project, after\
+    \ being picked by [Jason Rohrer](http://hcsoftware.sourceforge.net/jason-rohrer/)!"
+
+- name: Quark
+  id: quark
+  link: http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=14778
+  tags: [game, gamejam, web]
+  tech: three.js
+  time: "Ludum Dare 37 (Dec 9th – Dec 11th 2016)"
+  sort_time: 20161213
+  sort_effort: 4
+  image: quark_stripe.png
+  links:
+  - {title: ludumdare.com, url: "https://web.archive.org/web/20210803035050/http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=14778"}
+  - {title: GitHub, url: "https://github.com/pfirsich/LD37"}
+  - {title: Video, url: "https://www.youtube.com/watch?v=0P2gyMfaU5M"}
+  description: "Made with [Raphael Willerding](https://www.artstation.com/artist/kerberos22),\
+    \ who created the artwork. At the time of making this I spent a lot of time thinking\
+    \ about skillful movement in video games (and that I observe it as slowly being\
+    \ less prevalent), so I decided to make a game about maneuvering a single room\
+    \ (theme: “one room”) with non-trivial movement options that can be\
+    \ used creatively. Though almost all of the options included seem to be very similar\
+    \ to some in popular Quake mods like Defrag, I have not played much Quake before\
+    \ making this game (and certainly was not able to pull of anything like this).\
+    \ During testing it was pointed out to me by a friend, that they were very similar\
+    \ which I was not aware of beforehand, so the game is named “Quark” (german\
+    \ for “curd”, often used as “junk”) to pay homage. I'm very\
+    \ happy with the result since we discovered how deep the mechanics actually were\
+    \ by constantly finding new tricks and combos and extending the level accordingly.\
+    \ Sadly it is not as accessible as game jam games usually ought to be, since the\
+    \ time needed to properly use these mechanics is more than a few minutes (close\
+    \ to an hour I'd say)."
+
+- name: Spacetris
+  id: spacetris
+  link: https://pfirsich.itch.io/spacetris
+  tags: [game, gamejam, lua]
+  tech: "löve/Lua"
+  time: "Game Maker's Toolkit Jam 2018 (Aug 31st – Sep 2nd)"
+  sort_time: 20180902
+  sort_effort: 4
+  image: spacetris_stripe.png
+  links:
+  - {title: itch.io, url: "https://pfirsich.itch.io/spacetris"}
+  - {title: GitHub, url: "https://github.com/pfirsich/GMTKJam18"}
+  - {title: Video, url: "https://www.youtube.com/watch?v=RC8R4ItYUJg"}
+  description: "The theme for this game jam was “&lt;genre&gt; without &lt;mechanic&gt;”\
+    \ and since I decided to make Tetris without clearing lines/a failure state, this\
+    \ is intended as a relaxing, meditative game. The music is done by my good friend\
+    \ [Jan Koerver](https://soundcloud.com/jankoerver), who is also worked on music\
+    \ for [Shatter Buddies](#spectacular-shatter-buddies)!"
+
+- name: Termination Shock
+  id: termination-shock
+  link: https://github.com/pfirsich/TerminationShock
+  tags: [game, gamejam, lua]
+  tech: "löve/Lua"
+  time: "Spielmarmelade 2015 (Apr 25th – Apr 27nd)"
+  sort_time: 20150427
+  sort_effort: 4
+  image: termshock_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/TerminationShock"}
+  - {title: Video (astronaut), url: "https://youtu.be/9zE_9D_5DmA"}
+  - {title: Video (spaceship), url: "https://youtu.be/o6lwj3CFpO0"}
+  description: Made for [Spielmarmelade 2015 - dead, no archive, nothing](https://www.fsmpi.rwth-aachen.de/gamejam/),
+    a game jam me and two fellow students organized at my university [RWTH Aachen](https://www.rwth-aachen.de/).
+    A brief description of the setting and the gameplay as well as videos and screenshots
+    can be found on the GitHub page. All in all I'm very proud of this project, even
+    tough we couldn't manage to finish it. On the graphics programming and art side
+    this is certainly one of the better game jam games I've seen.
+
+- name: Falling Nukes & Running People
+  id: falling-nukes-running-people
+  link: https://theshoemaker.de/2015/01/global-game-jam-2015-falling-nukes-running-people/
+  tags: [game, gamejam, lua]
+  tech: "löve/Lua"
+  time: "Global Game Jam 2015 (Jan 23rd – Jan 25th)"
+  sort_time: 20150125
+  sort_effort: 4
+  image: fnap_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/ggj2015"}
+  - {title: globalgamejam.org, url: "https://globalgamejam.org/2015/games/falling-nukes-running-people"}
+  - {title: Blog Post, url: "https://theshoemaker.de/2015/01/global-game-jam-2015-falling-nukes-running-people/"}
+  description: "A game about escaping impending doom in the form of a nuclear missile\
+    \ impact as a competitive local multiplayer platformer. Also highlighted as an\
+    \ “oustanding project” [here](https://web.archive.org/web/20150219021404/http://www.colognegamelab.de/global-game-jam-cologne-recap/)."
+
+- name: Per Torpedum Ad Astram
+  id: per-torpedum-ad-astram
+  link: https://theshoemaker.de/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/
+  tags: [game, gamejam, lua]
+  tech: "löve/Lua"
+  time: "TAG Jam 5 Winner (Dec 6th – Dec 8th 2013)"
+  sort_time: 20131207
+  sort_effort: 4
+  image: ptaa_stripe.png
+  links:
+  - {title: Video, url: "https://www.youtube.com/watch?v=723aAV4LAd8"}
+  - {title: Blog Post, url: "https://theshoemaker.de/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/"}
+  description: I deliberately tried to make the worst game for TAG Jam, but won it
+    in the end with this game. A game about flying a pirate ship in the sky and defending
+    against laser shooting kittens inspired by one of my all time favourites, Starfox.
+
+- name: Lost in the Stars
+  id: lost-in-the-stars
+  link: https://globalgamejam.org/2018/games/lost-stars
+  tags: [game, gamejam, web]
+  tech: node.js, three.js
+  time: "Global Game Jam 2018 (Jan 26th – Jan 28th)"
+  sort_time: 20180128
+  sort_effort: 4
+  image: lits_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2018"}
+  - {title: globalgamejam.org, url: "https://globalgamejam.org/2018/games/lost-stars"}
+  description: "Lost in the Stars is a “mini MMO” with everyone in the game\
+    \ jam venue participating during the presentation. Every player is placed in somewhere\
+    \ in space, being able to move and transmit a signal into a direction. The goal\
+    \ is to find two other players with signals (sounds) different from their own\
+    \ and meet in one spot. The developers have the ability to overview the whole\
+    \ map. They guide the players towards each other by “pinging” them (which\
+    \ shows a special message on the client) and helping them find each other in real\
+    \ life, effectively mirroring what they do in-game. Such a game is obviously very\
+    \ hard to test, since a representative test scenario is difficult to set up. So\
+    \ we decided to make this a one-time event – A game that is only played (and\
+    \ gameplay-tested) once, ever."
+
+- name: Bat Sight
+  id: bat-sight
+  link: http://globalgamejam.org/2017/games/batsight
+  tags: [game, gamejam]
+  tech: Unity
+  time: "Global Game Jam 2017 (Jan 20th – Jan 22nd)"
+  sort_time: 20170122
+  sort_effort: 4
+  image: batsight_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2017"}
+  - {title: globalgamejam.org, url: "http://globalgamejam.org/2017/games/batsight"}
+  description: "This was my first project using Unity. The theme was “Waves”\
+    , so we made a game in which you play a bat, that is flying around at night and\
+    \ can only perceive it's surroundings using the reflection of sonar waves in the\
+    \ environment. We also put significant attention in to proper support of Google's\
+    \ Daydream VR, thankfully without much technical overhead, thanks to Unity. I\
+    \ didn't really know much about Unity at that point but am now very much convinced\
+    \ of it's power and ease of use. During the Jam I mostly worked on the controls\
+    \ and the sonar shader."
+
+- name: Species X
+  id: species-x
+  link: https://theshoemaker.de/2012/09/species-x/
+  tags: [c++, game, gamejam]
+  tech: C++
+  time: "Ludum Dare 24 (Aug 24th – Aug 27th 2012)"
+  sort_time: 20120801
+  sort_effort: 4
+  image: species_x_stripe.png
+  links:
+  - {title: ludumdare.com, url: "https://web.archive.org/web/20150426072307/http://www.ludumdare.com/compo/ludum-dare-24/?action=preview&uid=14778"}
+  - {title: Video, url: "http://youtu.be/ASF-6fc2ayc"}
+  - {title: Blog Post, url: "https://theshoemaker.de/2012/09/species-x/"}
+  description: "This was my first game jam game. The theme was “Evolution”\
+    \ and in this game a fungus (a cellular automaton) is spreading across randomly\
+    \ generated levels, taking over walkable space and turning it into breeding grounds\
+    \ for fungus zombies. The fungus has to be destroyed before it gets out of hand\
+    \ while dealing with said zombies that try to prevent you from doing so."
+
+- name: Tron Cruise
+  id: tron-cruise
+  link: https://pfirsich.github.io/IGJAM2016/
+  tags: [game, gamejam, web]
+  tech: three.js
+  time: "IGJAM @ gamescom 2016 (Aug 17th – Aug 19th)"
+  sort_time: 20160819
+  sort_effort: 4
+  image: tron_cruise_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/IGJAM2016"}
+  - {title: Video, url: "https://www.youtube.com/watch?v=qsVs0lpYDIc"}
+  - {title: IGJAM site, url: "https://www.igjam.eu/jams/igjam16/192/"}
+  description: Tron Cruise is a 2-player Star Fox/Top Gun inspired TRON-like in which
+    you either have to shoot each other out of the sky or avoid the other player's
+    trails longer than they can avoid yours. The general idea was to make a game with
+    a unconventional control scheme utilizing our laptops' webcams in particular.
+    We used [OpenFace](https://cmusatyalab.github.io/openface/) to do face tracking
+    and use your screen-relative real-world viewing direction to steer the ship. The
+    setup is sadly not very simple, so the online version you can play for yourself
+    only supports keyboard controls (WASD + V or Arrow Keys + L to steer + shoot),
+    but the video linked above can give give some idea of how the face controls looked
+    like. If you try the online version, please consider using Chrome for reasonable
+    performance.
+
+- name: Cardiac Murmur
+  id: cardiac-murmur
+  link: https://theshoemaker.de/2013/01/global-game-jam-cardiac-murmur/
+  tags: [c++, game, gamejam]
+  tech: C++
+  time: "Global Game Jam 2013 (Jan 25th – Jan 27th)"
+  sort_time: 20130123
+  sort_effort: 4
+  image: cardiac_murmur_stripe.png
+  links:
+  - {title: Video, url: "https://youtu.be/M3AxFZOEyYc"}
+  - {title: Blog Post, url: "https://theshoemaker.de/2013/01/global-game-jam-cardiac-murmur/"}
+  description: The theme was the sound of heartbeat (the actual sound). In this game
+    you use your heartbeat to unveil hidden information and display the true feelings
+    and thoughts of the characters around you. Rather pretentiously pointing to issues
+    of our peers that often stay hidden to us, because of a lack of genuine attention.
+
+- name: Scavenger Hunt
+  id: scavenger-hunt
+  link: http://globalgamejam.org/2016/games/scavenger-hunt
+  tags: [game, gamejam, lua]
+  tech: "löve/Lua"
+  time: "Global Game Jam 2016 (Jan 29th – Jan 31st)"
+  sort_time: 20160131
+  sort_effort: 4
+  image: scavenger_hunt_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2016"}
+  - {title: globalgamejam.org, url: "http://globalgamejam.org/2016/games/scavenger-hunt"}
+  description: "A two player local competitive multiplayer game on the theme “\
+    ritual”. In this game both players play a serial killer that on their killing\
+    \ spree are hindered by their compulsive tendencies to perform certain rituals\
+    \ inbetween killing people. The lists of rituals to complete are randomized each\
+    \ time and both players race for their completion. The theme gave us some trouble,\
+    \ so the game sadly has a relatively generic and blunt setting, but in the end\
+    \ it turned out to be a solid 20 minutes of fun for two bored people sitting at\
+    \ the same computer."
+
+- name: Zombie Salvation
+  id: zombie-salvation
+  link: http://ludumdare.com/compo/ludum-dare-25/?action=preview&uid=14778
+  tags: [c++, game, gamejam]
+  tech: C++
+  time: "Ludum Dare 25 (Dec 15th – Dec 17th 2012)"
+  sort_time: 20121201
+  sort_effort: 4
+  image: zombie_salvation_stripe.png
+  links:
+  - {title: Video, url: "https://www.youtube.com/watch?v=15yTXz__xvo"}
+  - {title: ludumdare.com, url: "https://web.archive.org/web/20210803050956/http://ludumdare.com/compo/ludum-dare-25/?action=preview&uid=14778"}
+  description: "A realtime strategy game made for “You are the enemy”-Ludum\
+    \ Dare where you have to coordinate a zombie invasion of randomly generated towns."
+
+- name: Fluglotse
+  id: fluglotse
+  link: https://theshoemaker.de/2015/02/exam-preparation-avoidance-game-jam/
+  tags: [game, gamejam, lua]
+  tech: "löve/Lua"
+  time: "Feb 12th – Feb 14th 2015"
+  sort_time: 20150212
+  sort_effort: 4
+  image: fluglotse_stripe.png
+  links:
+  - {title: Video, url: "https://www.youtube.com/watch?v=jN1GjQzoKJM"}
+  - {title: Blog Post, url: "https://theshoemaker.de/2015/02/exam-preparation-avoidance-game-jam/"}
+  description: A very bad simulation, but a fairly fun game about being a flight coordinator.
+    Made just for fun in a 48h marathon with my roommate [Jonas Lieb](http://jonaslieb.com/).
