@@ -67,7 +67,7 @@
         "id": "irps-arena",
         "link": "",
         "tech": "C++",
-        "tags": ["game", "c++"],
+        "tags": ["c++", "game"],
         "time": "Aug 2021 – Oct 2021",
         "sort_time": 20211015,
         "sort_effort": 70,
@@ -75,7 +75,7 @@
         "links": [
             {"title": "Video", "url": "https://youtu.be/K2D1kBn7oDE"}
         ],
-        "description": "I wanted to make a game and decided to make a clone of [FÄRG](https://ditto.itch.io/farg) with online multiplayer, which I have wanted to do for a very long time. This of course comes with more constraints and more possibilities and you end up with a very different game (which was expected). I worked on this very intensely for a few months, but then found myself being somewhat on the fence about whether it is worth it to invest a couple thousand hours into finishing it. The repository is private, since I considered selling it and because I don't want to pay even more for servers of yet another multiplayer game of mine, that not enough people play to justify the costs."
+        "description": "I wanted to make a game and decided to make a clone of [FÄRG](https://ditto.itch.io/farg) with online multiplayer, which I have wanted to do for a very long time. This of course comes with more constraints and more possibilities and you end up with a very different game (which was expected). I worked on this very intensely for a few months, but then found myself being somewhat on the fence about whether it is worth it to invest a couple thousand hours into finishing it. The repository is private, since I considered selling it and I don't want to pay for servers at the moment."
     },
     {
         "name": "makelove",
@@ -96,7 +96,7 @@
         "name": "jprof",
         "id": "jprof",
         "link": "https://github.com/pfirsich/jprof/",
-        "tags": ["tool", "lua"],
+        "tags": ["lua", "tool"],
         "tech": "löve/Lua",
         "time": "Nov 2017 – Jun 2018",
         "sort_time": 20180601,
@@ -142,7 +142,7 @@
         "id": "glwrap",
         "link": "https://github.com/pfirsich/glwrap",
         "tech": "C++, OpenGL",
-        "tags": ["library", "c++"],
+        "tags": ["c++", "library"],
         "time": "Jun 2020",
         "sort_time": 20200701,
         "sort_effort": 32,
@@ -157,7 +157,7 @@
         "id": "arbitrary-complexity",
         "link": "https://pfirsich.itch.io/arbitrary-complexity",
         "tech": "C++, OpenGL",
-        "tags": ["game", "gamejam", "c++"],
+        "tags": ["c++", "game", "gamejam"],
         "time": "7dfps 2020 (Dec 4th – Dec 14th)",
         "sort_time": 20201220,
         "sort_effort": 15,
@@ -173,7 +173,7 @@
         "id": "what-a-mess",
         "link": "https://pfirsich.itch.io/what-a-mess",
         "tech": "löve/Lua",
-        "tags": ["lua", "game", "gamejam"],
+        "tags": ["game", "gamejam", "lua"],
         "time": "LÖVE Jam 2020 (Feb 22nd - Feb 25th)",
         "sort_time": 20200225,
         "sort_effort": 4,
@@ -184,14 +184,14 @@
             {"title": "Tutorial Video", "url": "https://www.youtube.com/watch?v=rBzPzOfCInA"},
             {"title": "Speedrun", "url": "https://www.youtube.com/watch?v=rqkKjjP6l-8"}
         ],
-        "description": "Much like [Per Torpedum Ad Astram](#per-torpedum-ad-astram) this was a game, where I really didn't even try to make something anyone would like and I ended up having the most fun I ever had making a game jam game. I love the resulting game, even though it is objectively extremely unfunny and bad game design."
+        "description": "Much like [Per Torpedum Ad Astram](#per-torpedum-ad-astram) this was a game, where I really didn't even try to make something anyone would like and I ended up having the most fun I ever had making a game jam game. I love the resulting game, even though it is objectively extremely unfunny and probably bad game design."
     },
     {
         "name": "JOML",
         "id": "joml",
         "link": "https://github.com/pfirsich/joml",
         "tech": "C++, Python",
-        "tags": ["library", "c++", "python"],
+        "tags": ["c++", "library", "python"],
         "time": "Apr 2021",
         "sort_time": 20210422,
         "sort_effort": 30,
@@ -207,7 +207,7 @@
         "name": "kaun",
         "id": "kaun",
         "link": "https://github.com/pfirsich/kaun",
-        "tags": ["library", "c++", "lua"],
+        "tags": ["c++", "library", "lua"],
         "tech": "C++, Lua",
         "sort_time": 20180815,
         "sort_effort": 28,
@@ -239,7 +239,7 @@
         "id": "clipp",
         "link": "https://github.com/pfirsich/clipp",
         "tech": "C++",
-        "tags": ["library", "c++"],
+        "tags": ["c++", "library"],
         "time": "Jun 2022",
         "sort_time": 20220610,
         "sort_effort": 14,
@@ -254,7 +254,7 @@
         "id": "cpprom",
         "link": "https://github.com/pfirsich/cpprom",
         "tech": "C++",
-        "tags": ["library", "c++"],
+        "tags": ["c++", "library"],
         "time": "Jun 2022",
         "sort_time": 20220620,
         "sort_effort": 8,
@@ -269,7 +269,7 @@
         "id": "muwa",
         "link": "https://github.com/pfirsich/muwa",
         "tech": "C++",
-        "tags": ["tool", "c++"],
+        "tags": ["c++", "tool"],
         "time": "Aug 2021 – Oct 2021",
         "sort_time": 20211015,
         "sort_effort": 22,
@@ -296,11 +296,11 @@
         "description": "For most game jam games on here I remember quite well what features or game design aspects I had issues with or even how I ended up implementing some things, but for this game I mostly remember my team! I had a lot of fun with you all and this was probably one of my favorite Global Game Jams because of it. If any of you reads this, feel free to shoot me a message!"
     },
     {
-        "_disabled": true,
+        "disabled": true,
         "name": "🪓 C++ ECS",
         "id": "cpp-ecs",
         "link": "https://github.com/pfirsich/cpp-ecs",
-        "tags": ["library", "c++"],
+        "tags": ["c++", "library"],
         "tech": "C++",
         "time": "Sep 2018 – Oct 2018",
         "sort_time": 20181001,
@@ -330,7 +330,7 @@
         "name": "NGN",
         "id": "ngn",
         "link": "https://github.com/pfirsich/NGN",
-        "tags": ["library", "c++"],
+        "tags": ["c++", "library"],
         "tech": "C++, OpenGL",
         "time": "Aug 2016 – Dec 2016",
         "sort_time": 20161201,
@@ -341,17 +341,18 @@
     },
     {
         "_disabled": true,
-        "name": "🪓 LameTD",
+        "name": "LameTD",
         "id": "lametd",
         "link": "https://github.com/pfirsich/LameTD",
-        "tags": ["game", "c++"],
+        "tags": ["c++", "game"],
         "tech": "C++",
         "time": "Oct 2010 – Jan 2011",
         "sort_time": 20110101,
         "sort_effort": 1,
         "image": "lametd_stripe.png",
         "links": [
-            {"title": "Video", "url": "https://www.youtube.com/watch?v=P7YLTwcZt20"}
+            {"title": "Video", "url": "https://www.youtube.com/watch?v=P7YLTwcZt20"},
+            {"title": "GitHub", "url": "https://github.com/pfirsich/LameTD"}
         ],
         "description": "This is the oldest project on the list. I've worked on it for about 4 months (while still going to school) and it started out of the growing, but now faded trend of tower defense games. Starting university I got quickly distracted by other things, but it looks relatively nice and it's 3D, so it is listed here."
     },
@@ -359,7 +360,7 @@
         "name": "Screwdriver",
         "id": "screwdriver",
         "link": "https://theshoemaker.de/2015/11/isr2015-preparation-screwdriver-sparkled-lighting/",
-        "tags": ["tool", "lua"],
+        "tags": ["lua", "tool"],
         "tech": "löve/Lua",
         "time": "Sep 2015 – Nov 2015",
         "sort_time": 20150801,
@@ -406,7 +407,7 @@
         "name": "gciso",
         "id": "gciso",
         "link": "https://github.com/pfirsich/gciso",
-        "tags": ["library", "tool", "python"],
+        "tags": ["library", "python", "tool"],
         "tech": "Python",
         "time": "May 2018",
         "sort_time": 20180501,
@@ -421,7 +422,7 @@
         "name": "welo",
         "id": "welo",
         "link": "https://github.com/pfirsich/welo",
-        "tags": ["tool", "python"],
+        "tags": ["python", "tool"],
         "tech": "Python",
         "time": "May 2018 – Jun 2018",
         "sort_time": 20180501,
@@ -436,7 +437,7 @@
         "name": "fexp",
         "id": "fexp",
         "link": "https://github.com/pfirsich/fexp",
-        "tags": ["tool", "lua"],
+        "tags": ["lua", "tool"],
         "tech": "löve/Lua",
         "time": "May 2018",
         "sort_time": 20180501,
@@ -448,31 +449,34 @@
         "description": "fexp is a prototype of the file explorer I wish I could replace Windows Explorer with. The general idea is to make “Sublime Text for file browsing” with a fuzzy matching command palette for all operations and also just for navigating directories. It also includes tabs and panes."
     },
     {
-        "_disabled": true,
-        "name": "🪓 Frontdown",
+        "name": "Frontdown",
         "id": "frontdown",
         "link": "https://github.com/pfirsich/Frontdown",
-        "tags": ["tool", "python"],
+        "tags": ["python", "tool"],
         "tech": "Python",
         "time": "Jan 2016 – Feb 2016",
         "sort_time": 20160201,
         "sort_effort": 8,
         "image": "frontdown_stripe.png",
-        "links": [],
-        "description": "Frontdown is an open source backup program, written in Python, that uses hardlinks for space efficient, versioned backups. This was made before [restic](https://restic.net/) was well known, which I use today."
+        "links": [
+            {"title": "GitHub", "url": "https://github.com/pfirsich/Frontdown"}
+        ],
+        "description": "Frontdown is an open source backup program, written in Python, that uses hardlinks for space efficient, versioned backups. I used this for regular backups for quite a while, but I have now replaced it with [restic](https://restic.net/)."
     },
     {
-        "_disabled": true,
-        "name": "🪓 Möhre",
+        "disabled": true,
+        "name": "Möhre",
         "id": "moehre",
         "link": "https://github.com/jojonas/moehre",
-        "tags": ["tool", "python"],
+        "tags": ["python", "tool"],
         "tech": "Python, PyQt, PyAudio, OpenGL",
         "time": "Jan 2015",
         "sort_time": 20150101,
         "sort_effort": 5,
         "image": "moehre_stripe.png",
-        "links": [],
+        "links": [
+            {"title": "GitHub", "url": "https://github.com/jojonas/moehre"}
+        ],
         "description": "A node based software synthesizer for generating instrument samples or sound effects I worked on with my roommate [Jonas Lieb](http://www.jonaslieb.com/)."
     },
     {
@@ -491,7 +495,7 @@
         "description": "This was a 2D multiplayer shooter (with basic networking) taking place on rock formations in space with very high gravity (watch the video!). My then roommate [Jonas Lieb](http://www.jonaslieb.com/) and I did this during a weekend and I still can't quite let go of the idea, but have not found good solutions for some of the design problems that became apparent, back when we made it."
     },
     {
-        "name": "🪓 Metroidlike",
+        "name": "Metroidlike",
         "id": "metroidlike",
         "link": "https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/",
         "tags": ["game", "lua"],
@@ -502,9 +506,10 @@
         "image": "metroidlike_stripe.png",
         "links": [
             {"title": "Video", "url": "https://www.youtube.com/watch?v=dJSdzbMAj7Y"},
-            {"title": "Video 2", "url": "https://www.youtube.com/watch?v=6onBYjnob7w"}
+            {"title": "Video 2", "url": "https://www.youtube.com/watch?v=6onBYjnob7w"},
+            {"title": "Blog Post", "url": "https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/"}
         ],
-        "description": "I started a little “engine” (with normal mapping and lighting (dynamic and some cool global pre-baked lighting) for a potential Metroidvania I wanted to make. But my ideas were too vague and I'm still not sure what exactly I wanted to do there."
+        "description": "I started a little “engine” (with normal mapping and lighting (dynamic and some cool global pre-baked lighting) for a potential Metroidvania I wanted to make. But my ideas were too vague and I'm still not sure what exactly I wanted to do there. REWORD REWORD"
     },
     {
         "name": "(PL)ANT LIFE",
@@ -638,7 +643,7 @@
         "name": "Species X",
         "id": "species-x",
         "link": "https://theshoemaker.de/2012/09/species-x/",
-        "tags": ["game", "gamejam", "c++"],
+        "tags": ["c++", "game", "gamejam"],
         "tech": "C++",
         "time": "Ludum Dare 24 (Aug 24th – Aug 27th 2012)",
         "sort_time": 20120801,
@@ -671,7 +676,7 @@
         "name": "Cardiac Murmur",
         "id": "cardiac-murmur",
         "link": "https://theshoemaker.de/2013/01/global-game-jam-cardiac-murmur/",
-        "tags": ["game", "gamejam", "c++"],
+        "tags": ["c++", "game", "gamejam"],
         "tech": "C++",
         "time": "Global Game Jam 2013 (Jan 25th – Jan 27th)",
         "sort_time": 20130123,
@@ -701,7 +706,7 @@
         "name": "Zombie Salvation",
         "id": "zombie-salvation",
         "link": "http://ludumdare.com/compo/ludum-dare-25/?action=preview&uid=14778",
-        "tags": ["game", "gamejam", "c++"],
+        "tags": ["c++", "game", "gamejam"],
         "tech": "C++",
         "time": "Ludum Dare 25 (Dec 15th – Dec 17th 2012)",
         "sort_time": 20121201,
