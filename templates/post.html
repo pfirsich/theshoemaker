@@ -12,7 +12,9 @@
         border-left: 2px solid #616161;
         padding: 1px 20px;
         margin: 20px 0px;
+        background-color: #2d2d2d;
     }
+
 </style>
 {% endblock %}
 
@@ -33,7 +35,7 @@
         <h3>Comments (from old blog)</h3>
         {% for comment in comments %}
         <div class="comment" style="margin-left: {{ comment.level | default(0) * 50 }}px">
-            <b>{{ comment.author }}</b> ({{ comment.post_date }})<br />
+            <p><b>{{ comment.author }}</b> ({{ comment.post_date }})</p>
             {{ comment.content | markdown | safe }}
         </div>
         {% endfor %}
