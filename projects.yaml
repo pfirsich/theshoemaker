@@ -53,7 +53,7 @@
   links:
   - {title: Website, url: "http://melee-framedata.theshoemaker.de/"}
   - {title: GitHub (Website), url: "https://github.com/pfirsich/melee-framedata"}
-  - {title: GitHub (.dat file reader), url: "https://github.com/pfirsich/meleeFrameDataExtractor"}
+  - {title: GitHub (.dat file reader), url: "https://github.com/pfirsich/meleeDat2Json"}
   - {title: GitHub (Frame Data Extractor), url: "https://github.com/pfirsich/meleeFrameDataExtractor"}
   description: melee-framedata is a website with in-depth frame data for Super Smash
     Bros. Melee, inspired by the move pages on [SmashWiki](https://www.ssbwiki.com/Samus_(SSBM)/Neutral_aerial).
@@ -162,9 +162,9 @@
   image: what_a_mess_stripe.png
   links:
   - {title: itch.io, url: "https://pfirsich.itch.io/what-a-mess"}
-  - {title: GitHub, url: "https://github.com/pfirsich/lovejam20"}
   - {title: Tutorial Video, url: "https://www.youtube.com/watch?v=rBzPzOfCInA"}
   - {title: Speedrun, url: "https://www.youtube.com/watch?v=rqkKjjP6l-8"}
+  - {title: GitHub, url: "https://github.com/pfirsich/lovejam20"}
   description: Much like [Per Torpedum Ad Astram](#per-torpedum-ad-astram) this was
     a game, where I really didn't even try to make something anyone would like and
     I ended up having the most fun I ever had making a game jam game. I love the resulting
@@ -315,8 +315,8 @@
   image: spacetris_stripe.png
   links:
   - {title: itch.io, url: "https://pfirsich.itch.io/spacetris"}
-  - {title: GitHub, url: "https://github.com/pfirsich/GMTKJam18"}
   - {title: Video, url: "https://www.youtube.com/watch?v=RC8R4ItYUJg"}
+  - {title: GitHub, url: "https://github.com/pfirsich/GMTKJam18"}
   description: "The theme for this game jam was “&lt;genre&gt; without &lt;mechanic&gt;”\
     \ and since I decided to make Tetris without clearing lines/a failure state, this\
     \ is intended as a relaxing, meditative game. The music is done by my good friend\
@@ -354,8 +354,8 @@
   sort_effort: 28
   image: myl_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/myl"}
   - {title: Video, url: "https://www.youtube.com/watch?v=zW5ACxGnX8E"}
+  - {title: GitHub, url: "https://github.com/pfirsich/myl"}
   description: I have never really liked any game engine for 3D games, which turned
     out to be a problem in game jams many times. I have also tried to fix that problem
     many times and never succeeded. This is another iteration, where I wanted to use
@@ -428,8 +428,8 @@
   image: quark_stripe.png
   links:
   - {title: ludumdare.com, url: "https://web.archive.org/web/20210803035050/http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=14778"}
-  - {title: GitHub, url: "https://github.com/pfirsich/LD37"}
   - {title: Video, url: "https://www.youtube.com/watch?v=0P2gyMfaU5M"}
+  - {title: GitHub, url: "https://github.com/pfirsich/LD37"}
   description: "Made with [Raphael Willerding](https://www.artstation.com/artist/kerberos22),\
     \ who created the artwork. At the time of making this I spent a lot of time thinking\
     \ about skillful movement in video games (and that I observe it as slowly being\
@@ -473,8 +473,8 @@
   sort_effort: 31
   image: screwdriver_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/Screwdriver"}
   - {title: Video, url: "https://www.youtube.com/watch?v=x0ldw3uBklg"}
+  - {title: GitHub, url: "https://github.com/pfirsich/Screwdriver"}
   description: To supplement the awesome [Tiled](http://www.mapeditor.org/) map editor,
     I decided to build an editor for non-tile based games. It is meant to be extended
     for each different game that one wants to build levels for. In the end it was
@@ -492,8 +492,8 @@
   sort_effort: 20
   image: kraidGUI_stripe.png
   links:
+  - {title: Video, url: "https://gfycat.com/VagueSociableJackal"}
   - {title: GitHub, url: "https://github.com/pfirsich/kraidGUI/"}
-  - {title: Demo, url: "https://gfycat.com/VagueSociableJackal"}
   description: "kraidGUI is a framework for creating GUI libraries, with a built-in\
     \ löve backend. I only used it for [Screwdriver](#screwdriver)."
 
@@ -507,8 +507,8 @@
   sort_effort: 4
   image: lits_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2018"}
   - {title: globalgamejam.org, url: "https://globalgamejam.org/2018/games/lost-stars"}
+  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2018"}
   description: "Lost in the Stars is a “mini MMO” with everyone in the game\
     \ jam venue participating during the presentation. Every player is placed somewhere\
     \ in space, being able to move and transmit a signal into a direction. The goal\
@@ -562,9 +562,9 @@
   sort_effort: 4
   image: tron_cruise_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/IGJAM2016"}
   - {title: Video, url: "https://www.youtube.com/watch?v=qsVs0lpYDIc"}
-  - {title: IGJAM site, url: "https://www.igjam.eu/jams/igjam16/192/"}
+  - {title: GitHub, url: "https://github.com/pfirsich/IGJAM2016"}
+  #- {title: IGJAM site, url: "https://www.igjam.eu/jams/igjam16/192/"}
   description: Tron Cruise is a 2-player Star Fox/Top Gun inspired TRON-like in which
     you either have to shoot each other out of the sky or avoid the other player's
     trails longer than they can avoid yours. The general idea was to make a game with
@@ -587,9 +587,9 @@
   sort_effort: 4
   image: termshock_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/TerminationShock"}
   - {title: Video (astronaut), url: "https://youtu.be/9zE_9D_5DmA"}
   - {title: Video (spaceship), url: "https://youtu.be/o6lwj3CFpO0"}
+  - {title: GitHub, url: "https://github.com/pfirsich/TerminationShock"}
   description: Made for [Spielmarmelade 2015 - dead, no archive, nothing](https://www.fsmpi.rwth-aachen.de/gamejam/),
     a game jam me and two fellow students organized at my university [RWTH Aachen](https://www.rwth-aachen.de/).
     A brief description of the setting and the gameplay as well as videos and screenshots
@@ -622,8 +622,8 @@
   sort_effort: 12
   image: fexp_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/fexp"}
   - {title: Video, url: "https://streamable.com/4rolj"}
+  - {title: GitHub, url: "https://github.com/pfirsich/fexp"}
   description: "fexp is a prototype of the file explorer I wish I could replace Windows\
     \ Explorer with. The general idea is to make “Sublime Text for file browsing”\
     \ with a fuzzy matching command palette for all operations and also just for navigating\
@@ -677,8 +677,8 @@
   sort_effort: 4
   image: fnap_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/ggj2015"}
   - {title: globalgamejam.org, url: "https://globalgamejam.org/2015/games/falling-nukes-running-people"}
+  - {title: GitHub, url: "https://github.com/pfirsich/ggj2015"}
   - {title: Blog Post, url: "https://theshoemaker.de/2015/01/global-game-jam-2015-falling-nukes-running-people/"}
   description: "A game about escaping impending doom in the form of a nuclear missile\
     \ impact as a competitive local multiplayer platformer. Also highlighted as an\
@@ -712,8 +712,8 @@
   sort_effort: 1
   image: lametd_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/LameTD"}
   - {title: Video, url: "https://www.youtube.com/watch?v=P7YLTwcZt20"}
+  - {title: GitHub, url: "https://github.com/pfirsich/LameTD"}
   description: This is the oldest project on the list. I've worked on it for about
     4 months while still going to school. It started out of the growing, but
     now faded trend of tower defense games. Starting university I got quickly distracted
@@ -729,8 +729,8 @@
   sort_effort: 4
   image: batsight_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2017"}
   - {title: globalgamejam.org, url: "http://globalgamejam.org/2017/games/batsight"}
+  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2017"}
   description: "This was my first project using Unity. The theme was “Waves”\
     , so we made a game in which you play a bat, that is flying around at night and\
     \ can only perceive its surroundings using the reflection of sonar waves in the\
@@ -819,8 +819,8 @@
   sort_effort: 4
   image: scavenger_hunt_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2016"}
   - {title: globalgamejam.org, url: "http://globalgamejam.org/2016/games/scavenger-hunt"}
+  - {title: GitHub, url: "https://github.com/pfirsich/GGJ2016"}
   description: "A two player local competitive multiplayer game on the theme “\
     ritual”. In this game both players play serial killers that on their killing\
     \ spree are hindered by their compulsive tendencies to perform certain rituals\
