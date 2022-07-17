@@ -55,16 +55,22 @@
   - {title: GitHub (Website), url: "https://github.com/pfirsich/melee-framedata"}
   - {title: GitHub (.dat file reader), url: "https://github.com/pfirsich/meleeDat2Json"}
   - {title: GitHub (Frame Data Extractor), url: "https://github.com/pfirsich/meleeFrameDataExtractor"}
-  description: melee-framedata is a website with in-depth frame data for Super Smash
+  description: "melee-framedata is a website with in-depth frame data for Super Smash
     Bros. Melee, inspired by the move pages on [SmashWiki](https://www.ssbwiki.com/Samus_(SSBM)/Neutral_aerial).
-    It is based on two other programs of mine, [meleeDat2Json](https://github.com/pfirsich/meleeDat2Json)
-    and [meleeFrameDataExtractor](https://github.com/pfirsich/meleeFrameDataExtractor)
-    which dump the character data files right from the Super Smash Bros. Melee disk
-    image ([gciso](#gciso)) to JSON and generate JSON framedata from these dumps respectively.
-    [meleeframedata.com](https://meleeframedata.com/) bases their data on my results
-    (see their Info section under "Data Sources"). I consider this one of the best
+    It is split into subprojects, [meleeDat2Json](https://github.com/pfirsich/meleeDat2Json)
+    and [meleeFrameDataExtractor](https://github.com/pfirsich/meleeFrameDataExtractor).
+    First the character files are extracted from the Super Smash Bros. Melee disk image using [gciso](#gciso).
+    Then those character files are parsed and dumped to JSON files using [meleeDat2Json](https://github.com/pfirsich/meleeDat2Json).
+    These character files include small scripts for each move, called \"subactions\".
+    The subactions are then processed to extract high-level information such as move-length in frames,
+    hitbox creation, change and removal times, and so on.
+    Finally this data is converted to tables and diagrams describing the move
+    (example: [Samus Neutral-Air](http://melee-framedata.theshoemaker.de/samus/nair.html)).
+    To record the clips on the move pages I patched a Super Smash Bros. Melee disk image to color the hitboxes in the game's debug mode according to my choice.
+    [meleeframedata.com](https://meleeframedata.com/) bases their data on my work
+    (see their Info section under \"Data Sources\"). I consider this one of the coolest
     things I have made, though it is hard to understand for most people what it is
-    or why it is cool.
+    or why it is cool."
 
 - name: exquisite
   id: exquisite
