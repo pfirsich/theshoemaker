@@ -1,6 +1,7 @@
 
 - name: htcpp
   id: htcpp
+  tagline: "HTTP/1.1 Server"
   link: https://github.com/pfirsich/htcpp
   tags: [c++, library, tool, web]
   tech: C++
@@ -10,7 +11,7 @@
   image: htcpp_stripe.png
   links:
   - {title: GitHub,  url: "https://github.com/pfirsich/htcpp"}
-  description: 'htcpp is an HTTP server that hosts the website you are on right now.
+  description: 'htcpp hosts the website you are visiting right now.
     Initially, I started it in 2021 as a way to try out [io_uring](https://en.wikipedia.org/wiki/Io_uring),
     which is a fairly new asynchronous Linux Kernel IO interface (C++ wrapper: [liburingpp](https://github.com/pfirsich/liburingpp)).
     In July 2021 I couldn''t even come up with more features to implement, except
@@ -20,6 +21,7 @@
 
 - name: Spectacular Shatter Buddies
   id: spectacular-shatter-buddies
+  tagline: "Platform Fighting Game"
   link: http://shatterbuddies.net/
   tags: [game, lua]
   tech: "löve/Lua, Python"
@@ -44,6 +46,7 @@
 
 - name: melee-framedata
   id: melee-framedata
+  tagline: Frame Data Website
   link: http://melee-framedata.theshoemaker.de/
   tags: [python, web]
   tech: Python, HTML/CSS
@@ -75,6 +78,7 @@
 
 - name: exquisite
   id: exquisite
+  tagline: Text Editor
   link: https://github.com/pfirsich/exquisite
   tags: [c++, tool]
   tech: C++
@@ -99,6 +103,7 @@
 
 - name: IRPS Arena
   id: irps-arena
+  tagline: Multiplayer Platformer
   link: ''
   tags: [c++, game]
   tech: C++
@@ -119,6 +124,7 @@
 
 - name: (PL)ANT LIFE
   id: plant-life
+  tagline: Plant Simulator
   link: https://www.indiespeedrun.com/2015wp/game/?game=652770 # dead, no archive
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
@@ -141,6 +147,7 @@
 
 - name: Arbitrary Complexity
   id: arbitrary-complexity
+  tagline: Multiplayer Puzzle Game
   link: https://pfirsich.itch.io/arbitrary-complexity
   tags: [c++, game, gamejam]
   tech: C++, OpenGL
@@ -160,6 +167,7 @@
 
 - name: What a Mess
   id: what-a-mess
+  tagline: Cleaning Simulator
   link: https://pfirsich.itch.io/what-a-mess
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
@@ -179,6 +187,7 @@
 
 - name: makelove
   id: makelove
+  tagline: löve Packaging Tool
   link: https://github.com/pfirsich/makelove
   tags: [python, tool]
   tech: Python
@@ -188,13 +197,14 @@
   image: makelove_stripe.png
   links:
   - {title: GitHub, url: "https://github.com/pfirsich/makelove"}
-  description: "This is a build/packaging tool for [löve](https://love2d.org),\
+  description: "This is a build/packaging tool for games made with [löve](https://love2d.org),\
     \ which I have used for many games on this page and liked quite a lot for many\
     \ years. After [jprof](#jprof), this is the second most used piece of software\
     \ of mine."
 
 - name: jprof
   id: jprof
+  tagline: LuaJIT Profiler
   link: https://github.com/pfirsich/jprof/
   tags: [lua, tool]
   tech: "löve/Lua"
@@ -214,6 +224,7 @@
 
 - name: lua-discordRPC
   id: lua-discordrpc
+  tagline: Bindings for <a target="_blank" href="https://github.com/discordapp/discord-rpc">Discord Rich Presence</a>
   link: https://github.com/pfirsich/lua-discordRPC
   tags: [library, lua]
   tech: LuaJIT
@@ -228,6 +239,7 @@
 
 - name: C++ glTF Library
   id: gltf-cpp
+  tagline: C++ glTF Loader
   link: https://github.com/pfirsich/gltf
   tags: [c++, library]
   tech: C++
@@ -244,6 +256,7 @@
 
 - name: glwrap
   id: glwrap
+  tagline: OpenGL Wrapper
   link: https://github.com/pfirsich/glwrap
   tags: [c++, library]
   tech: C++, OpenGL
@@ -265,6 +278,7 @@
 
 - name: JOML
   id: joml
+  tagline: Markup Language
   link: https://github.com/pfirsich/joml
   tags: [c++, library, python]
   tech: C++, Python
@@ -289,6 +303,7 @@
 
 - name: kaun
   id: kaun
+  tagline: Graphics Engine
   link: https://github.com/pfirsich/kaun
   tags: [c++, library, lua]
   tech: C++, Lua
@@ -313,6 +328,7 @@
 
 - name: Spacetris
   id: spacetris
+  tagline: Infinite Tetris
   link: https://pfirsich.itch.io/spacetris
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
@@ -332,6 +348,7 @@
 
 - name: SudoHack
   id: sudohack
+  tagline: Bullethell Roguelike
   link: https://theshoemaker.de/tag/sudohack/
   tags: [game, lua]
   tech: "löve/Lua"
@@ -341,7 +358,7 @@
   image: sudohack_stripe.png
   links:
   - {title: Video, url: "http://youtu.be/j9_trXhZrmM"}
-  description: SudoHack is a bullethell roguelike featured in [a number of blog posts
+  description: SudoHack has been featured in [a number of blog posts
     on this blog](https://theshoemaker.de/tag/sudohack/). After the main development
     period listed in the title, university demanded a lot more attention from me and
     I had to hibernate development until December 2015. Then after working on it again
@@ -353,6 +370,7 @@
 
 - name: myl
   id: myl
+  tagline: Game Engine
   link: https://github.com/pfirsich/myl
   tags: [c++, library, lua]
   tech: C++, Lua
@@ -376,6 +394,7 @@
 
 - name: clipp
   id: clipp
+  tagline: Command Line Argument Parser
   link: https://github.com/pfirsich/clipp
   tags: [c++, library]
   tech: C++
@@ -394,6 +413,7 @@
 
 - name: cpprom
   id: cpprom
+  tagline: Prometheus Client Library
   link: https://github.com/pfirsich/cpprom
   tags: [c++, library]
   tech: C++
@@ -411,6 +431,7 @@
 
 - name: muwa
   id: muwa
+  tagline: 2D Level Editor
   link: https://github.com/pfirsich/muwa
   tags: [c++, tool]
   tech: C++
@@ -426,6 +447,7 @@
 
 - name: Quark
   id: quark
+  tagline: Movement-Focused FPS
   link: http://ludumdare.com/compo/ludum-dare-37/?action=preview&uid=14778
   tags: [game, gamejam, web]
   tech: three.js
@@ -456,6 +478,7 @@
 
 - name: NGN
   id: ngn
+  tagline: Game Engine
   link: https://github.com/pfirsich/NGN
   tags: [c++, library]
   tech: C++, OpenGL
@@ -472,6 +495,7 @@
 
 - name: Screwdriver
   id: screwdriver
+  tagline: 2D Level Editor
   link: https://theshoemaker.de/2015/11/isr2015-preparation-screwdriver-sparkled-lighting/
   tags: [lua, tool]
   tech: "löve/Lua"
@@ -491,6 +515,7 @@
 
 - name: kraidGUI
   id: kraidgui
+  tagline: GUI
   link: https://github.com/pfirsich/kraidGUI/
   tags: [library, lua]
   tech: Lua
@@ -506,6 +531,7 @@
 
 - name: Lost in the Stars
   id: lost-in-the-stars
+  tagline: Multiplayer Game
   link: https://globalgamejam.org/2018/games/lost-stars
   tags: [game, gamejam, web]
   tech: node.js, three.js
@@ -530,6 +556,7 @@
 
 - name: gciso
   id: gciso
+  tagline: GameCube Disk Image Tool
   link: https://github.com/pfirsich/gciso
   tags: [library, python, tool]
   tech: Python
@@ -545,6 +572,7 @@
 
 - name: Per Torpedum Ad Astram
   id: per-torpedum-ad-astram
+  tagline: Rail Shooter
   link: https://theshoemaker.de/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
@@ -561,6 +589,7 @@
 
 - name: Tron Cruise
   id: tron-cruise
+  tagline: Dog Fighting Game
   link: https://pfirsich.github.io/IGJAM2016/
   tags: [game, gamejam, web]
   tech: three.js
@@ -586,6 +615,7 @@
 
 - name: Termination Shock
   id: termination-shock
+  tagline: Multiplayer Game
   link: https://github.com/pfirsich/TerminationShock
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
@@ -606,6 +636,7 @@
 
 - name: welo
   id: welo
+  tagline: Weight & Calorie Tracker
   link: https://github.com/pfirsich/welo
   tags: [python, tool]
   tech: Python
@@ -621,6 +652,7 @@
 
 - name: fexp
   id: fexp
+  tagline: File Manager
   link: https://github.com/pfirsich/fexp
   tags: [lua, tool]
   tech: "löve/Lua"
@@ -631,13 +663,14 @@
   links:
   - {title: Video, url: "https://streamable.com/4rolj"}
   - {title: GitHub, url: "https://github.com/pfirsich/fexp"}
-  description: "fexp is a prototype of the file explorer I wish I could replace Windows\
+  description: "fexp is a prototype of the file manager I wish I could replace Windows\
     \ Explorer with. The general idea is to make “Sublime Text for file browsing”\
     \ with a fuzzy matching command palette for all operations and also just for navigating\
     \ directories. It also includes tabs and panes."
 
 - name: andross
   id: andross
+  tagline: 2D Skeletal Animation Library
   link: https://github.com/pfirsich/andross
   tags: [library, lua]
   tech: "löve/Lua"
@@ -647,10 +680,10 @@
   image: andross_stripe.png
   links:
   - {title: GitHub, url: "https://github.com/pfirsich/andross"}
-  description: "andross is a Lua library for 2D skeletal/bone animations. It provides\
+  description: "andross provides\
     \ different backends, where a backend for [löve](https://love2d.org/) is already\
-    \ provided. There is also the possibility to implement different importers, where\
-    \ an importer for the DragonBones format is already provided as well. Originally\
+    \ provided. There is also the possibility to implement different importers, with\
+    \ the DragonBones format being supported out of the box. Originally\
     \ it is written as a runtime for the [Cutout Animation Tools](https://github.com/ndee85/coa_tools)\
     \ plugin for Blender, so that there are still quite some compatibility issues\
     \ with files exported by DragonBones itself. It is used in [Spectacular Shatter\
@@ -658,6 +691,7 @@
 
 - name: Spacewalk
   id: spacewalk
+  tagline: Platformer
   link: https://theshoemaker.de/2013/04/spacewalk-part-1/
   tags: [game, python]
   tech: Python, PyOpenGL
@@ -676,6 +710,7 @@
 
 - name: Falling Nukes & Running People
   id: falling-nukes-running-people
+  tagline: Multiplayer Platformer
   link: https://theshoemaker.de/2015/01/global-game-jam-2015-falling-nukes-running-people/
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
@@ -693,6 +728,7 @@
 
 - name: Metroidlike
   id: metroidlike
+  tagline: Metroidvania
   link: https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/
   tags: [game, lua]
   tech: "löve/Lua"
@@ -711,6 +747,7 @@
 
 - name: LameTD
   id: lametd
+  tagline: Tower Defense
   link: https://github.com/pfirsich/LameTD
   tags: [c++, game]
   tech: C++
@@ -728,6 +765,7 @@
 
 - name: Bat Sight
   id: bat-sight
+  tagline: Flight Game
   link: http://globalgamejam.org/2017/games/batsight
   tags: [game, gamejam]
   tech: Unity
@@ -749,6 +787,7 @@
 
 - name: Species X
   id: species-x
+  tagline: Top-Down Shooter
   link: https://theshoemaker.de/2012/09/species-x/
   tags: [c++, game, gamejam]
   tech: C++
@@ -768,6 +807,7 @@
 
 - name: Rodent Rampage
   id: rodent-rampage
+  tagline: Multiplayer Game
   link: https://globalgamejam.org/2020/games/rodent-rampage-1
   tags: [game, gamejam]
   tech: Unity
@@ -786,6 +826,7 @@
 
 - name: Cardiac Murmur
   id: cardiac-murmur
+  tagline: Platformer
   link: https://theshoemaker.de/2013/01/global-game-jam-cardiac-murmur/
   tags: [c++, game, gamejam]
   tech: C++
@@ -803,6 +844,7 @@
 
 - name: Frontdown
   id: frontdown
+  tagline: Backup Tool
   link: https://github.com/pfirsich/Frontdown
   tags: [python, tool]
   tech: Python
@@ -812,12 +854,12 @@
   image: frontdown_stripe.png
   links:
   - {title: GitHub, url: "https://github.com/pfirsich/Frontdown"}
-  description: Frontdown is an open source backup program, written in Python, that
-    uses hardlinks for space efficient, versioned backups. I used this for regular
-    backups for quite a while, but I have now replaced it with [restic](https://restic.net/).
+  description: Frontdown uses hardlinks for space efficient, versioned backups.
+    I used this for regular backups for quite a while, but I have now replaced it with [restic](https://restic.net/).
 
 - name: Scavenger Hunt
   id: scavenger-hunt
+  tagline: Multiplayer Game
   link: http://globalgamejam.org/2016/games/scavenger-hunt
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
@@ -839,6 +881,7 @@
 
 - name: Zombie Salvation
   id: zombie-salvation
+  tagline: Real-Time Strategy Game
   link: http://ludumdare.com/compo/ludum-dare-25/?action=preview&uid=14778
   tags: [c++, game, gamejam]
   tech: C++
@@ -854,6 +897,7 @@
 
 - name: Fluglotse
   id: fluglotse
+  tagline: Flight Coordinator Sim
   link: https://theshoemaker.de/2015/02/exam-preparation-avoidance-game-jam/
   tags: [game, gamejam, lua]
   tech: "löve/Lua"

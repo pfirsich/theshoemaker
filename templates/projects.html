@@ -204,7 +204,7 @@
         </h3>
 
         <p class="tech">
-            {{ project.tech }}
+            {{ project.tagline | safe }} ({{ project.tech }})
             &mdash;
             {{ project.time }}
             {% if project.links | length > 0 %}
