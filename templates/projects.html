@@ -202,7 +202,7 @@
             {% set comma = joiner(",") %}
             {% for link in project.links %}
             {{ comma() }}
-            <a href="{{ link.url }}">{{ link.title }}</a>
+            <a target="_blank" href="{{ link.url }}">{{ link.title }}</a>
             {% endfor %}
         </p>
 
