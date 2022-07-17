@@ -6,6 +6,7 @@ services: {
                     "/": "output/index.html"
                     "/blog": "output/blog.html"
                     "/projects": "output/projects.html"
+                    "/favicon.svg": "output/favicon.svg"
 
                     "/posts/ray-casting-in-2d-grids": "output/posts/ray-casting-in-2d-grids.html"
                     "/posts/isr2015-preparation-screwdriver-sparkled-lighting": "output/posts/isr2015-preparation-screwdriver-sparkled-lighting.html"

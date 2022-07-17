@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+   "Technique?" said the programmer, turning from his terminal,
+   "What I follow is Tao — beyond all techniques!
+   When I first began to program,  I would see before me the whole problem in one mass.
+   After three years, I no longer saw this mass. Instead, I used subroutines.
+   But now I see nothing. My whole being exists in a formless void.
+   My senses are idle. My spirit, free to work without a plan, follows its own instinct.
+   In short, my program writes itself. True, sometimes there are difficult problems.
+   I see them coming, I slow down, I watch silently.
+   Then I change a single line of code and the difficulties vanish like puffs of idle smoke.
+   I then compile the program. I sit still and let the joy of the work fill my being.
+   I close my eyes for a moment and then log off."
+      - The Tao of Programming
+
+   Consider this an easter egg. But if you found this on GitHub, it doesn't count!
+-->
+<svg
+   width="48"
+   height="48"
+   viewBox="0 0 48 48"
+   version="1.1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+   <rect x="0.0" y="0.0" width="48" height="48" rx="5" ry="5" style="fill:#454545;fill-opacity:1"/>
+   <text x="5" y="36" font-size="38" style="fill:#11c8b0">JS</text>
+</svg>

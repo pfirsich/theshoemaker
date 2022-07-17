@@ -10,6 +10,7 @@ codehighlight:
 
 files:
   images: images/
+  favicon.svg: favicon.svg
 
   index.html:
     template: templates/index.html
