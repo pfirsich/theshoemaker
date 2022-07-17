@@ -33,10 +33,25 @@
     .filters {
         display: flex;
         justify-content: space-between;
+        padding: 10px;
+        border-top: 1px solid #555;
+        border-bottom: 1px solid #555;
+        background-color: #333;
     }
 
     .tag {
         margin-right: 5px;
+        cursor: pointer;
+        border: 0px;
+        background: none;
+        padding: 0px;
+        font-size: inherit;
+        font-family: inherit;
+        color: #11c8b0;
+    }
+
+    .tag:hover {
+        color: #fff;
     }
 
     .tag[data-enabled="true"] {
@@ -44,12 +59,8 @@
     }
 
     .tag[data-enabled="false"] {
-        text-decoration: line-through;
+        text-decoration: none;
         color: #888;
-    }
-
-    .tag:hover {
-        color: #fff;
     }
 
     /* https://www.w3schools.com/css/css_tooltip.asp */
@@ -153,13 +164,13 @@
     <div class="tags">
         {% set tags = projects | sum(attribute="tags", start=[]) | unique | sort %}
         Tags:
-        <span class="tag" data-tagname="all" data-enabled="true">
+        <button class="tag" data-tagname="all" data-enabled="true">
             All
-        </span>
+        </button>
         {% for tag in tags %}
-        <span class="tag" data-tagname="{{ tag }}" data-enabled="true">
+        <button class="tag" data-tagname="{{ tag }}" data-enabled="true">
             {{ tag_names[tag] }}
-        </span>
+        </button>
         {% endfor %}
     </div>
 
