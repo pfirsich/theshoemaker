@@ -25,7 +25,7 @@
         height: auto;
     }
 
-    .project .tech {
+    .project .infoline {
         text-align: center;
         margin: 5px;
     }
@@ -203,7 +203,7 @@
             <a class="projectname" href="#{{ project.id }}">{{ project.name }}</a>
         </h3>
 
-        <p class="tech">
+        <p class="infoline">
             {{ project.tagline | safe }} ({{ project.tech }})
             &mdash;
             {{ project.time }}
@@ -217,12 +217,11 @@
             {% endfor %}
         </p>
 
+        <img class="stripe" src="images/{{ project.image }}">
 
-        <a href="{{ project.link }}">
-            <img class="stripe" src="images/{{ project.image }}">
-        </a>
-
-        {{ project.description | markdown | safe }}
+        <div class="description"">
+            {{ project.description | markdown | safe }}
+        </div>
     </article>
     {% endfor %}
 </div>
