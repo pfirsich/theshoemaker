@@ -615,6 +615,28 @@
     like. If you try the online version, please consider using Chrome for reasonable
     performance.
 
+- name: Hand of Death
+  id: hand-of-death
+  tagline: Adventure
+  link: https://josefnpat.itch.io/hand-of-death
+  tags: [game, gamejam]
+  tech: Unity
+  time: "Ludum Dare 44 (Apr 27th – Apr 30th 2019)"
+  sort_time: 20190427
+  sort_effort: 8
+  image: hand_of_death_stripe.png
+  links:
+  - {title: itch.io, url: "https://josefnpat.itch.io/hand-of-death"}
+  - {title: ldjam.com, url: "https://ldjam.com/events/ludum-dare/44/hand-of-death"}
+  - {title: Video, url: "https://youtu.be/nrvumO4IEck"}
+  - {title: GitHub, url: "https://github.com/josefnpat/LD44"}
+  description: "The team that I was part of during this game jam was the largest team I have ever jammed with.
+    So large in fact that I think there were some people in the team that I have not talked to for the whole duration of the jam.
+    [Seppi](http://missingsentinelsoftware.com/) did full-time project management and game direction and I remember that he did a great job.
+    For the longest time I thought that being a game developer in a large company is likely
+    not something I am interested in at all, because I think that I mostly make games as self-expression and making *someone else's* game is not something I'm interested in.
+    This game jam made me reconsider, because it was actually quite nice not having to worry about *everything*, while still having room to mess around and put in things I think were cool."
+
 - name: Termination Shock
   id: termination-shock
   tagline: Multiplayer Game
