@@ -389,8 +389,10 @@
     If you are a programmer, you might be thinking "what? oh no." and you would be
     right. This relies heavily on [undefined behaviour](https://en.wikipedia.org/wiki/Undefined_behavior)
     and it breaks in shocking ways across compilers and compiler versions.
-    So I consider it a research project more than anything. I like the direction,
-    but I need a couple more good ideas to turn it into a viable piece of software.
+    The core idea was that there was no distinction anywhere between a component defined in
+    Lua, TOML or C++ and while does enable some cool features, you could have them without
+    this extra complication.
+    I consider it a research project more than anything, but it is something I really needed to have tried.
 
 - name: clipp
   id: clipp
