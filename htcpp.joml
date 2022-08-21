@@ -1,5 +1,5 @@
 services: {
-    "0.0.0.0:80": {
+    "0.0.0.0:${PORT:6969}": {
         hosts: {
             "*": {
                 files: {
@@ -7,33 +7,14 @@ services: {
                     "/blog": "output/blog.html"
                     "/projects": "output/projects.html"
                     "/favicon.svg": "output/favicon.svg"
+                    "/posts/*": "output/posts/$1.html"
+                    "/*": "output/$1"
+                }
 
-                    "/posts/ray-casting-in-2d-grids": "output/posts/ray-casting-in-2d-grids.html"
-                    "/posts/isr2015-preparation-screwdriver-sparkled-lighting": "output/posts/isr2015-preparation-screwdriver-sparkled-lighting.html"
-                    "/posts/old-videos-fixed": "output/posts/old-videos-fixed.html"
-                    "/posts/sudohack-update-replay-system": "output/posts/sudohack-update-replay-system.html"
-                    "/posts/tweaking-values-in-sudohack": "output/posts/tweaking-values-in-sudohack.html"
-                    "/posts/exam-preparation-avoidance-game-jam": "output/posts/exam-preparation-avoidance-game-jam.html"
-                    "/posts/global-game-jam-2015-falling-nukes-running-people": "output/posts/global-game-jam-2015-falling-nukes-running-people.html"
-                    "/posts/new-website": "output/posts/new-website.html"
-                    "/posts/sudohack-bits-ai-prettiness": "output/posts/sudohack-bits-ai-prettiness.html"
-                    "/posts/sudohack-enemies-and-prettiness": "output/posts/sudohack-enemies-and-prettiness.html"
-                    "/posts/sudohack": "output/posts/sudohack.html"
-                    "/posts/modify-assign-in-lua-per-torpedum-ad-astram": "output/posts/modify-assign-in-lua-per-torpedum-ad-astram.html"
-                    "/posts/tag-jam-6-results": "output/posts/tag-jam-6-results.html"
-                    "/posts/tag-jam-6-times-up": "output/posts/tag-jam-6-times-up.html"
-                    "/posts/tag-jam-6-the-jam-time-begins": "output/posts/tag-jam-6-the-jam-time-begins.html"
-                    "/posts/tag-jam-6-themes": "output/posts/tag-jam-6-themes.html"
-                    "/posts/tag-jam-6-welcome-post": "output/posts/tag-jam-6-welcome-post.html"
-                    "/posts/metroidlike-2d-water-bone-animations": "output/posts/metroidlike-2d-water-bone-animations.html"
-                    "/posts/bacongamejam5-love": "output/posts/bacongamejam5-love.html"
-                    "/posts/spacewalk-part-1": "output/posts/spacewalk-part-1.html"
-                    "/posts/feedback-effect": "output/posts/feedback-effect.html"
-                    "/posts/global-game-jam-cardiac-murmur": "output/posts/global-game-jam-cardiac-murmur.html"
-                    "/posts/species-x": "output/posts/species-x.html"
-                    "/posts/first-post": "output/posts/first-post.html"
-
-                    "/": "output"
+                headers: {
+                    "*": {
+                        "Cache-Control": "${CACHE_CONTROL:no-store}"
+                    }
                 }
             }
         }
