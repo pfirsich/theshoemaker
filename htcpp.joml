@@ -1,7 +1,35 @@
+acme: {
+    "theshoemaker.de": {
+        url: "letsencrypt" # magic
+        alt_names: ["www.theshoemaker.de"] # empty by default
+    }
+}
+
 services: {
-    "0.0.0.0:${PORT:6969}": {
+    "0.0.0.0:80": {
         hosts: {
-            "*": {
+            "theshoemaker.de": {
+                acme_challenges: "theshoemaker.de"
+                redirects: {
+                    "/*": "https://theshoemaker.de/$1"
+                }
+            }
+
+            "www.theshoemaker.de": {
+                redirects: {
+                    "/*": "http://theshoemaker.de/$1"
+                }
+            }
+        }
+    }
+
+    "0.0.0.0:443": {
+        tls: {
+            acme: "theshoemaker.de" # reference to acme object
+        }
+
+        hosts: {
+            "theshoemaker.de": {
                 files: {
                     "/": "output/index.html"
                     "/blog": "output/blog.html"
@@ -15,6 +43,12 @@ services: {
                     "*": {
                         "Cache-Control": "${CACHE_CONTROL:no-store}"
                     }
+                }
+            }
+
+            "www.theshoemaker.de": {
+                redirects: {
+                    "/*": "https://theshoemaker.de/$1"
                 }
             }
         }

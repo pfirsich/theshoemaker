@@ -12,4 +12,11 @@ ssh theshoemaker gunzip -f theshoemaker.tar.gz
 ssh theshoemaker docker load --input theshoemaker.tar
 ssh theshoemaker docker stop theshoemaker
 ssh theshoemaker docker rm --force theshoemaker
-ssh theshoemaker docker run --detach --init --name theshoemaker --network=host theshoemaker
+ssh theshoemaker docker run \
+    --detach \
+    --rm \
+    --init \
+    --name theshoemaker \
+    --network=host \
+    --volume /htcpp_data:/root/.local/share/htcpp \
+    theshoemaker
