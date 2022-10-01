@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eou pipefail
+set -euo pipefail
 set -x
 
 raydor --output output raydor.yml
@@ -11,7 +11,7 @@ rm theshoemaker.tar.gz
 ssh theshoemaker gunzip -f theshoemaker.tar.gz
 ssh theshoemaker docker load --input theshoemaker.tar
 ssh theshoemaker docker stop theshoemaker
-ssh theshoemaker docker rm --force theshoemaker
+ssh theshoemaker docker rm --force theshoemaker || true
 ssh theshoemaker docker run \
     --detach \
     --rm \
