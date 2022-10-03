@@ -357,10 +357,12 @@
   image: sudohack_stripe.png
   links:
   - {title: Video, url: "http://youtu.be/j9_trXhZrmM"}
-  description: SudoHack has been featured in [a number of blog posts
-    on this blog](https://theshoemaker.de/tag/sudohack/). After the main development
-    period listed in the title, university demanded a lot more attention from me and
-    I had to hibernate development until December 2015. Then after working on it again
+  description: SudoHack has been featured in a number of blog posts
+    on this blog ([1](/posts/sudohack), [2](/posts/sudohack-enemies-and-prettiness),
+    [3](/posts/sudohack-bits-ai-prettiness), [4](/posts/sudohack-update-replay-system)).
+    After the main development period listed in the title, university
+    demanded a lot more attention from me and I had to hibernate development
+    until December 2015. Then after working on it again
     I realized that I somehow lost track of the vision for this game and I had to
     stop and just think about it for a while. After finishing my Bachelor's degree
     I wanted to continue, but somehow never recovered my initial intention for the
