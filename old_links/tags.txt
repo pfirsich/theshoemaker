@@ -1,0 +1,57 @@
+actually used tags: 
+sudohack (from projects)!
+	https://theshoemaker.de/2015/01/sudohack/
+	https://theshoemaker.de/2015/01/sudohack-enemies-and-prettiness/
+	https://theshoemaker.de/2015/01/sudohack-bits-ai-weapons-movement-and-a-lot-more-pretty-a-really-long-one/
+	https://theshoemaker.de/2015/03/sudohack-update-replay-system/
+-> redirected
+	https://theshoemaker.de/posts/sudohack
+	https://theshoemaker.de/posts/sudohack-enemies-and-prettiness
+	https://theshoemaker.de/posts/sudohack-bits-ai-prettiness
+	https://theshoemaker.de/posts/sudohack-update-replay-system
+
+
+
+all tags:
+from-old-blog
+game-jams
+global-game-jam
+indie-speed-run
+love2d
+lua
+ludum-dare
+programming
+sudohack
+tag-jam
+technical
+
+http://old.theshoemaker.de/tag/from-old-blog/
+http://old.theshoemaker.de/tag/from-old-blog/feed/
+http://old.theshoemaker.de/tag/from-old-blog/page/2/
+http://old.theshoemaker.de/tag/from-old-blog/page/3/
+http://old.theshoemaker.de/tag/from-old-blog/page/4/
+http://old.theshoemaker.de/tag/game-jams/
+http://old.theshoemaker.de/tag/game-jams/feed/
+http://old.theshoemaker.de/tag/game-jams/page/2/
+http://old.theshoemaker.de/tag/game-jams/page/3/
+http://old.theshoemaker.de/tag/global-game-jam/
+http://old.theshoemaker.de/tag/global-game-jam/feed/
+http://old.theshoemaker.de/tag/indie-speed-run/
+http://old.theshoemaker.de/tag/indie-speed-run/feed/
+http://old.theshoemaker.de/tag/love2d/
+http://old.theshoemaker.de/tag/love2d/feed/
+http://old.theshoemaker.de/tag/love2d/page/2/
+http://old.theshoemaker.de/tag/lua/
+http://old.theshoemaker.de/tag/lua/feed/
+http://old.theshoemaker.de/tag/lua/page/2/
+http://old.theshoemaker.de/tag/lua/page/3/
+http://old.theshoemaker.de/tag/ludum-dare/
+http://old.theshoemaker.de/tag/ludum-dare/feed/
+http://old.theshoemaker.de/tag/programming/
+http://old.theshoemaker.de/tag/programming/feed/
+http://old.theshoemaker.de/tag/sudohack/
+http://old.theshoemaker.de/tag/sudohack/feed/
+http://old.theshoemaker.de/tag/tag-jam/
+http://old.theshoemaker.de/tag/tag-jam/feed/
+http://old.theshoemaker.de/tag/technical/
+http://old.theshoemaker.de/tag/technical/feed/
