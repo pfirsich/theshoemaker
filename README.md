@@ -1,6 +1,7 @@
 # [theshoemaker.de](https://theshoemaker.de)
 
-This is the repository used for my website. I generated the HTML with [raydor](https://github.com/pfirsich/raydor) and serve it with [htcpp](https://github.com/pfirsich/htcpp).
+This is the repository used for my website.
+I generate the HTML with [raydor](https://github.com/pfirsich/raydor) and serve it with [htcpp](https://github.com/pfirsich/htcpp).
 
 # To Do
 ## Tech
