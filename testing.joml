@@ -1,0 +1,51 @@
+services: {
+    "0.0.0.0:6969": {
+        hosts: {
+            "*": {
+                files: {
+                    "/": "output/index.html"
+                    "/blog": "output/blog.html"
+                    "/projects": "output/projects.html"
+                    "/favicon.svg": "output/favicon.svg"
+                    "/posts/*": "output/posts/$1.html"
+                    "/*": "output/$1"
+                }
+
+                # I don't want 80+ redirects for old images and I don't think it's necessary.
+                # Also I only redirect from the link including the trailing slash because that was the canonical link (from `<link rel="canonical">`).
+                redirects: {
+                    "/2012/09/first-post/": "/posts/first-post"
+                    "/2012/09/species-x/": "/posts/species-x"
+                    "/2013/01/feedback-effect/": "/posts/feedback-effect"
+                    "/2013/01/global-game-jam-cardiac-murmur/": "/posts/global-game-jam-cardiac-murmur"
+                    "/2013/04/spacewalk-part-1/": "/posts/spacewalk-part-1"
+                    "/2013/07/bacongamejam5-love/": "/posts/bacongamejam5-love"
+                    "/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/": "/posts/metroidlike-2d-water-bone-animations"
+                    "/2013/12/tag-jam-6-welcome-post/": "/posts/tag-jam-6-welcome-post"
+                    "/2014/01/tag-jam-6-results/": "/posts/tag-jam-6-results"
+                    "/2014/01/tag-jam-6-the-jam-time-begins/": "/posts/tag-jam-6-the-jam-time-begins"
+                    "/2014/01/tag-jam-6-themes/": "/posts/tag-jam-6-themes"
+                    "/2014/01/tag-jam-6-times-up/": "/posts/tag-jam-6-times-up"
+                    "/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/": "/posts/modify-assign-in-lua-per-torpedum-ad-astram"
+                    "/2015/01/global-game-jam-2015-falling-nukes-running-people/": "/posts/global-game-jam-2015-falling-nukes-running-people"
+                    "/2015/01/new-website/": "/posts/new-website"
+                    "/2015/01/sudohack-bits-ai-weapons-movement-and-a-lot-more-pretty-a-really-long-one/": "/posts/sudohack-bits-ai-prettiness"
+                    "/2015/01/sudohack-enemies-and-prettiness/": "/posts/sudohack-enemies-and-prettiness"
+                    "/2015/01/sudohack/": "/posts/sudohack"
+                    "/2015/02/exam-preparation-avoidance-game-jam/": "/posts/exam-preparation-avoidance-game-jam"
+                    "/2015/02/the-old-problem-of-tweaking-values/": "/posts/tweaking-values-in-sudohack"
+                    "/2015/03/old-videos-fixed/": "/posts/old-videos-fixed"
+                    "/2015/03/sudohack-update-replay-system/": "/posts/sudohack-update-replay-system"
+                    "/2015/11/isr2015-preparation-screwdriver-sparkled-lighting/": "/posts/isr2015-preparation-screwdriver-sparkled-lighting"
+                    "/2016/02/ray-casting-in-2d-grids/": "/posts/ray-casting-in-2d-grids"
+                }
+
+                headers: {
+                    "*": {
+                        "Cache-Control": "no-store"
+                    }
+                }
+            }
+        }
+    }
+}
