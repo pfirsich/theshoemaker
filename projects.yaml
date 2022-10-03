@@ -1,4 +1,3 @@
-
 - name: htcpp
   id: htcpp
   tagline: "HTTP/1.1 Server"
@@ -7,7 +6,7 @@
   tech: C++
   time: "Jul 2021, Apr 2022 – today"
   sort_time: 20220731
-  sort_effort: 40
+  sort_effort: 55
   image: htcpp_stripe.png
   links:
   - {title: GitHub,  url: "https://github.com/pfirsich/htcpp"}
