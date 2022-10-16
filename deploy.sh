@@ -12,11 +12,12 @@ ssh theshoemaker gunzip -f theshoemaker.tar.gz
 ssh theshoemaker docker load --input theshoemaker.tar
 ssh theshoemaker docker stop theshoemaker
 ssh theshoemaker docker rm --force theshoemaker || true
+# add read-only to make the container fs ro? Need to make sure htcpp_data is writable!
 ssh theshoemaker docker run \
     --detach \
-    --rm \
     --init \
     --name theshoemaker \
     --network=host \
+    --restart=unless-stopped \
     --volume /htcpp_data:/root/.local/share/htcpp \
     theshoemaker
