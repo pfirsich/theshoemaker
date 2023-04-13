@@ -34,6 +34,7 @@ services: {
                     "/": "output/index.html"
                     "/blog": "output/blog.html"
                     "/projects": "output/projects.html"
+                    "/cv": "output/cv.pdf"
                     "/favicon.svg": "output/favicon.svg"
                     "/posts/*": "output/posts/$1.html"
                     "/*": "output/$1"
@@ -71,6 +72,10 @@ services: {
                 headers: {
                     "*": {
                         "Cache-Control": "${CACHE_CONTROL:no-store}"
+                    }
+
+                    "/cv": {
+                        "Content-Disposition": "inline; filename=\"Joel Schumacher - CV.pdf\""
                     }
                 }
             }
