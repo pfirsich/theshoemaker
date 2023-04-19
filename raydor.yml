@@ -38,6 +38,7 @@ files:
     template: templates/blog.html
     vars:
       posts:
+      - !load posts/why-is-there-no-invisible-database.md
       - !load posts/ray-casting-in-2d-grids.md
       - !load posts/isr2015-preparation-screwdriver-sparkled-lighting.md
       - !load posts/old-videos-fixed.md
