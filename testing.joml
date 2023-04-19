@@ -1,5 +1,12 @@
 services: {
     "0.0.0.0:6969": {
+        limit_connections: 512
+        limit_requests_by_ip: {
+            steady_rate: 5
+            burst_size: 100
+            #max_num_entries: 8192
+        }
+
         hosts: {
             "*": {
                 files: {

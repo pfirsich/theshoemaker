@@ -7,6 +7,8 @@ acme: {
 
 services: {
     "0.0.0.0:80": {
+        limit_connections: 256
+        limit_requests_by_ip: {}
         hosts: {
             "theshoemaker.de": {
                 acme_challenges: "theshoemaker.de"
@@ -24,6 +26,13 @@ services: {
     }
 
     "0.0.0.0:443": {
+        limit_connections: 512
+        limit_requests_by_ip: {
+            steady_rate: 5 # A bit low, but caching of images should make this fine
+            burst_size: 100 # The projects page has 50 images
+            max_num_entries: 8192 # If an attacker has more IPs, they are spoofing and I am screwed anyways
+        }
+
         tls: {
             acme: "theshoemaker.de" # reference to acme object
         }
