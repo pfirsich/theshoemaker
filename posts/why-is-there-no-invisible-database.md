@@ -7,7 +7,7 @@ In this post I'll write about the exploration of an old idea of mine, which didn
 
 ## The Idea
 
-For a few years I have been thinking about a database that requires little to no explicit storage and loading. I imagined simply marking a `std::vector` for example as "in the database" and it would all just magically happen. I wouldn't have to create wrapper classes and or write tedious serialization/deserialization code. Most developery dislike writing plumbing code, right? I wanted a system that automatically retrieves the newest version whenever I access a data structure and sends a modified version back to the server, when I modify it. And ideally it would work with arbitrary data structures, without any extra work. Something like this:
+For a few years I have been thinking about a database that requires little to no explicit storage and loading. I imagined simply marking a `std::vector` for example as "in the database" and it would all just magically happen. I wouldn't have to create wrapper classes and or write tedious serialization/deserialization code. Most developer dislike writing plumbing code, right? I wanted a system that automatically retrieves the newest version whenever I access a data structure and sends a modified version back to the server, when I modify it. And ideally it would work with arbitrary data structures, without any extra work. Something like this:
 
 ```cpp
 struct TestStruct {
@@ -75,7 +75,7 @@ region.unlock();
 
 There are also some other small changes in this snippet. To inject the allocator, we used the standard library types from the `std::pmr` (polymorphic memory resource) namespace. Also of course we need some object that represents the database server, `server`, which we need to pass into the `SyncedMemoryRegion`. Where it comes from, how we connect and anything like that is not important for our sketch. The `getObject` factory function either creates the vector on the heap, inside the memory region or returns the instance, if an object with that name is already in the region. It was already like that in the first sketch, but it should be mentioned that the vector itself must not live on the stack, or it would not be synchronized properly (duh).
 
-Additionally because we can track memory accesses already, we can do cool things like asserting when the memory is accessed without the region being locked, because sometimes that's the only way they're gonna learn.
+Additionally because we can track memory accesses already, we can do cool things like `assert`ing when the memory is accessed without the region being locked, because sometimes that's the only way they're gonna learn.
 
 Note that it's very easy to be less than extremely careful here and use the wrong allocator by accident. For example like this:
 
@@ -115,6 +115,6 @@ Now that I have finally implemented a (not so) invisible database, I know why it
 
 And even if any of these are no concern to you, you don't really know if it will stay like that forever. I would not feel comfortable introducing something like this into my project. Even if I had made it!
 
-If we finally (ever?) get reflection in C++, another approach might to generate serialization/deserialization logic for [POD](https://en.wikipedia.org/wiki/Passive_data_structure)s and provide some wrappers for standard library classes to simply interface with any of the popular databases. This would essentially be just a fancy client library for an existing database. And if we ever do get reflection, I will probably try that.
+If we finally (ever?) get reflection in C++, another approach might be to generate serialization/deserialization logic for [POD](https://en.wikipedia.org/wiki/Passive_data_structure)s and provide some wrappers for standard library classes to simply interface with any of the popular databases. This would essentially be just a fancy client library for an existing database. And if we ever do get reflection, I will probably try that.
 
 Expectedly my idea did not lead to a groundbreaking conclusion, but I found it very worthwile to explore this topic more deeply and the better I understand the remaining problems, the more likely I am to find solutions for them in the future.
