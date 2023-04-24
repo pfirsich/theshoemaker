@@ -1,2 +1,2 @@
 #!/bin/bash
-find raydor.yml src/ projects.yaml templates/ | entr -sr "raydor --output output raydor.yml"
+find raydor.yml posts/ src/ projects.yaml templates/ | entr -sr "raydor --output output raydor.yml"
