@@ -710,6 +710,13 @@ We can also use this in `FinalAwaiter::await_suspend`:
 
 The [cppcoro](https://github.com/andreasbuhr/cppcoro) library has a [check](https://github.com/andreasbuhr/cppcoro/blob/10bbcdbf2be3ad3aa56febcf4c7662d771460a99/include/cppcoro/config.hpp#L33) for whether a compiler supports symmetric transfer, but judging from my trials on [godbolt](https://godbolt.org) it seems that symmetric transfer works for all compilers that don't complain about their respective C++20 flags (GCC 11 and later, MSVC 19.29 and later), so I will just use it.
 
+Now that `initial_suspend` returns `std::suspend_always` our coroutine does not start executing until we `co_await` it, meaning that it would make sense to make our `Task` type `[[nodiscard]]`, otherwise creating the coroutine would simply do nothing and that is likely a mistake we want to help catch:
+```cpp
+class [[nodiscard]] Task {
+    // ...
+};
+```
+
 The last tweak we want to make to `Task` is to `Awaiter::await_ready`. It returns `false`, which works for our code, but it's possible to `co_await` a `Task` multiple times and we want to handle this case too:
 
 ```cpp
@@ -722,7 +729,7 @@ The last tweak we want to make to `Task` is to `Awaiter::await_ready`. It return
 Putting it all together, we get this:
 
 ```cpp
-class Task {
+class [[nodiscard]] Task {
 public:
     struct FinalAwaiter {
         bool await_ready() const noexcept { return false; }
@@ -910,7 +917,7 @@ This is the whole thing:
 
 ```cpp
 template <typename Result = void>
-class Task {
+class [[nodiscard]] Task {
 public:
     struct FinalAwaiter {
         bool await_ready() const noexcept { return false; }
