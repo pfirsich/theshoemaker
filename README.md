@@ -15,6 +15,7 @@ I generate the HTML with [raydor](https://github.com/pfirsich/raydor) and serve 
   Latency from US is shit. I want to keep using my own webserver, so I need to build something myself
   Use Route 58, Cloudflare DNS or whatever to point theshoemaker.de to multiple PoPs
   Figure out a way to share certificate and add reverse-proxy mode to htcpp
+* Lazy Image Loading? (`loading="lazy"`)
 * Reprocess Markdown to add `target="_blank"` into links
 * Atom Feed
 
