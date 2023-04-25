@@ -1013,6 +1013,8 @@ We would have to make `final_suspend` return `std::suspend_always` as well, so t
 And then we couldn't use it anymore to "branch off" with `echo` because it returns a temporary and now that the `BasicCoroutine` object has ownership of the coroutine, it would be destroyed in `~BasicCoroutine`.
 So we still have reasons to keep a type without a non-void return value, like `BasicCoroutine`, around.
 
+Also now that we have a `Task` class that owns the coroutine, it is possible that we destroy it (by destroying the `Task`) when it still has queued IO operations that essentially keep a reference to our *awaiter* (in the lambda capture). To avoid a use-after-free, it is necessary to cancel IO operations if the *awaiter* being referenced in the `IoQueue` dies. I did not include that in this tutorial yet, because I haven't figured out how to do that nicely myself. Maybe I'll edit it into this blog post in the future or maybe you figure it out and let me know if you find something that works well for you.
+
 ## Where To Go Next
 
 Lastly I have to mention that if you want to do anything multi-threaded or if you want to handle exceptions, there is extra work you have to do and you have to be a lot more careful everywhere.
