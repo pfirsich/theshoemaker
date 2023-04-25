@@ -5,11 +5,20 @@ I generate the HTML with [raydor](https://github.com/pfirsich/raydor) and serve 
 
 # To Do
 ## Tech
+* Add metrics (collect Prometheus metrics somewhere and add some dashboards or something)
+* SEO:
+  - Optimize Images (optipng, pngcrush, jpegoptim, tinypng/tinyjpeg API)
+  - meta tags (description)
+  - alt attributes for all images
+  - https://pagespeed.web.dev/
+* DIY CDN
+  Latency from US is shit. I want to keep using my own webserver, so I need to build something myself
+  Use Route 58, Cloudflare DNS or whatever to point theshoemaker.de to multiple PoPs
+  Figure out a way to share certificate and add reverse-proxy mode to htcpp
 * Reprocess Markdown to add `target="_blank"` into links
 * Atom Feed
 
 ## Content
-* CV (public version without sensitive personal info). Add a link to home page.
 * Videos
   - exquisite
   - myl
