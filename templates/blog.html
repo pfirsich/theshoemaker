@@ -6,7 +6,7 @@
         {% for post in posts %}
         <div class="post">
             {% set post_url = "posts/" + post.filename | replace('.md', '') %}
-            <h2><a href="{{ post_url }}">{{ post.title }}</a></h2>
+            <h1><a href="{{ post_url }}">{{ post.title }}</a></h1>
             <p class="postdate">
                 <time datetime="{{ post.publish_date }}">{{ post.publish_date | datetime("%Y-%m-%d") }}</time>
                 {% if post.update_date is defined %}

@@ -21,7 +21,7 @@
 {% block content %}
 <div id="blog">
     <div class="post">
-        <h2>{{ title }}</h2>
+        <h1>{{ title }}</h1>
         <p class="postdate">
             <time datetime="{{ publish_date }}">{{ publish_date | datetime("%Y-%m-%d") }}</time>
             {% if update_date is defined %}
