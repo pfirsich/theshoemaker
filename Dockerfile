@@ -1,4 +1,4 @@
-FROM htcpp:latest
+FROM htcpp:1.1.0
 
 COPY htcpp.joml htcpp.joml
 COPY output/ output/
