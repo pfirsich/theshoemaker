@@ -717,7 +717,7 @@ class [[nodiscard]] Task {
 };
 ```
 
-The last tweak we want to make to `Task` is to `Awaiter::await_ready`. It returns `false`, which works for our code, but it's possible to `co_await` a `Task` multiple times and we want to handle this case too:
+The last tweak we want to make to `Task` is to `Awaiter::await_ready`. It returns `false`, which works for our code, but in case the coroutine is already done when we `co_await` it, we don't want to suspend, but rather return the value right away:
 
 ```cpp
             bool await_ready() const noexcept
