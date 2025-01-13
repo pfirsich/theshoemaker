@@ -18,13 +18,18 @@ I generate the HTML with [raydor](https://github.com/pfirsich/raydor) and serve 
   Figure out a way to share certificate and add reverse-proxy mode to htcpp
 * Lazy Image Loading? (`loading="lazy"`)
 * Reprocess Markdown to add `target="_blank"` into links
-* Atom Feed
 
 ## Content
 * Videos
   - exquisite
   - myl
   - muwa
+* Projects
+  - aiopp
+  - minijson
+  - womf
+  - mugfx
+  - wuzy
 
 # Notes for Later
 * `sort_effort` in projects is roughly the number of 8h work days spent on it
