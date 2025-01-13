@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>theshoemaker Blog</title>
+        <link>{{ site_url }}/blog</link>
+        <description>theshoemaker Blog Posts</description>
+        <language>en-us</language>
+        <lastBuildDate>{{ now_tz() | rfc822 }}</lastBuildDate>
+        {% for post in blog_posts %}
+        <item>
+            <title>{{ post.title }}</title>
+            {% set post_url = site_url + "/posts/" + post.filename | replace('.md', '') %}
+            <link>{{ post_url }}</link>
+            <guid>{{ post_url }}</guid>
+            <pubDate>{{ post.publish_date | rfc822 }}</pubDate>
+            <content:encoded><![CDATA[{{ post.content | markdown | safe }}]]></content:encoded>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

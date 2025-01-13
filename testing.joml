@@ -12,6 +12,8 @@ services: {
                 files: {
                     "/": "output/index.html"
                     "/blog": "output/blog.html"
+                    "/blog/rss.xml": "output/blog-feed-rss.xml"
+                    "/blog/atom.xml": "output/blog-feed-atom.xml"
                     "/projects": "output/projects.html"
                     "/cv": "output/cv.pdf"
                     "/favicon.svg": "output/favicon.svg"

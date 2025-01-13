@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>theshoemaker Blog</title>
+    <link href="{{ site_url }}/blog"/>
+    <link rel="self" href="{{ site_url }}/blog/atom.xml"/>
+    <updated>{{ blog_posts[0].publish_date | datetime('%Y-%m-%dT%H:%M:%S%z') }}</updated>
+    <id>{{ site_url }}/blog</id>
+    <author>
+        <name>Joel Schumacher</name>
+    </author>
+
+    {% for post in blog_posts %}
+    <entry>
+        <title>{{ post.title }}</title>
+        {% set post_url = site_url + "/posts/" + post.filename | replace('.md', '') %}
+        <link href="{{ post_url }}"/>
+        <id>{{ post_url }}</id>
+        <updated>{{ post.publish_date | datetime('%Y-%m-%dT%H:%M:%S%z') }}</updated>
+        <content type="html">{{ post.content | markdown | safe | xml_escape }}</content>
+    </entry>
+    {% endfor %}
+</feed>

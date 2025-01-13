@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}{% endblock %} &raquo; theshoemaker</title>
     <link rel="icon" href="/favicon.svg">
+    <link rel="alternate" type="application/rss+xml" title="Blog RSS" href="/blog/rss.xml">
+    <link rel="alternate" type="application/json" title="Blog Atom" href="/blog/atom.xml">
     <script data-goatcounter="https://pfirsich.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 
@@ -96,6 +98,26 @@
 
         .postdate {
             font-style: italic;
+        }
+
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .page-header + p {
+            /* The page-header div somehow turns of margin collapsing between <h1> and <p>, so I remove the margin*/
+            margin-top: 0px;
+        }
+
+        .feed-links {
+            font-size: 0.8em;
+            color: #666;
+        }
+
+        .feed-links a {
+            color: #666;
         }
 
         #footerbox {

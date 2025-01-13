@@ -1,5 +1,34 @@
 globals:
-  host: theshoemaker.de
+  site_url: https://theshoemaker.de
+  #site_url: http://localhost:6969 # for local testing
+  # Posts are global, because we need them in multiple places (blog and feeds)
+  blog_posts:
+    - !load posts/yet-another-cpp-coroutine-tutorial.md
+    - !load posts/why-is-there-no-invisible-database.md
+    - !load posts/ray-casting-in-2d-grids.md
+    - !load posts/isr2015-preparation-screwdriver-sparkled-lighting.md
+    - !load posts/old-videos-fixed.md
+    - !load posts/sudohack-update-replay-system.md
+    - !load posts/tweaking-values-in-sudohack.md
+    - !load posts/exam-preparation-avoidance-game-jam.md
+    - !load posts/global-game-jam-2015-falling-nukes-running-people.md
+    - !load posts/new-website.md
+    - !load posts/sudohack-bits-ai-prettiness.md
+    - !load posts/sudohack-enemies-and-prettiness.md
+    - !load posts/sudohack.md
+    - !load posts/modify-assign-in-lua-per-torpedum-ad-astram.md
+    - !load posts/tag-jam-6-results.md
+    - !load posts/tag-jam-6-times-up.md
+    - !load posts/tag-jam-6-the-jam-time-begins.md
+    - !load posts/tag-jam-6-themes.md
+    - !load posts/tag-jam-6-welcome-post.md
+    - !load posts/metroidlike-2d-water-bone-animations.md
+    - !load posts/bacongamejam5-love.md
+    - !load posts/spacewalk-part-1.md
+    - !load posts/feedback-effect.md
+    - !load posts/global-game-jam-cardiac-murmur.md
+    - !load posts/species-x.md
+    - !load posts/first-post.md
 
 markdown_substitutions:
   "'": "&#8217;" # apostrophe
@@ -36,31 +65,9 @@ files:
 
   blog.html:
     template: templates/blog.html
-    vars:
-      posts:
-      - !load posts/yet-another-cpp-coroutine-tutorial.md
-      - !load posts/why-is-there-no-invisible-database.md
-      - !load posts/ray-casting-in-2d-grids.md
-      - !load posts/isr2015-preparation-screwdriver-sparkled-lighting.md
-      - !load posts/old-videos-fixed.md
-      - !load posts/sudohack-update-replay-system.md
-      - !load posts/tweaking-values-in-sudohack.md
-      - !load posts/exam-preparation-avoidance-game-jam.md
-      - !load posts/global-game-jam-2015-falling-nukes-running-people.md
-      - !load posts/new-website.md
-      - !load posts/sudohack-bits-ai-prettiness.md
-      - !load posts/sudohack-enemies-and-prettiness.md
-      - !load posts/sudohack.md
-      - !load posts/modify-assign-in-lua-per-torpedum-ad-astram.md
-      - !load posts/tag-jam-6-results.md
-      - !load posts/tag-jam-6-times-up.md
-      - !load posts/tag-jam-6-the-jam-time-begins.md
-      - !load posts/tag-jam-6-themes.md
-      - !load posts/tag-jam-6-welcome-post.md
-      - !load posts/metroidlike-2d-water-bone-animations.md
-      - !load posts/bacongamejam5-love.md
-      - !load posts/spacewalk-part-1.md
-      - !load posts/feedback-effect.md
-      - !load posts/global-game-jam-cardiac-murmur.md
-      - !load posts/species-x.md
-      - !load posts/first-post.md
+
+  blog-feed-rss.xml:
+    template: templates/blog-feed-rss.xml
+
+  blog-feed-atom.xml:
+    template: templates/blog-feed-atom.xml
