@@ -71,3 +71,18 @@ files:
 
   blog-feed-atom.xml:
     template: templates/blog-feed-atom.xml
+
+  microblog.html:
+    template: templates/microblog.html
+    vars:
+      posts: !load microblog.yaml
+
+  microblog-feed-rss.xml:
+    template: templates/microblog-feed-rss.xml
+    vars:
+      posts: !load microblog.yaml
+
+  microblog-feed-atom.xml:
+    template: templates/microblog-feed-atom.xml
+    vars:
+      posts: !load microblog.yaml

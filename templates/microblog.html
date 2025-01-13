@@ -1,0 +1,53 @@
+{% extends "templates/base.html" %}
+{% block title %}Microblog{% endblock %}
+{% block header %}
+<style>
+.post-entry {
+    padding: 1em 0;
+    margin-top: 0.8em;
+    border-top: 1px solid #444;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.post-meta {
+    color: #888;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h1>Microblog</h1>
+    <div class="feed-links">
+        <a href="/microblog/rss.xml">RSS</a> / <a href="/microblog/atom.xml">Atom</a>
+    </div>
+</div>
+<p>
+See my <a href="#2025-01-06-14:30:00">first post below</a> for why I created this page.
+</p>
+
+{% for post in posts %}
+<div class="post-entry">
+    <div class="post-header">
+        <div>
+            <a id="{{ post.publish_date | to_id }}" href="#{{ post.publish_date | to_id }}">#</a>
+            {% if post.url %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <!--<span class="post-meta">({{ post.url | url_hostname }})</span>-->
+            {% elif post.title %}
+            {{ post.title }}
+            {% endif %}
+        </div>
+        <div class="post-meta">
+            <time datetime="{{ post.publish_date }}">{{ post.publish_date | datetime("%Y-%m-%d") }}</time>
+        </div>
+    </div>
+    {{ post.description | markdown | safe }}
+</div>
+{% endfor %}
+{% endblock %}

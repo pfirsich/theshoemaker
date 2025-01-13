@@ -1,0 +1,76 @@
+- title: MariaDB performance analysis with eBPF - Max Kellermann
+  url: https://www.youtube.com/watch?v=bsQwnboqZwQ
+  publish_date: "2025-01-10 16:30:00"
+  description:
+    "I have been messing around with eBPF at work and I have become a huge fan of it.
+    When I talked about this with my colleague at work, he mentioned a talk he gave at MariaDB ServerFest Berlin about eBPF very recently.
+    I have seen a few resources on eBPF before but never quite grasped what kind of superpower it can be, before I used it myself.
+    If I had seen Max's real-life case study I would have understood much earlier how useful eBPF can be. So if you are developing or debugging on Linux
+    and haven't hopped on the hype train, this might sell you on it."
+
+- title: Why Tramway SDK
+  url: https://racenis.github.io/tram-sdk/why.html
+  publish_date: "2025-01-08 16:30:00"
+  description:
+    'As a serial "new engine" developer I also have very strong opinions about what kind of game engine
+    I would like to use or, more accurately, can tolerate using.
+    Racenis has some ideas that I very much agree with. Especially the first three sections.
+    I have a couple design docs scattered about that outline what I actually want from a game engine and I think I''ll turn it into a living blog post soon.'
+
+- title: Tomorrow Corporation Tech Demo
+  url: https://www.youtube.com/watch?v=72y2EC5fkcE
+  publish_date: "2025-01-05 16:30:00"
+  description:
+    "I think building things is bridging the gap between grand ideas of things you wish existed and reality.
+    So a builder is constantly thinking of cool stuff they would love to see become real.
+    Or rather someone that thinks like that tends to become a builder of some sort.
+    And even though you spend so much time thinking about a cooler future, sometimes you get blown away by something someone else has done
+    because you didn't even consider that someone could think **this** big.
+    The thing itself might be difficult, but not much more than a ton of other difficult things people do all the time
+    and nonetheless people need to see the thing before they realize that it's possible to do something like that.
+    This video really blew the door wide open in terms of what I think engines and game tooling might be able to do.
+    If I ever have a couple of years of free time and enough money I'd build exactly what Tomorrow Corporation showed in this video myself."
+
+- title: "Untangling Lifetimes: The Arena Allocator"
+  url: https://www.rfleury.com/p/untangling-lifetimes-the-arena-allocator
+  publish_date: "2025-01-05 16:00:00"
+  description: 'This is quite long, but very good.
+    I think it''s part my "N+1 arc" mentioned in the post before.
+    It introduces a really cool concept of tying the abstract concept of a lifetime to something concrete, which is allocation arenas.'
+
+- title: Handmade Hero | Getting rid of the OOP mindset
+  url: https://www.youtube.com/watch?v=GKYCA3UsmrU
+  publish_date: "2025-01-05 15:30:00"
+  description:
+    'Though he is very smart, I find Casey has a narrow view of software, because he seems unaware that many (most) software is not compute-bound, like games and adjacent software often are
+    and he also shows a lack of understanding of the realities of larger development teams.
+    He then tends to attribute apparent flaws in software today to people simply being bad or dumb, when in fact their
+    practices are a result of a development culture that has good reason to exist, but not necessarily in (small) games.
+    I agree it''s usually a mistake to misuse those common practices in compute-driven applications like games (e.g. TDD, heavy OOP, etc.),
+    but people have good reason to do it this way, he just doesn''t really understand those reasons.
+    Anyways my point in adding this disclaimer is that I understand perfectly if you do not want to watch this video or have to try not rolling your eyes as has as you can, if you do watch it, but it is worth seeing.
+    I think this video and some other videos of his sort of started a new era for me.
+    When I started programming I did it the "non-OOP" way, but in the most horrible spaghetti chaos kind of way. Later on I did learn about encapsulation, layers of abstraction and the value in making software robust,
+    but I carried this into my personal, small (one-man) projects and it kind of ruined them. Everything was full of abstractions and allocations and crazy ownership graphs and just a lot of code that doesn''t actually
+    *do* anything in the sense of modifying memory in a useful way.
+    In large teams or old code bases the extra abstractions keep different programmers aligned, newbies in check and avoid subtle regressions, but a lot of this is likely unnecessary or counterproductive in some kinds
+    of projects (compute-bound, small teams, etc.) or even certain pieces of code.
+    Just when I started watching some videos of Casey I have been reading a lot of code by people that do have the "N+1 thinking" and I knew it was much better than mine, but I didn''t really understand why.
+    The "N+1 thinking" is about structuring your code never around single objects, but always around collections of objects.
+    [Smart-Pointers, RAII, ZII? Becoming an N+2 programmer](https://www.youtube.com/watch?v=xt1KNDmOYqA) describes it in more detail, but the video is relatively long and somewhat noisy.
+    Overall Casey opened my eyes on what exactly I should change and what I need to learn. I think I am still a little too OOP-brained, but I am currently on my "N+1 arc" because of him.'
+
+- title: My approach to running a link blog
+  url: https://simonwillison.net/2024/Dec/22/link-blog/
+  publish_date: "2025-01-05 14:30:00"
+  description:
+    'I have had "Website: Link Page!" on my todo for possibly years and this blog post inspired me to build this site.
+    I post very sparingly on this website, because I don''t like thinking I have anything to say that anyone else has to hear, though I do feel like that sometimes.
+    This also kept me from creating such a link page.
+    Simon Willison''s post changed my mind about it - especially this paragraph:
+
+    > The point of that article was to emphasize that blogging doesn’t have to be about unique insights. The value is in writing frequently and having something to show for it over time—worthwhile even if you don’t attract much of an audience (or any audience at all).
+
+
+    I really don''t really need a reason for someone to listen, when I am just screaming into the void anyways.
+    Right around this time I also read [What is microblogging?](https://book.micro.blog/what-is-microblogging/) and I thought I''d go for something more general like that instead.'

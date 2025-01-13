@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>theshoemaker Microblog</title>
+    <link href="{{ site_url }}/microblog"/>
+    <link rel="self" href="{{ site_url }}/microblog/atom.xml"/>
+    <updated>{{ posts[0].publish_date | datetime('%Y-%m-%dT%H:%M:%S%z') }}</updated>
+    <id>{{ site_url }}/microblog</id>
+    <author>
+        <name>Joel Schumacher</name>
+    </author>
+
+    {% for post in posts %}
+    <entry>
+        <title>{% if post.title %}{{ post.title }}{% else %}{{ post.description | limit(" ", 20) }}{% endif %}</title>
+        <link href="{{ site_url }}/microblog#{{ post.publish_date | to_id }}"/>
+        <id>{{ site_url }}/microblog#{{ post.publish_date | to_id }}</id>
+        <updated>{{ post.publish_date | datetime('%Y-%m-%dT%H:%M:%S%z') }}</updated>
+        <content type="html">{{ post.description | markdown | xml_escape }}</content>
+        {% if post.url %}
+        <link rel="related" href="{{ post.url }}"/>
+        {% endif %}
+    </entry>
+    {% endfor %}
+</feed>

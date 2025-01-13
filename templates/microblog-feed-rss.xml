@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>theshoemaker Microblog</title>
+        <link>{{ site_url }}/microblog</link>
+        <description>theshoemaker Microblog Posts</description>
+        <language>en-us</language>
+        <lastBuildDate>{{ now_tz() | rfc822 }}</lastBuildDate>
+        {% for post in posts %}
+        <item>
+            <title>{% if post.title %}{{ post.title }}{% else %}{{ post.description | limit(" ", 20) }}...{% endif %}</title>
+            <link>{{ site_url }}/microblog#{{ post.publish_date | to_id }}</link>
+            <guid>{{ site_url }}/microblog#{{ post.publish_date | to_id }}</guid>
+            <pubDate>{{ post.publish_date | rfc822 }}</pubDate>
+            <content:encoded><![CDATA[{{ post.description | markdown }}]]></content:encoded>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
