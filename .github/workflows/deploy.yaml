@@ -79,12 +79,13 @@ jobs:
 
       - name: Deploy to server
         run: |
-          scp theshoemaker.tar.gz ${{ vars.DEPLOY_HOST }}:/root
-          ssh ${{ vars.DEPLOY_HOST }} "gunzip -f theshoemaker.tar.gz"
-          ssh ${{ vars.DEPLOY_HOST }} "docker load --input theshoemaker.tar"
-          ssh ${{ vars.DEPLOY_HOST }} "docker stop theshoemaker || true"
-          ssh ${{ vars.DEPLOY_HOST }} "docker rm --force theshoemaker || true"
-          ssh ${{ vars.DEPLOY_HOST }} "docker run \
+          scp theshoemaker.tar.gz root@${{ vars.DEPLOY_HOST }}:/root
+          ssh root@${{ vars.DEPLOY_HOST }} "gunzip -f theshoemaker.tar.gz"
+          ssh root@${{ vars.DEPLOY_HOST }} "docker load --input theshoemaker.tar"
+          ssh root@${{ vars.DEPLOY_HOST }} "rm theshoemaker.tar"
+          ssh root@${{ vars.DEPLOY_HOST }} "docker stop theshoemaker || true"
+          ssh root@${{ vars.DEPLOY_HOST }} "docker rm --force theshoemaker || true"
+          ssh root@${{ vars.DEPLOY_HOST }} "docker run \
             --detach \
             --init \
             --name theshoemaker \
