@@ -1,10 +1,8 @@
 name: Deploy
-
 on:
   push:
     branches: ["main"]
-  workflow_dispatch: # Allows manual triggering
-
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,12 +16,40 @@ jobs:
           revision=$(grep '^FROM htcpp:' Dockerfile | cut -d':' -f2)
           echo "revision=$revision" >> $GITHUB_OUTPUT
 
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      # Try to restore htcpp image from cache
+      - name: Cache Docker htcpp image
+        id: cache-htcpp
+        uses: actions/cache@v4
+        with:
+          path: /tmp/htcpp-image.tar
+          key: htcpp-${{ steps.htcpp-version.outputs.revision }}
+
+      # Load cached image if it exists
+      - name: Load cached htcpp image
+        if: steps.cache-htcpp.outputs.cache-hit == 'true'
+        run: |
+          docker load < /tmp/htcpp-image.tar
+          echo "Found htcpp image in cache"
+
+      # Only checkout and build htcpp if not found in cache
       - name: Checkout htcpp
+        if: steps.cache-htcpp.outputs.cache-hit != 'true'
         uses: actions/checkout@v4
         with:
           repository: pfirsich/htcpp
           path: htcpp
           ref: ${{ steps.htcpp-version.outputs.revision }}
+
+      - name: Build htcpp image
+        if: steps.cache-htcpp.outputs.cache-hit != 'true'
+        run: |
+          cd htcpp
+          docker build -t htcpp:${{ steps.htcpp-version.outputs.revision }} .
+          docker save htcpp:${{ steps.htcpp-version.outputs.revision }} > /tmp/htcpp-image.tar
+          cd ..
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -34,12 +60,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install git+https://github.com/pfirsich/raydor.git
-
-      - name: Build htcpp image
-        run: |
-          cd htcpp
-          docker build -t htcpp:${{ steps.htcpp-version.outputs.revision }} .
-          cd ..
 
       - name: Generate output with raydor
         run: raydor --output output raydor.yml
