@@ -1,4 +1,4 @@
-FROM htcpp:b690475c0f1fc8da148150004e73945457eefbce
+FROM htcpp:38dc045390e7ee1a3ddd72eaaf65401095226335
 
 COPY htcpp.joml htcpp.joml
 COPY output/ output/
