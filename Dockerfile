@@ -1,4 +1,4 @@
-FROM htcpp:1.1.0
+FROM htcpp:b690475
 
 COPY htcpp.joml htcpp.joml
 COPY output/ output/
