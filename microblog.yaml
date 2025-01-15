@@ -1,3 +1,19 @@
+- publish_date: "2025-01-15 16:03:00"
+  description: '
+    Yesterday I attended a gamedev meetup and it got me really excited about making games again - not just engines and libraries.
+    I decided I should take a break from the engine dev and make a game instead.. but with what engine? I hate them all.
+    The solution I came up with was to make the game first and then go from the MIDDLE OUT (not the best fit, but I like to call it that).
+
+    <center>
+    <video src="images/middle-out.webm" width="700" height="340" autoplay loop></video>
+    </center>
+
+    I''ll start with an executable that runs a Lua script, hardcode the window title, resolution - everything I can.
+    Just add `womf.newFrame()` that returns false as soon as the window gets closed and clears the screen.
+    Load a single shader from s hard-coded path and add `womf.draw("modelfile.obj", {uniforms, ...})`.
+    The goal will be to build as little as possible of what could be called an engine and later on replace parts with nicer engine components.
+    '
+
 - title: MariaDB performance analysis with eBPF - Max Kellermann
   url: https://www.youtube.com/watch?v=bsQwnboqZwQ
   publish_date: "2025-01-10 16:30:00"
