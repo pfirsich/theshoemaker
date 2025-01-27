@@ -1,6 +1,6 @@
 ---
-publish_date: "2024-01-15 20:27:00" # date -Is
-summary_length: 4
+publish_date: "2025-01-15 20:27:00" # date -Is
+summary_length: 5
 title: Game Engine Requirements
 ---
 
