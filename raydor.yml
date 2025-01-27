@@ -3,6 +3,7 @@ globals:
   #site_url: http://localhost:6969 # for local testing
   # Posts are global, because we need them in multiple places (blog and feeds)
   blog_posts:
+    - !load posts/ebpf-file-system-monitoring.md
     - !load posts/game-engine-requirements.md
     - !load posts/yet-another-cpp-coroutine-tutorial.md
     - !load posts/why-is-there-no-invisible-database.md
