@@ -148,25 +148,25 @@ if (name_len > path_start) {
 }
 ```
 
-```asm
+``` { guess_lang = False }
 ; name_len++;
 97: (07) r2 += 1                       ; R2_w=scalar(umin=1,umax=4294967296,
-                                           var_off=(0x0; 0x1ffffffff))
+                                       ;   var_off=(0x0; 0x1ffffffff))
 98: (bf) r1 = r2                       ; R1_w=scalar(id=6,umin=1,umax=4294967296,
-                                           var_off=(0x0; 0x1ffffffff))
-                                         R2_w=scalar(id=6,umin=1,umax=4294967296,
-                                           var_off=(0x0; 0x1ffffffff))
+                                       ;   var_off=(0x0; 0x1ffffffff))
+                                       ; R2_w=scalar(id=6,umin=1,umax=4294967296,
+                                       ;   var_off=(0x0; 0x1ffffffff))
 99: (67) r1 <<= 32                     ; R1_w=scalar(smax=9223372032559808512,
-                                           umax=18446744069414584320,
-                                           var_off=(0x0; 0xffffffff00000000),
-                                           s32_min=0,s32_max=0,u32_max=0)
+                                       ;   umax=18446744069414584320,
+                                       ;   var_off=(0x0; 0xffffffff00000000),
+                                       ;   s32_min=0,s32_max=0,u32_max=0)
 100: (77) r1 >>= 32                    ; R1=scalar(umax=4294967295,
-                                           var_off=(0x0; 0xffffffff))
+                                       ;   var_off=(0x0; 0xffffffff))
 ; if (name_len > path_start) {
 101: (25) if r1 > 0x1000 goto pc+2051  ; R1=scalar(umax=4096,var_off=(0x0; 0x1fff))
 ```
 
-Here `name_len` is stored in `r2`. In instruction 97 it is incremented. `path_start` is just `4096`. The problem with this snippet is that the verifier will not update the range of `name_len`, despite `if (name_len > path_start) break`. In general it will exclude paths that you `break` from and update value ranges accordingly. This is because here `name_len` is a 32-bit unsigned int and `r2` is a 64-bit register, so the increment might push `r2` out of 32-bit range. To perform the check in instruction 101, the compiler has to bring `r1` back into 32-bit range by shifting it up (instruction 99) and down again (instruction 100). Unfortunately the compiler decided to use another register (`r1`) for this and as a result the verifier doesn't know that it should update `r2`. It's possible to program around these things, but it can be very annoying and it will frequently bug you.
+Here `name_len` is stored in `r2`. In instruction 97 it is incremented. `path_start` is just `4096`. The `umin`/`umax` values in the comments indicate the known ranges of the registers and are just another way to display `var_off`. The problem with this snippet is that the verifier will not update the range of `name_len`, despite `if (name_len > path_start) break`. In general it will exclude paths that you `break` from and update value ranges accordingly. This is because here `name_len` is a 32-bit unsigned int and `r2` is a 64-bit register, so the increment might push `r2` out of 32-bit range. To perform the check in instruction 101, the compiler has to bring `r1` back into 32-bit range by shifting it up (instruction 99) and down again (instruction 100). Unfortunately the compiler decided to use another register (`r1`) for this and as a result the verifier doesn't know that it should update `r2`. It's possible to program around these things, but it can be very annoying and it will frequently bug you.
 
 ## Actual Problems
 
