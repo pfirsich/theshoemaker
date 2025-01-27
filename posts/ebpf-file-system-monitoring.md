@@ -39,7 +39,7 @@ These are the ones I could come up:
 - [`write`](https://linux.die.net/man/2/write) a (non-zero) number of times and then [`close`](https://linux.die.net/man/2/close) (C API: `fwrite`, `fclose`)
 - [`write`](https://linux.die.net/man/2/write) a (non-zero) number of times and then [`fsync`](https://linux.die.net/man/2/fsync) (C API: `fflush`)
 - [`write`](https://linux.die.net/man/2/write) a (non-zero) number of times and the kernel does an automatic write-back
-- [`writev`](https://linux.die.net/man/2/write)
+- [`writev`](https://linux.die.net/man/2/writev)
 - [`mmap`](https://linux.die.net/man/2/mmap), modify the mapped memory and then call [`msync`](https://linux.die.net/man/2/msync)
 - [`mmap`](https://linux.die.net/man/2/mmap), modify the mapped memory and then call [`close`](https://linux.die.net/man/2/close)
 - [`mmap`](https://linux.die.net/man/2/mmap) and the kernel does an automatic write-back
@@ -148,12 +148,20 @@ if (name_len > path_start) {
 }
 ```
 
-```
+```asm
 ; name_len++;
-97: (07) r2 += 1                       ; R2_w=scalar(umin=1,umax=4294967296,var_off=(0x0; 0x1ffffffff))
-98: (bf) r1 = r2                       ; R1_w=scalar(id=6,umin=1,umax=4294967296,var_off=(0x0; 0x1ffffffff)) R2_w=scalar(id=6,umin=1,umax=4294967296,var_off=(0x0; 0x1ffffffff))
-99: (67) r1 <<= 32                     ; R1_w=scalar(smax=9223372032559808512,umax=18446744069414584320,var_off=(0x0; 0xffffffff00000000),s32_min=0,s32_max=0,u32_max=0)
-100: (77) r1 >>= 32                    ; R1=scalar(umax=4294967295,var_off=(0x0; 0xffffffff))
+97: (07) r2 += 1                       ; R2_w=scalar(umin=1,umax=4294967296,
+                                           var_off=(0x0; 0x1ffffffff))
+98: (bf) r1 = r2                       ; R1_w=scalar(id=6,umin=1,umax=4294967296,
+                                           var_off=(0x0; 0x1ffffffff))
+                                         R2_w=scalar(id=6,umin=1,umax=4294967296,
+                                           var_off=(0x0; 0x1ffffffff))
+99: (67) r1 <<= 32                     ; R1_w=scalar(smax=9223372032559808512,
+                                           umax=18446744069414584320,
+                                           var_off=(0x0; 0xffffffff00000000),
+                                           s32_min=0,s32_max=0,u32_max=0)
+100: (77) r1 >>= 32                    ; R1=scalar(umax=4294967295,
+                                           var_off=(0x0; 0xffffffff))
 ; if (name_len > path_start) {
 101: (25) if r1 > 0x1000 goto pc+2051  ; R1=scalar(umax=4096,var_off=(0x0; 0x1fff))
 ```
