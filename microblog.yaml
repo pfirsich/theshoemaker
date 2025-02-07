@@ -1,3 +1,46 @@
+- title: Game Engineering Podcast - Billy Basso
+  url: https://www.youtube.com/watch?v=YngwUu4bXR4
+  publish_date: "2025-02-07 20:13:00"
+  description: |
+    Yesterday I watched the Game Engineering Podcast with [Animal Well](https://www.animalwell.net/)'s Billy Basso as the guest and it really gave me some new direction and got me a bit unstuck.
+
+    He said that that he is frustrated with modern games, because they start really slowly with lots of tutorials and exposition and they hold you hand so much that you never really get a chance to
+    have a genuine discovery and insight, because they give you a hint before you even had a chance to look at the puzzle.
+    He mentiones God of War, which is a sadly a very good example of this. The games don't even give you a chance to get bored.
+    Animal Well is really not like that at all, which is probably a huge reason why I enjoyed it so much, when I played it recently.
+
+    Of course he also talks about the technology and he mentions a bunch of cool things, most of which I could have expected from a handmade hero descendant.
+    He says he just uses [POD](https://en.wikipedia.org/wiki/Passive_data_structure)s without destructors or constructors, he mostly just zero-initializes everything with some inline initializers.
+    He has a couple large blocks of memory that he preallocates at the start and wipes completely at certain points.
+    There is a large block for fonts and vertex buffers and such, which have to live for the whole time the application is running, another block for the game itself,
+    which lives for as long as you play and another block that lives as long as the current screen you are on. He said he never had a memory leak and doesn't use pointers or anything,
+    just fixed size arrays.
+    Enterprise software has brainwashed me into disliking fixed size arrays and I think one of my biggest weaknesses is having disliked them for such a long time.
+    Whenever he added a new type of object, he just added a new fixed size array for that object. First he just made up a number of the required size and later he did one pass through the screen
+    to figure out how many of each object there are and then sliced up a big chunk of memory to fit all of the required objects exactly.
+
+    One really cool thing he mentioned is that he considers hot-reloading (both code and assets) one of the most important features of his engine and that this feature alone has
+    saved him lots of editors and configuration files. This makes a lot of sense, because if you can just tweak the position of an object in the code itself, hit save and it
+    immediately shows up in the game, you don't really need an editor this much anymore. Having a data structure for some thing in the code is the bare minimum,
+    but putting reflection on top, UI to edit that whole structure and stuff like that is usually a ton of extra work. You can just avoid it by having code reloading.
+    I have been working on a [Tomorrow Corporation](#2025-01-19-18:36:00) engine thing for a few weeks now (including a giant blog post) and this really affirms some of my thoughts.
+
+    The way he does it though is simply having the game code in a separate shared library that is recompiled on demand and automatically reloaded.
+    This really changed my direction regards to the Tomorrow Corporation prototype (more on that in the upcoming blog post).
+
+    A few other things he said that I liked are that he tries to keep the engine as thin and small as possible.
+
+    He also mentioned he wanted to double-buffer game state for a while so that the new game state is write-only and the old frame's state is read-only
+    (so your game update logic becomes a pure function), because this eliminates problems with order of execution, which are so, so common in video games.
+    I did something like that for multiplayer games in the past, but I think with the new engine prototype I am working on I might put that in as a first-class feature from the start.
+
+    He also said that he does and uses the bad version of everything first. According to him most of the game engine advice will make you create a bloated engine with tons of stuff you don't need.
+    Most of the things that are considered essential parts of an engine are usually just required for AAA games with tons of people. You already don't have many problems,
+    simply because you work solo. And as a fun aside he mentions that he even put all the code into a single file until much later.
+
+    One thing that I will try to remember (continuously and have been trying to remember for years now): **Don't solve any problem until it actually confronts you as a real issue**.
+    Only make something more complicated when it hurts not to.
+
 - publish_date: "2025-01-19 18:36:00"
   description: |
     I am obsessed with [Tomorrow Corporation Tech Demo](#2025-01-05-16:30:00) for a while now and this weekend I had two cool insights that made me think it was possible to prototype this.
