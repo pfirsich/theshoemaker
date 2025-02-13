@@ -6,17 +6,17 @@ title: Stop Overcomplicating Parsing
 
 ## Introduction
 
-I have been working on a little programming language for the last couple of days and the software and theory around parsing is just eternally frustrating. People have built mind-boggling theory temples around this and I think nothing attracts architecture astronauts like parsing. I am not convinced that most of it is not necessary and it is not actually this difficult.
+I have been working on a little programming language for the last couple of days and the software and theory around parsing is just eternally frustrating. People have built mind-boggling theory temples around this and I think nothing attracts architecture astronauts like parsing. I not convinced that most of it is not necessary and it is not actually this difficult.
 
 You read about `LL(k)` parsers, `LL(*)` parsers, `LL(1)` parsers, `LR(k)` parsers, `LALR` parsers, `SLR` parsers, `GLR` parsers, Earley parsers (all of these are real) and more. It makes your head spin and barf all the `LOL(k)` parsers right back onto the screen. I keep thinking "no one cares dude, just parse the thing".
 
 We haven't just lost bright minds to parsing theory, but (the real tragedy) countless of people have been discouraged to parse something by the overwhelming overcomplication of the subject.
 
-It's so silly to me that people that know nothing about parsing just parse stuff with recursive descent and when you go to the really complicated languages and the really large parsers (JavaScript V8, TypeScript, Rust, CPython, GCC), you end up having to use recursive descent again. It's kind of weird there is a whole science inbetween. Maybe the stuff in the middle is not really that useful?
+It's so silly to me that people that know nothing about parsing just parse stuff with recursive descent parsers and when you go to the really complicated languages and the really large parsers (JavaScript V8, TypeScript, Rust, CPython, GCC), you end up having to use recursive descent again. It's kind of weird there is a whole science inbetween. Maybe the stuff in the middle is not really that useful?
 
 ## Recursive Descent
 
-For everyone who doesn't really know much about parsing: A recursive descent parser is just the thing you would write down if you didn't know anything about parsing.
+For everyone who doesn't know much about parsing: A recursive descent parser is just the thing you would write down if you didn't know anything about parsing.
 
 Consider this simple grammar ([EBNF](https://de.wikipedia.org/wiki/Erweiterte_Backus-Naur-Form)-like):
 
@@ -53,7 +53,7 @@ def parse_action(parser):
 
 Ignore some `parser.skip_whitespace()` I might have missed and pretend `parse_flag` and `parse_arg` look mostly like that. You don't even have to think much when you write a parser like that.
 
-There is no science here. You are just writing it out. And I didn't even need a `ROFL(69)` parser or whatever. If you don't know anything and are humble enough, you might think "but maybe this is slow" (because it's dumb/straightforward), but no, recursive descent parsers is often some of the fastest ways to parse things.
+There is no science here. You are just writing it out. And I didn't even need a `ROFL(69)` parser or whatever. If you don't know anything and are humble enough, you might think "but maybe this is slow" (because it's dumb/straightforward), but no, recursive descent is often one of the fastest ways to parse things.
 
 Maybe there are languages / grammars you can't parse with it? No, not even that. Recursive descent is one of the only popular algorithms that can parse context sensitive languages.
 
@@ -81,7 +81,7 @@ First of all I think it's silly to choose a parser based on whether it helps you
 
 People are rightfully obsessed with removing ambiguities in their grammar, but why not simply come up with a grammar that can't even have them? Like PEG! [Parsing Expression Grammars](https://en.wikipedia.org/wiki/Parsing_expression_grammar) replace the choice operator (`|` before) with an ordered choice which implies a priority of the first (left hand side) option and thereby removes ambiguity.
 
-This is actually sick, because if you notice above I started with checking for `run` and then checked for `stop`. The grammar didn't actually imply a priority there, but my code did of course. There might be an expression that can get parsed by both `if`s. And if you use a PEG then those different branches in your code DO have a well-defined, correct order. In that way PEGs map to recursive descent parsers more directly.
+This is actually sick, because if you notice above I started with checking for `run` and then checked for `stop`. The grammar didn't actually imply a priority there, but my code did of course. There might be an expression that can get parsed by both `if`s after all. And if you use a PEG then those different branches in your code DO have a well-defined, correct order. In that way PEGs map to recursive descent parsers more directly.
 
 Parsing experts don't like them much and I don't really understand why. I read that it's somehow undesirable that PEGs are unambiguous because you can write stuff that looks correct, but actually isn't and no one complains. I think this is mostly (again) related to operator precedence. Also they use more memory, which I respect as a limitation in certain scenarios, but I have 32G of RAM and that's not even a lot, but more than plenty to parse a couple MBs of code.
 
@@ -89,7 +89,7 @@ Parsing experts don't like them much and I don't really understand why. I read t
 
 Generally I am all for theory. It's important that someone understand these things (and anything else) on a truly deep level. Someone needs to know what is possible and provable and correct, but what confuses me is the ratio of people doing pragmatic parsing and people swooning over parsing algorithms. I feel like the whole world is tricking me into thinking I actually need a lecture to parse text. I don't - you can literally just parse it.
 
-I acknowledge that there was a time where all this theory was actually necessary to compile C on an analogue toothbrush in some ancient sumerian assembly. And they did develop some great ideas that are useful to this day (like precedence climbing / Pratt parsing), but honestly I think most of this stuff is just not really interesting to most people that just want to turn text into trees.
+I acknowledge that there was a time where all this theory was actually necessary to compile C on an analogue toothbrush in some ancient sumerian assembly. And they did develop some great ideas that are useful to this day (like precedence climbing / Pratt parsing), but honestly I think most of this stuff is just not interesting to the majority of people that want to turn text into trees.
 
 ## Lexing
 
@@ -118,18 +118,18 @@ Where is the "common man" tool/library that accomodates practical parsing needs 
 
 **Honestly more than half the tools I come across I don't even understand! I have been programming for 20 years and done a bunch of different things. I have Bachelor's degree in Physics. I'm stupid, but not completely stupid. Parsing text is really not difficult if you do it the right way, but somehow everything out there is super complicated anyways.**
 
-I tried getting a grip on all this stuff multiple times through the years, eventually just gave up (until now) after a few hours and ended up writing a recursive descent parser again, in the beginning not even knowing they were called that.
+I tried getting a grip on all this stuff multiple times through the years, eventually just gave up after a few hours (until recently) and ended up writing a recursive descent parser again, in the beginning not even knowing that is what they were called.
 
 ### Expressions
 
-_EVERY LANGUAGE_ needs expressions. Why do we have to solve this a million times? Why can't I just define a set of sub-languages with their operators and precedences and then the parser will work it out.
+_EVERY LANGUAGE_ needs expressions. Why do we have to solve this a million times? Why can't I just define a set of sub-languages with their operators and precedences and the parser will work it out?
 If you build a parser generator there should be a built-in feature for operator expressions. What do you think people use your generators for? Everyone needs this.
 
 ## What I Want
 
 Like I said I gave up many times on parsing. The first tool that changed my mind was [lark](https://github.com/lark-parser/lark). It is so cool in large part because it eats almost any grammar you give it and because it spits out an AST right away, which you can just post-process (or you can customize the AST generation).
 
-The problem with lark is of course that it's a Python library and I don't want to call into Python to parse (lol). Also it's pretty slow. I wrote a grammar for a language I am working on and it takes about 10 seconds to parse less than 200 lines, which is of course absurd.
+The problem with lark is of course that it's a Python library and I don't want to call into Python to parse (lol). Also it's pretty slow. I wrote a grammar for the language I am working on and it takes about 10 seconds to parse less than 200 lines, which is, of course, absurd.
 
 The thing I want should generate a C parser, because you can integrate those into anything. It should have roughly these features:
 
