@@ -1,3 +1,13 @@
+- title: Why Make a Game Engine?
+  publish_date: "2025-02-22 12:49:00"
+  description: |
+    I get asked this a lot and I ask it myself frequently as well. It's a good question too, because there are so many good engines.  If your goal is to get from idea to game as quickly as possible,
+    then it's in many cases objectively wrong to build your own engine first.
+    But my goal is primarily to enjoy myself making the game. When I picture a moment in time when my hypothentical perfect engine is finally done, I don't think about all the games I am going to make
+    and how quickly I will make them, but how natural and frictionless it will be. Unity and Godot and their endless menus cannot provide this for me. I want to write code and I don't want to be annoyed at weird
+    quirks I have to research and work around for multiple days. I don't want to think "If only this engine let me do X".
+    If your goal is not to make a game, but enjoy making a game, you don't really have another choice, but to make your own engine.
+
 - title: Game Engineering Podcast - Billy Basso
   url: https://www.youtube.com/watch?v=YngwUu4bXR4
   publish_date: "2025-02-07 20:13:00"
