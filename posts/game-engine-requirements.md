@@ -95,6 +95,7 @@ Reinventing the wheel exists, but people try to avoid it too much and they shoul
 
 The engine can be built on Windows and Linux and both are equally important. And you can build your game for Windows, Linux, Mac and Web _out of the box_.
 `engine build --release mygame/` should give you distributables for all platforms without much fuss.
+Increasingly many game jams require all submissions to be playable in the browser, therefore a web export is very important.
 
 ### Single Executable
 
