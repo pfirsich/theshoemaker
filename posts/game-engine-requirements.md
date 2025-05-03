@@ -101,7 +101,7 @@ Increasingly many game jams require all submissions to be playable in the browse
 
 Yes, everything you want to do is in that executable. This makes for an easy download and easy experiments.
 You can run your debug builds with it, you can create your release builds with it, you can convert your assets. Everything the engine needs to do, is in that single executable.
-This is not in contrast to what I asid in [Small Scope](#small-scope), because I am talking about a means of software distribution only. This is about the stuff that is part of the engine anyways.
+This is not in contrast to what I said in [Small Scope](#small-scope), because I am talking about a means of software distribution only. This is about the stuff that is part of the engine anyways.
 
 ## Final Note
 
