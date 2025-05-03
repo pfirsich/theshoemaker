@@ -32,6 +32,7 @@ See my <a href="#2025-01-05-14:30:00">first post below</a> for why I created thi
 </p>
 
 {% for post in posts %}
+{% if not post.hidden %}
 <div class="post-entry">
     <div class="post-header">
         <div>
@@ -49,5 +50,6 @@ See my <a href="#2025-01-05-14:30:00">first post below</a> for why I created thi
     </div>
     {{ post.description | markdown | safe }}
 </div>
+{% endif %}
 {% endfor %}
 {% endblock %}
