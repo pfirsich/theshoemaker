@@ -1,12 +1,32 @@
+- name: ung
+  id: ung
+  tagline: "Game Engine"
+  link: https://github.com/pfirsich/ung
+  tags: [c++, library]
+  tech: C++
+  time: "Mar 2025 – today"
+  sort_time: 20260101
+  sort_effort: 100
+  image: ung_stripe.png
+  links:
+    - {title: GitHub, url: "https://github.com/pfirsich/ung"}
+  description: "This is my most recent engine project in large part inspired by 
+    [Handles are the better pointers](https://floooh.github.io/2018/06/17/handles-vs-pointers.html)
+    and [Billy Basso](https://theshoemaker.de/microblog#2025-02-07-20:13:00). The more engines
+    I build the more I realize that they need to be smaller and smaller and the whole idea here
+    was to make it as small as possible with as little opinions as possible. I really like this
+    engine and it's the longest time I have worked on the same engine so far. I have actually started
+    working on two games with this engine (which I cannot show yet) and I am quite happy with it."
+
 - name: htcpp
   id: htcpp
   tagline: "HTTP/1.1 Server"
   link: https://github.com/pfirsich/htcpp
   tags: [c++, library, tool, web]
   tech: C++
-  time: "Jul 2021, Apr 2022 – today"
+  time: "Jul 2021, Apr 2022 – Oct 2022"
   sort_time: 20220731
-  sort_effort: 55
+  sort_effort: 75
   image: htcpp_stripe.png
   links:
   - {title: GitHub,  url: "https://github.com/pfirsich/htcpp"}
@@ -75,30 +95,44 @@
     things I have made, though it is hard to understand for most people what it is
     or why it is cool."
 
-- name: exquisite
-  id: exquisite
-  tagline: Text Editor
-  link: https://github.com/pfirsich/exquisite
-  tags: [c++, tool]
+- name: wuzy
+  id: wuzy
+  tagline: "Collision Detection Library"
+  link: https://github.com/pfirsich/wuzy
+  tags: [c++, library]
   tech: C++
-  time: "Jul 2020 – Aug 2020"
-  sort_time: 20200801
-  sort_effort: 35
-  image: exq_stripe.png
+  time: "Oct 2022 – today"
+  sort_time: 20260101
+  sort_effort: 80
+  image: wuzy_stripe.png
   links:
-  - {title: GitHub, url: "https://github.com/pfirsich/exquisite"}
-  description: There was a time at work when our graphical interface was not working
-    properly and I had to use vim for a few weeks. A few years earlier I spent a good
-    half year with a vim cheat sheet in front of me to learn vim and concluded that
-    I would never be as fast at editing text with it than I already am with [Sublime
-    Text](https://www.sublimetext.com/). Since there seems to be a dire lack of an
-    editor of the TextMate family (to which Sublime Text belongs as well) for the
-    terminal, I decided to try my hand at it. This editor is not intended to be used
-    by anyone else but me, so it can be fully tailored to my needs without compromises.
-    It has multiple buffers, a command palette, C++ highlighting using [tree-sitter](https://tree-sitter.github.io/tree-sitter/),
-    find and various cursor movements and I already use it for small editing jobs
-    here and there, but some major features are missing to switch to it, which I have
-    not gotten around to yet.
+    - {title: GitHub, url: "https://github.com/pfirsich/wuzy"}
+  description: 'When you make games, you usually just write a bit of code that calculates the
+    intersection of a few spheres or axis-aligned boxes OR you use a gigantic physics engine
+    which has more code than the whole rest of your project combined. There are very few
+    options inbetween and this library aims to fit into that gigantic gap. It allows you to bump a few
+    shapes into one another, resolve their collisions and cast rays.
+    I have been working on this on and off for years now and keep coming back and redesigning
+    and rewriting things, but I have still not used it anywhere, because it is still incomplete
+    (collision is very difficult - go figure). It currently implements GJK, EPA and a AABB tree for acceleration.'
+
+- name: dgml
+  id: dgml
+  tagline: "Dialogue Toolkit"
+  link: https://github.com/pfirsich/dgml
+  tags: [python, c++, library]
+  tech: Python, C++
+  time: "Jun 2025 – today"
+  sort_time: 20260101
+  sort_effort: 50
+  image: dgml_stripe.png
+  links:
+    - {title: GitHub, url: "https://github.com/pfirsich/dgml"}
+  description: 'dgml is a toolkit for authoring and managing dialogue trees with plain text files 
+    and CLI tools. There is a DGML markup language for dialogue trees, a couple of tools
+    for metadata (like localization). It compiles all the dialogue to a single JSON file
+    or a custom binary format that is built in such a way that writing a runtime is as easy as possible.
+    There is a Python runtime, a C runtime and a Lua runtime.'
 
 - name: IRPS Arena
   id: irps-arena
@@ -143,6 +177,24 @@
     \ its former majesty by managing resources and defending itself from foes cohabiting\
     \ the forest. We reached the finals of Indie Speed Run with this project, after\
     \ being picked by [Jason Rohrer](http://hcsoftware.sourceforge.net/jason-rohrer/)!"
+
+- name: Game Architecture Comparison
+  id: game-architecture-comparison
+  tagline: ""
+  link: https://github.com/pfirsich/game-architecture-comparison
+  tags: [c++]
+  tech: C++
+  time: "Jul 2024 – Sep 2024"
+  sort_time: 20240701
+  sort_effort: 20
+  image: game_architecture_comparison_stripe.png
+  links:
+    - {title: GitHub, url: "https://github.com/pfirsich/game-architecture-comparison"}
+  description: 'After many started engine projects and trying out different game architectures
+    I found myself lost and unsure about everything, so I started this project to build
+    the same, simple game (incomplete asteroids) in as many ways as I can come up with. I wrote
+    down my thoughts extensively in the README of the project.'
+
 
 - name: Arbitrary Complexity
   id: arbitrary-complexity
@@ -221,6 +273,49 @@
     \ profiling. It is probably the piece of software of mine that is most used by\
     \ other people."
 
+- name: exquisite
+  id: exquisite
+  tagline: Text Editor
+  link: https://github.com/pfirsich/exquisite
+  tags: [c++, tool]
+  tech: C++
+  time: "Jul 2020 – Aug 2020"
+  sort_time: 20200801
+  sort_effort: 35
+  image: exq_stripe.png
+  links:
+  - {title: GitHub, url: "https://github.com/pfirsich/exquisite"}
+  description: There was a time at work when our graphical interface was not working
+    properly and I had to use vim for a few weeks. A few years earlier I spent a good
+    half year with a vim cheat sheet in front of me to learn vim and concluded that
+    I would never be as fast at editing text with it than I already am with [Sublime
+    Text](https://www.sublimetext.com/). Since there seems to be a dire lack of an
+    editor of the TextMate family (to which Sublime Text belongs as well) for the
+    terminal, I decided to try my hand at it. This editor is not intended to be used
+    by anyone else but me, so it can be fully tailored to my needs without compromises.
+    It has multiple buffers, a command palette, C++ highlighting using [tree-sitter](https://tree-sitter.github.io/tree-sitter/),
+    find and various cursor movements and I already use it for small editing jobs
+    here and there, but some major features are missing to switch to it, which I have
+    not gotten around to yet.
+
+- name: mugfx
+  id: mugfx
+  tagline: "Graphics Library"
+  link: https://github.com/pfirsich/mugfx
+  tags: [c++, library]
+  tech: C++, OpenGL
+  time: "Nov 2024 – today"
+  sort_time: 20260101
+  sort_effort: 50
+  image: mugfx_stripe.png
+  links:
+    - {title: GitHub, url: "https://github.com/pfirsich/mugfx"}
+  description: 'This is the graphics abstraction used in ung and serves as the smallest possible
+    abstration over OpenGL 4 and WebGL 2 and possibly Vulkan in the future.
+    In general APIs and graphics libraries are fairly low level nowadays and this library
+    aims to be much closer to OpenGL (i.e. high-level), just borrowing some concepts from the
+    modern APIs (immutable objects and little global state).'
+
 - name: lua-discordRPC
   id: lua-discordrpc
   tagline: Bindings for <a target="_blank" href="https://github.com/discordapp/discord-rpc">Discord Rich Presence</a>
@@ -274,6 +369,26 @@
     to strike before. I am very happy with this and have used it in [Arbitrary Complexity](#arbitrary-complexity),
     [IRPS Arena](#irps-arena), [muwa](#muwa), [myl](#myl) and the examples for the
     [glTF Library](#gltf-cpp).
+
+- name: utxt
+  id: utxt
+  tagline: "Text Rendering Library for Games"
+  link: https://github.com/pfirsich/utxt
+  tags: [c++, library]
+  tech: C++
+  time: "Jul 2025"
+  sort_time: 20250701
+  sort_effort: 10
+  image: utxt_stripe.png
+  links:
+    - {title: GitHub, url: "https://github.com/pfirsich/utxt"}
+  description: 'So far this is mostly a wrapper around stb_truetype, but I plan to add BMFont
+    support (when I need it). I found myself writing the same wrapper around stb_truetype
+    again and again and having to familiarize myself with the concepts repeatedly, but with
+    just enough time between each instance that I forget everything. So I made this library
+    which I can just drop into future projects without understanding anything. It also includes
+    basic text shaping, which is sort of a pain and necessary in most games.
+    This is a break-out project of ung.'
 
 - name: JOML
   id: joml

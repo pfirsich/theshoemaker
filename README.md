@@ -25,11 +25,9 @@ I generate the HTML with [raydor](https://github.com/pfirsich/raydor) and serve 
   - myl
   - muwa
 * Projects
-  - aiopp
-  - minijson
-  - womf
-  - mugfx
-  - wuzy
+  - aiopp?
+  - minijson?
+  - womf?
 
 # Notes for Later
 * `sort_effort` in projects is roughly the number of 8h work days spent on it
