@@ -3,6 +3,10 @@ acme: {
         url: "letsencrypt" # magic
         alt_names: ["www.theshoemaker.de"] # empty by default
     }
+    "joelschumacher.de": {
+        url: "letsencrypt"
+        alt_names: ["www.joelschumacher.de"]
+    }
 }
 
 services: {
@@ -10,16 +14,29 @@ services: {
         limit_connections: 256
         limit_requests_by_ip: {}
         hosts: {
+            "joelschumacher.de": {
+                acme_challenges: "joelschumacher.de"
+                redirects: {
+                    "/*": "https://joelschumacher.de/$1"
+                }
+            }
+
+            "www.joelschumacher.de": {
+                redirects: {
+                    "/*": "http://joelschumacher.de/$1"
+                }
+            }
+
             "theshoemaker.de": {
                 acme_challenges: "theshoemaker.de"
                 redirects: {
-                    "/*": "https://theshoemaker.de/$1"
+                    "/*": "https://joelschumacher.de/$1"
                 }
             }
 
             "www.theshoemaker.de": {
                 redirects: {
-                    "/*": "http://theshoemaker.de/$1"
+                    "/*": "http://joelschumacher.de/$1"
                 }
             }
         }
@@ -34,11 +51,11 @@ services: {
         }
 
         tls: {
-            acme: "theshoemaker.de" # reference to acme object
+            acme: "joelschumacher.de" # reference to acme object
         }
 
         hosts: {
-            "theshoemaker.de": {
+            "joelschumacher.de": {
                 files: {
                     "/": "output/index.html"
                     "/blog": "output/blog.html"
@@ -94,9 +111,21 @@ services: {
                 }
             }
 
+            "www.joelschumacher.de": {
+                redirects: {
+                    "/*": "https://joelschumacher.de/$1"
+                }
+            }
+
+            "theshoemaker.de": {
+                redirects: {
+                    "/*": "https://joelschumacher.de/$1"
+                }
+            }
+
             "www.theshoemaker.de": {
                 redirects: {
-                    "/*": "https://theshoemaker.de/$1"
+                    "/*": "https://joelschumacher.de/$1"
                 }
             }
         }
