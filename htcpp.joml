@@ -1,11 +1,11 @@
 acme: {
     "joelschumacher.de": {
         url: "letsencrypt" # magic
-        alt_names: ["www.joelschumacher.de"] # empty by default
-    }
-    "theshoemaker.de": {
-        url: "letsencrypt"
-        alt_names: ["www.theshoemaker.de"]
+        alt_names: [
+            "www.joelschumacher.de"
+            "theshoemaker.de"
+            "www.theshoemaker.de"
+        ]
     }
 }
 
@@ -22,19 +22,21 @@ services: {
             }
 
             "www.joelschumacher.de": {
+                acme_challenges: "joelschumacher.de"
                 redirects: {
                     "/*": "http://joelschumacher.de/$1"
                 }
             }
 
             "theshoemaker.de": {
-                acme_challenges: "theshoemaker.de"
+                acme_challenges: "joelschumacher.de"
                 redirects: {
                     "/*": "https://joelschumacher.de/$1"
                 }
             }
 
             "www.theshoemaker.de": {
+                acme_challenges: "joelschumacher.de"
                 redirects: {
                     "/*": "http://joelschumacher.de/$1"
                 }
