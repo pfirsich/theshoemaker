@@ -1,5 +1,5 @@
 globals:
-  site_url: https://theshoemaker.de
+  site_url: https://joelschumacher.de
   #site_url: http://localhost:6969 # for local testing
   # Posts are global, because we need them in multiple places (blog and feeds)
   blog_posts:

@@ -1,4 +1,4 @@
-# [theshoemaker.de](https://theshoemaker.de)
+# [joelschumacher.de](https://joelschumacher.de)
 
 This is the repository used for my website.
 I generate the HTML with [raydor](https://github.com/pfirsich/raydor) and serve it with [htcpp](https://github.com/pfirsich/htcpp).
@@ -14,7 +14,7 @@ I generate the HTML with [raydor](https://github.com/pfirsich/raydor) and serve 
 * Analytics: goatcounter is blocked by many adblockers. Add a /stats endpoint or something that the page's path and referrer via query argument. Then use those and User-Agent to collect stats on Browser, Location, OS, Referrer and Path Visited (count separately and don't store IP).
 * DIY CDN
   Latency from US is shit. I want to keep using my own webserver, so I need to build something myself
-  Use Route 58, Cloudflare DNS or whatever to point theshoemaker.de to multiple PoPs
+  Use Route 58, Cloudflare DNS or whatever to point joelschumacher.de to multiple PoPs
   Figure out a way to share certificate and add reverse-proxy mode to htcpp
 * Lazy Image Loading? (`loading="lazy"`)
 * Reprocess Markdown to add `target="_blank"` into links

@@ -1,11 +1,11 @@
 acme: {
-    "theshoemaker.de": {
-        url: "letsencrypt" # magic
-        alt_names: ["www.theshoemaker.de"] # empty by default
-    }
     "joelschumacher.de": {
+        url: "letsencrypt" # magic
+        alt_names: ["www.joelschumacher.de"] # empty by default
+    }
+    "theshoemaker.de": {
         url: "letsencrypt"
-        alt_names: ["www.joelschumacher.de"]
+        alt_names: ["www.theshoemaker.de"]
     }
 }
 

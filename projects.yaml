@@ -12,7 +12,7 @@
     - {title: GitHub, url: "https://github.com/pfirsich/ung"}
   description: "This is my most recent engine project in large part inspired by 
     [Handles are the better pointers](https://floooh.github.io/2018/06/17/handles-vs-pointers.html)
-    and [Billy Basso](https://theshoemaker.de/microblog#2025-02-07-20:13:00). The more engines
+    and [Billy Basso](https://joelschumacher.de/microblog#2025-02-07-20:13:00). The more engines
     I build the more I realize that they need to be smaller and smaller and the whole idea here
     was to make it as small as possible with as little opinions as possible. I really like this
     engine and it's the longest time I have worked on the same engine so far. I have actually started
@@ -463,7 +463,7 @@
 - name: SudoHack
   id: sudohack
   tagline: Bullethell Roguelike
-  link: https://theshoemaker.de/tag/sudohack/
+  link: https://joelschumacher.de/tag/sudohack/
   tags: [game, lua]
   tech: "löve/Lua"
   time: "Dec 2014 – Jun 2015"
@@ -614,7 +614,7 @@
 - name: Screwdriver
   id: screwdriver
   tagline: 2D Level Editor
-  link: https://theshoemaker.de/2015/11/isr2015-preparation-screwdriver-sparkled-lighting/
+  link: https://joelschumacher.de/2015/11/isr2015-preparation-screwdriver-sparkled-lighting/
   tags: [lua, tool]
   tech: "löve/Lua"
   time: "Sep 2015 – Nov 2015"
@@ -691,7 +691,7 @@
 - name: Per Torpedum Ad Astram
   id: per-torpedum-ad-astram
   tagline: Rail Shooter
-  link: https://theshoemaker.de/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/
+  link: https://joelschumacher.de/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
   time: "TAG Jam 5 Winner (Dec 6th – Dec 8th 2013)"
@@ -700,7 +700,7 @@
   image: ptaa_stripe.png
   links:
   - {title: Video, url: "https://www.youtube.com/watch?v=723aAV4LAd8"}
-  - {title: Blog Post, url: "https://theshoemaker.de/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/"}
+  - {title: Blog Post, url: "https://joelschumacher.de/2014/12/the-delightful-reunification-with-modify-assign-in-lua-and-per-torpedum-ad-astram/"}
   description: I deliberately tried to make the worst game for TAG Jam, but won it
     in the end with this game. A game about flying a pirate ship in the sky and defending
     against laser shooting kittens inspired by one of my all time favourites, Starfox.
@@ -832,7 +832,7 @@
 - name: Spacewalk
   id: spacewalk
   tagline: Platformer
-  link: https://theshoemaker.de/2013/04/spacewalk-part-1/
+  link: https://joelschumacher.de/2013/04/spacewalk-part-1/
   tags: [game, python]
   tech: Python, PyOpenGL
   time: Feb 2014
@@ -841,7 +841,7 @@
   image: spacewalk_stripe.png
   links:
   - {title: Video, url: "https://www.youtube.com/watch?v=_4EkPm3LLYg"}
-  - {title: Blog Post, url: "https://theshoemaker.de/2013/04/spacewalk-part-1/"}
+  - {title: Blog Post, url: "https://joelschumacher.de/2013/04/spacewalk-part-1/"}
   description: "This was a 2D multiplayer shooter (with basic networking) taking place
     on rock formations in space with very high gravity (watch the video!). My then
     roommate [Jonas Lieb](http://www.jonaslieb.com/) and I did this during a weekend
@@ -851,7 +851,7 @@
 - name: Falling Nukes & Running People
   id: falling-nukes-running-people
   tagline: Multiplayer Platformer
-  link: https://theshoemaker.de/2015/01/global-game-jam-2015-falling-nukes-running-people/
+  link: https://joelschumacher.de/2015/01/global-game-jam-2015-falling-nukes-running-people/
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
   time: "Global Game Jam 2015 (Jan 23rd – Jan 25th)"
@@ -861,7 +861,7 @@
   links:
   - {title: globalgamejam.org, url: "https://globalgamejam.org/2015/games/falling-nukes-running-people"}
   - {title: GitHub, url: "https://github.com/pfirsich/ggj2015"}
-  - {title: Blog Post, url: "https://theshoemaker.de/2015/01/global-game-jam-2015-falling-nukes-running-people/"}
+  - {title: Blog Post, url: "https://joelschumacher.de/2015/01/global-game-jam-2015-falling-nukes-running-people/"}
   description: "A game about escaping impending doom in the form of a nuclear missile\
     \ impact as a competitive local multiplayer platformer. Also highlighted as an\
     \ “oustanding project” [here](https://web.archive.org/web/20150219021404/http://www.colognegamelab.de/global-game-jam-cologne-recap/)."
@@ -869,7 +869,7 @@
 - name: Metroidlike
   id: metroidlike
   tagline: Metroidvania
-  link: https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/
+  link: https://joelschumacher.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/
   tags: [game, lua]
   tech: "löve/Lua"
   time: Jun 2013
@@ -879,7 +879,7 @@
   links:
   - {title: Video, url: "https://www.youtube.com/watch?v=dJSdzbMAj7Y"}
   - {title: Video 2, url: "https://www.youtube.com/watch?v=6onBYjnob7w"}
-  - {title: Blog Post, url: "https://theshoemaker.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/"}
+  - {title: Blog Post, url: "https://joelschumacher.de/2013/12/metroidlike-2d-water-bone-animations-catching-up-part-1/"}
   description: "I started a little “engine” with normal mapping, dynamic lighting\
     \ and some cool pre-baked lighting for a potential Metroidvania\
     \ I wanted to make. Most of the time was spent on technical aspects and I never\
@@ -928,7 +928,7 @@
 - name: Species X
   id: species-x
   tagline: Top-Down Shooter
-  link: https://theshoemaker.de/2012/09/species-x/
+  link: https://joelschumacher.de/2012/09/species-x/
   tags: [c++, game, gamejam]
   tech: C++
   time: "Ludum Dare 24 (Aug 24th – Aug 27th 2012)"
@@ -938,7 +938,7 @@
   links:
   - {title: ludumdare.com, url: "https://web.archive.org/web/20150426072307/http://www.ludumdare.com/compo/ludum-dare-24/?action=preview&uid=14778"}
   - {title: Video, url: "http://youtu.be/ASF-6fc2ayc"}
-  - {title: Blog Post, url: "https://theshoemaker.de/2012/09/species-x/"}
+  - {title: Blog Post, url: "https://joelschumacher.de/2012/09/species-x/"}
   description: "This was my first game jam game. The theme was “Evolution”\
     \ and in this game a fungus (a cellular automaton) is spreading across randomly\
     \ generated levels, taking over walkable space and turning it into breeding grounds\
@@ -967,7 +967,7 @@
 - name: Cardiac Murmur
   id: cardiac-murmur
   tagline: Platformer
-  link: https://theshoemaker.de/2013/01/global-game-jam-cardiac-murmur/
+  link: https://joelschumacher.de/2013/01/global-game-jam-cardiac-murmur/
   tags: [c++, game, gamejam]
   tech: C++
   time: "Global Game Jam 2013 (Jan 25th – Jan 27th)"
@@ -976,7 +976,7 @@
   image: cardiac_murmur_stripe.png
   links:
   - {title: Video, url: "https://youtu.be/M3AxFZOEyYc"}
-  - {title: Blog Post, url: "https://theshoemaker.de/2013/01/global-game-jam-cardiac-murmur/"}
+  - {title: Blog Post, url: "https://joelschumacher.de/2013/01/global-game-jam-cardiac-murmur/"}
   description: The theme was the sound of heartbeat (the actual sound). In this game
     you use your heartbeat to unveil hidden information and display the true feelings
     and thoughts of the characters around you. Rather pretentiously pointing to issues
@@ -1038,7 +1038,7 @@
 - name: Fluglotse
   id: fluglotse
   tagline: Flight Coordinator Sim
-  link: https://theshoemaker.de/2015/02/exam-preparation-avoidance-game-jam/
+  link: https://joelschumacher.de/2015/02/exam-preparation-avoidance-game-jam/
   tags: [game, gamejam, lua]
   tech: "löve/Lua"
   time: "Feb 12th – Feb 14th 2015"
@@ -1047,7 +1047,7 @@
   image: fluglotse_stripe.png
   links:
   - {title: Video, url: "https://www.youtube.com/watch?v=jN1GjQzoKJM"}
-  - {title: Blog Post, url: "https://theshoemaker.de/2015/02/exam-preparation-avoidance-game-jam/"}
+  - {title: Blog Post, url: "https://joelschumacher.de/2015/02/exam-preparation-avoidance-game-jam/"}
   description: A very bad simulation, but a fairly fun game about being a flight coordinator.
     Made just for fun in a 48h marathon with my roommate [Jonas Lieb](http://jonaslieb.com/).
 

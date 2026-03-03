@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>theshoemaker Microblog</title>
+        <title>joelschumacher.de Microblog</title>
         <link>{{ site_url }}/microblog</link>
-        <description>theshoemaker Microblog Posts</description>
+        <description>joelschumacher.de Microblog Posts</description>
         <language>en-us</language>
         <lastBuildDate>{{ now_tz() | rfc822 }}</lastBuildDate>
         {% for post in posts %}
