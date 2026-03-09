@@ -1,0 +1,180 @@
+{% extends "templates/base.html" %}
+{% block title %}Work With Me{% endblock %}
+
+{% block header %}
+<style>
+.skill-list {
+    padding-left: 1.5em;
+}
+
+.skill-list > li {
+    margin-bottom: 0.4em;
+}
+
+.refs-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #11c8b0;
+    font-size: 0.85em;
+    cursor: pointer;
+    padding: 0 0.25em;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.js .refs-toggle {
+    display: inline;
+}
+
+.refs-toggle:hover {
+    opacity: 1;
+}
+
+.refs-toggle::after {
+    margin-left: 0.5em;
+    content: '▸';
+}
+
+.refs-toggle.open::after {
+    content: '▾';
+}
+
+.refs-list {
+    font-size: 0.9em;
+}
+
+.js .refs-list {
+    display: none;
+}
+
+.js .refs-list.open {
+    display: block;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<h1>Work With Me</h1>
+<p>
+    I have been building games and game-adjacent tools in my spare time for 20 years now while spending my professional career doing systems programming in C++ on Linux.
+    I am interested to help out on technical problems, mainly in gamedev systems and tools.
+</p>
+
+<p>
+    I can assist in these areas:
+
+    <ul class="skill-list">
+        <li>
+            C++ development & consulting
+            <button class="refs-toggle" aria-expanded="false">examples</button>
+            <div class="refs-list">
+                <ul>
+                <li><a href="/posts/yet-another-cpp-coroutine-tutorial">Coroutine Tutorial</a></li>
+                <li><a href="/cv">C++20 at IONOS and DATATRONiQ, C++14 at Ericsson (led migration to C++11)</a></li>
+            </ul>
+            </div>
+        </li>
+        <li>
+            Lua/LuaJIT and embedding in C/C++ projects
+            <button class="refs-toggle" aria-expanded="false">examples</button>
+            <div class="refs-list">
+                <ul>
+                <li><a href="/projects#kaun">kaun - replacement of love.graphics module for 3D graphics</a></li>
+                <li><a href="/projects#jprof">jprof - profiling library and visualizer</a></li>
+                <li><a href="/projects#kraidgui">kraidGUI - GUI library</a></li>
+                <li>Many projects using <a href="https://love2d.org/">löve</a>, such as:
+                <a href="/projects#spectacular-shatter-buddies">Spectacular Shatter Buddies</a>
+            </ul>
+            </div>
+        </li>
+        <li>
+            Custom gamedev tools (editors, importers, converters, content pipeline tools, general workflow automation)
+            <button class="refs-toggle" aria-expanded="false">examples</button>
+            <div class="refs-list">
+                <ul>
+                <li><a href="/projects#makelove">makelove - build and packaging tool for LÖVE games</a></li>
+                <li><a href="/projects#jprof">jprof - profiling library and visualizer</a></li>
+                <li><a href="/projects#dgml">dgml - dialogue toolkit</a></li>
+                <li><a href="/projects#muwa">muwa - map editor </a></li>
+                <li><a href="/projects#screwdriver">Screwdriver - 2D map editor</a></li>
+                <li><a href="/projects#gltf-cpp">C++ glTF Library</a></li>
+                <li><a href="/projects#myl">myl - game engine experiment</a></li>
+            </ul>
+            </div>
+        </li>
+        <li>
+            Technical prototyping (systems and gameplay)
+            <button class="refs-toggle" aria-expanded="false">examples</button>
+            <div class="refs-list">
+                Numerous game jam games, such as:
+                <ul>
+                <li><a href="/projects#plant-life">PL(ANT) LIFE</a></li>
+                <li><a href="/projects#arbitrary-complexity">Arbitrary Complexity</a></li>
+                <li><a href="/projects#what-a-mess">What a Mess</a></li>
+                <li><a href="/projects#spacetris">Spacetris</a></li>
+                <li><a href="/projects#quark">Quark</a></li>
+            </ul>
+            </div>
+        </li>
+        <li>
+            Debugging & rescue work
+        </li>
+        <li>
+            Systems design & technical architecture
+            <button class="refs-toggle" aria-expanded="false">examples</button>
+            <div class="refs-list">
+                <ul>
+                <li><a href="/projects#ung">ung - game engine</a></li>
+                <li><a href="/projects#game-architecture-comparison">Game Architecture Comparison</a></li>
+            </ul>
+            </div>
+        </li>
+        <li>
+            Final-stretch support
+        </li>
+        <li>
+            Geometry & math-heavy systems
+            <button class="refs-toggle" aria-expanded="false">examples</button>
+            <div class="refs-list">
+                <ul>
+                <li><a href="/projects#wuzy">wuzy - collision detection library (GJK, EPA, AABB tree)</a></li>
+                <li><a href="/posts/ray-casting-in-2d-grids">Ray Casting in 2D Grids</a></li>
+                <li><a href="/cv">B.Sc. Physics</a></li>
+            </ul>
+            </div>
+        </li>
+        <li>
+            Linux systems programming
+            <button class="refs-toggle" aria-expanded="false">examples</button>
+            <div class="refs-list">
+                <ul>
+                <li><a href="/projects#htcpp">htcpp - HTTP server using io_uring (serves this website)</a></li>
+                <li><a href="/posts/ebpf-file-system-monitoring">eBPF File System Monitoring</a></li>
+            </ul>
+            </div>
+        </li>
+    </ul>
+</p>
+
+<p>
+    You can get a good sense of what I might be able to help with by lookin at what I have <a href="/projects">built</a> or <a href="/blog">written about</a> before or my <a href="/cv">previous work experience</a>.
+</p>
+
+<p>
+    The easiest way to contact me is by mail: <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#109;&#97;&#105;&#108;&#64;&#106;&#111;&#101;&#108;&#115;&#99;&#104;&#117;&#109;&#97;&#99;&#104;&#101;&#114;&#46;&#100;&#101;">&#109;&#97;&#105;&#108;&#64;&#106;&#111;&#101;&#108;&#115;&#99;&#104;&#117;&#109;&#97;&#99;&#104;&#101;&#114;&#46;&#100;&#101;</a>
+</p>
+
+<script>
+document.documentElement.classList.add('js');
+
+document.querySelectorAll('.refs-toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const refs = btn.nextElementSibling;
+        const isOpen = refs.classList.toggle('open');
+        btn.classList.toggle('open', isOpen);
+        btn.setAttribute('aria-expanded', isOpen);
+    });
+});
+</script>
+{% endblock %}

@@ -89,3 +89,6 @@ files:
     template: templates/microblog-feed-atom.xml
     vars:
       posts: !load microblog.yaml
+
+  work-with-me.html:
+    template: templates/work-with-me.html
