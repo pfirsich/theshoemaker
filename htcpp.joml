@@ -69,6 +69,7 @@ services: {
                     "/projects": "output/projects.html"
                     "/cv": "output/cv.pdf"
                     "/favicon.svg": "output/favicon.svg"
+                    "/work-with-me": "output/work-with-me.html"
                     "/posts/*": "output/posts/$1.html"
                     "/*": "output/$1"
                 }
